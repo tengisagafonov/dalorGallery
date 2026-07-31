@@ -1,6 +1,12 @@
 {
   "categoriesHeading": "Categories",
+  "contentType": "Content type",
+  "photo": "Photo",
+  "video": "Video",
+  "soon": "Soon",
+  "videoComingSoon": "Video templates are coming soon",
   "templates": "Templates",
+  "searchResults": "Search results",
   "browse": "Browse templates and insert one into your prompt.",
   "search": "Search templates...",
   "viewAll": "View all",

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "analytics_events",
+  "info": {
+    "singularName": "analytics-event",
+    "pluralName": "analytics-events",
+    "displayName": "Statistikereignis",
+    "description": "Anonyme Nutzungsstatistik der Dalor Gallery"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": { "content-manager": { "visible": false } },
+  "attributes": {
+    "eventType": {
+      "type": "enumeration",
+      "enum": ["page_view", "template_select", "prompt_preview", "prompt_copy"],
+      "required": true
+    },
+    "templateId": { "type": "integer" },
+    "templateKey": { "type": "string" },
+    "templateTitle": { "type": "string" },
+    "visitorId": { "type": "string" },
+    "path": { "type": "string" }
+  }
+}

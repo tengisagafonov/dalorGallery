@@ -1,15 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { Icon } from "./icon";
-import type { Translation } from "./i18n";
+import { Icon } from "./gallery-icon";
+import type { Locale, Translation } from "./i18n";
 import type { useGalleryController } from "./use-gallery-controller";
 
 type Controller = ReturnType<typeof useGalleryController>;
 
-export function PreviewOverlays({ controller, t }: { controller: Controller; t: Translation }) {
+export function PreviewOverlays({ controller, locale, t }: { controller: Controller; locale: Locale; t: Translation }) {
   const { compiledPrompt, copyPrompt, isCoverPreviewOpen, isPromptCopied, isPromptPreviewOpen, selected, setIsCoverPreviewOpen, setIsPromptPreviewOpen } = controller;
-  const selectedTitle = t.templateTitles[String(selected.id)] ?? selected.title;
+  if (!selected) return null;
+
+  const selectedTitle = selected.localizedTitles?.[locale] ?? selected.title;
   return (
     <>
       {isPromptPreviewOpen && (

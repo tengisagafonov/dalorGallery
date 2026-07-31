@@ -1,27 +1,33 @@
 "use client";
 
 import Image from "next/image";
-import { categories, fashionSubcategories } from "./config";
-import { Icon } from "./icon";
-import type { Translation } from "./i18n";
+import type { GalleryCategory } from "./data/gallery-category";
+import { Icon } from "./gallery-icon";
+import type { Locale, Translation } from "./i18n";
 import type { GalleryTemplate } from "./types";
 import type { useGalleryController } from "./use-gallery-controller";
 
 type Controller = ReturnType<typeof useGalleryController>;
 
 type Props = {
+  categories: GalleryCategory[];
   controller: Controller;
+  locale: Locale;
   onSelectTemplate: (template: GalleryTemplate) => void;
   t: Translation;
 };
 
-export function TemplateGallery({ controller, onSelectTemplate, t }: Props) {
+export function TemplateGallery({ categories, controller, locale, onSelectTemplate, t }: Props) {
   const { activeCategory, filteredTemplates, query, selected, setActiveCategory, setQuery } = controller;
-  const mobileCategories = [...categories, ...fashionSubcategories];
+  const isSearching = query.trim().length > 0;
+  const mobileCategories = categories.map(({ name }) => name);
+  const categoryLabel = (name: string) =>
+    categories.find((category) => category.name === name)?.localizedNames?.[locale]
+      ?? name;
   return (
-        <section className="min-w-0 px-5 py-6 md:px-7">
-          <div className="sticky top-0 z-30 -mx-2 mb-5 space-y-2 bg-[#fbfaf8]/95 px-2 pb-3 pt-1 backdrop-blur lg:hidden">
-            <label className="flex items-center gap-3 rounded-full border border-[#ded8cf] bg-white px-4 py-3 shadow-sm">
+        <section className="min-w-0 px-5 pb-6 pt-3 md:px-7">
+          <div className="sticky top-0 z-30 -mx-2 mb-5 bg-[#fbfaf8]/95 px-2 pb-3 pt-1 backdrop-blur lg:hidden">
+            {!isSearching && <label className="mt-4 flex items-center gap-3 rounded-full border border-[#ded8cf] bg-white px-4 py-3 shadow-sm">
               <Icon name="search" className="size-5 shrink-0 text-[#403d39]" />
               <input
                 value={query}
@@ -30,7 +36,7 @@ export function TemplateGallery({ controller, onSelectTemplate, t }: Props) {
                 placeholder={t.search}
                 aria-label={t.search}
               />
-            </label>
+            </label>}
             <label className="flex items-center gap-3 rounded-full border border-[#ded8cf] bg-white px-4 py-3 shadow-sm">
               <Icon name="grid" className="size-5 shrink-0 text-[#403d39]" />
               <select
@@ -41,7 +47,7 @@ export function TemplateGallery({ controller, onSelectTemplate, t }: Props) {
               >
                 {mobileCategories.map((category) => (
                   <option key={category} value={category}>
-                    {t.categories[category] ?? category}
+                    {categoryLabel(category)}
                   </option>
                 ))}
               </select>
@@ -56,7 +62,7 @@ export function TemplateGallery({ controller, onSelectTemplate, t }: Props) {
             </div>
           </div>
 
-          <label className="mb-7 hidden items-center gap-3 rounded-full border border-[#ded8cf] bg-[#fdfcf9] px-5 py-3.5 shadow-[0_1px_2px_rgba(0,0,0,0.02)] lg:flex">
+          <label className="mb-9 hidden items-center gap-3 rounded-full border border-[#ded8cf] bg-[#fdfcf9] px-5 py-3.5 shadow-[0_1px_2px_rgba(0,0,0,0.02)] lg:flex">
             <Icon name="search" className="size-5 text-[#403d39]" />
             <input
               value={query}
@@ -69,24 +75,26 @@ export function TemplateGallery({ controller, onSelectTemplate, t }: Props) {
 
           <div className="mb-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <h2 className="text-[15px] font-semibold">{t.categories[activeCategory]} {t.templates}</h2>
+              <h2 className="text-[15px] font-semibold">
+                {isSearching ? t.searchResults : `${categoryLabel(activeCategory)} ${t.templates}`}
+              </h2>
               <span className="rounded-md bg-[#eeeae5] px-2 py-0.5 text-xs text-[#79736c]">{filteredTemplates.length}</span>
             </div>
-            <button className="flex items-center gap-2 text-xs text-[#69635d] hover:text-black">{t.viewAll} <Icon name="arrow" className="size-4" /></button>
+            {!isSearching && <button className="flex items-center gap-2 text-xs text-[#69635d] hover:text-black">{t.viewAll} <Icon name="arrow" className="size-4" /></button>}
           </div>
 
           {filteredTemplates.length > 0 ? (
             <div className="grid grid-cols-2 gap-x-4 gap-y-5 xl:grid-cols-4">
               {filteredTemplates.map((template) => (
                 <div key={template.id} className="group relative min-w-0 text-left">
-                  <button type="button" onClick={() => onSelectTemplate(template)} className={`relative block aspect-[4/4.25] w-full overflow-hidden rounded-[14px] bg-gradient-to-br p-4 text-left shadow-sm transition duration-200 group-hover:-translate-y-0.5 group-hover:shadow-lg ${template.style} ${selected.id === template.id ? "ring-2 ring-[#171410] ring-offset-2 ring-offset-[#fbfaf8]" : ""}`}>
-                    {selected.id === template.id && (
+                  <button type="button" onClick={() => onSelectTemplate(template)} className={`relative block aspect-[4/4.25] w-full overflow-hidden rounded-[14px] bg-gradient-to-br p-4 text-left shadow-sm transition duration-200 group-hover:-translate-y-0.5 group-hover:shadow-lg ${template.style} ${selected?.id === template.id ? "ring-2 ring-[#171410] ring-offset-2 ring-offset-[#fbfaf8]" : ""}`}>
+                    {selected?.id === template.id && (
                       <span className="absolute left-2 top-2 z-10 flex size-5 items-center justify-center rounded-full bg-[#171410] text-xs font-bold text-white ring-2 ring-white">✓</span>
                     )}
                     {template.cover ? (
                       <Image
                         src={template.cover}
-                        alt={`${t.templateTitles[String(template.id)] ?? template.title} cover`}
+                        alt={`${template.localizedTitles?.[locale] ?? template.title} cover`}
                         fill
                         sizes="(min-width: 1280px) 190px, 40vw"
                         className={template.coverFit === "contain" ? "object-contain" : "object-cover"}
@@ -103,10 +111,10 @@ export function TemplateGallery({ controller, onSelectTemplate, t }: Props) {
                     )}
                   </button>
                   <h3 className="mt-2 truncate text-[12px] font-semibold">
-                    {t.templateTitles[String(template.id)] ?? template.title}
+                    {template.localizedTitles?.[locale] ?? template.title}
                   </h3>
                   <p className="mt-0.5 text-[11px] text-[#77716b]">
-                    {t.categories[template.category] ?? template.category}
+                    {template.localizedCategoryNames?.[locale] ?? categoryLabel(template.category)}
                   </p>
                 </div>
               ))}

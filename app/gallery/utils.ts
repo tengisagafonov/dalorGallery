@@ -1,11 +1,13 @@
-import { fashionSubcategories, trendingTemplateIds } from "./config";
 import { searchMatchRank } from "./fuzzy-search";
-import { dictionaries, type Translation } from "./i18n";
-import { multilingualSearchKeywords } from "./multilingual-search-keywords";
 import type { GalleryTemplate } from "./types";
 
-export function createTemplateValues(template: GalleryTemplate) {
-  return Object.fromEntries(template.fields.map((field) => [field.key, field.placeholder]));
+export function createTemplateValues(template: GalleryTemplate, locale: string) {
+  return Object.fromEntries(
+    template.fields.map((field) => [
+      field.key,
+      field.localizedPlaceholders?.[locale] ?? field.placeholder,
+    ]),
+  );
 }
 
 export function compilePrompt(template: GalleryTemplate, values: Record<string, string>) {
@@ -24,40 +26,40 @@ export function filterTemplates(
   activeCategory: string,
   query: string,
 ) {
+  const isSearching = query.trim().length > 0;
+  const isAllCategory = ["all", "all templates"].includes(activeCategory.trim().toLowerCase());
   const indexedTemplates = templates.flatMap((template) => {
     const categoryMatches =
-      activeCategory === "Popular" ||
+      isSearching ||
+      isAllCategory ||
+      (activeCategory === "Popular" && template.popular === true) ||
       (activeCategory === "Trending"
-        ? trendingTemplateIds.has(template.id)
-        : fashionSubcategories.includes(activeCategory)
-            ? template.subcategory === activeCategory
-            : template.category === activeCategory);
+        ? template.trending === true
+        : template.subcategory === activeCategory || template.category === activeCategory);
 
     if (!categoryMatches) return [];
 
-    const localizedText = Object.values(dictionaries).flatMap((dictionary) => {
-      const translation = dictionary as Translation;
-      const id = String(template.id);
-      return [
-        translation.templateTitles[id],
-        translation.templateDescriptions[id],
-        translation.categories[template.category],
-        template.subcategory ? translation.categories[template.subcategory] : undefined,
-      ];
-    });
     const searchableText = [
       template.title,
       template.category,
       template.subcategory,
       template.description,
+      ...Object.values(template.localizedTitles ?? {}),
+      ...Object.values(template.localizedDescriptions ?? {}),
       ...(template.keywords ?? []),
-      ...(multilingualSearchKeywords[template.id] ?? []),
       template.eyebrow,
       template.headline,
       template.subline,
       template.prompt,
-      ...localizedText,
-      ...template.fields.flatMap((field) => [field.label, field.placeholder]),
+      ...Object.values(template.localizedTitles ?? {}),
+      ...Object.values(template.localizedDescriptions ?? {}),
+      ...Object.values(template.localizedCategoryNames ?? {}),
+      ...template.fields.flatMap((field) => [
+        field.label,
+        field.placeholder,
+        ...Object.values(field.localizedLabels ?? {}),
+        ...Object.values(field.localizedPlaceholders ?? {}),
+      ]),
     ]
       .filter(Boolean)
       .join(" ");
@@ -67,5 +69,12 @@ export function filterTemplates(
   const hasExactMatch = indexedTemplates.some(({ rank }) => rank === 2);
   return indexedTemplates
     .filter(({ rank }) => rank === 2 || (!hasExactMatch && rank === 1))
-    .map(({ template }) => template);
+    .map(({ template }) => template)
+    .sort((left, right) =>
+      activeCategory === "Popular" && !isSearching
+        ? (left.popularityRank ?? Number.MAX_SAFE_INTEGER) -
+          (right.popularityRank ?? Number.MAX_SAFE_INTEGER)
+        : 0,
+    )
+    .slice(0, activeCategory === "Popular" && !isSearching ? 50 : undefined);
 }

@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_template_input_fields",
+  "info": {
+    "displayName": "Eingabefeld",
+    "description": "Ein Feld, das Besucher im Prompt anpassen können"
+  },
+  "options": {},
+  "attributes": {
+    "key": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "labelDe": { "type": "string" },
+    "labelRu": { "type": "string" },
+    "labelHi": { "type": "string" },
+    "labelPa": { "type": "string" },
+    "inputType": {
+      "type": "enumeration",
+      "enum": ["text", "textarea", "number", "color", "select"],
+      "default": "text",
+      "required": true
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "placeholderDe": { "type": "string" },
+    "placeholderRu": { "type": "string" },
+    "placeholderHi": { "type": "string" },
+    "placeholderPa": { "type": "string" },
+    "required": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

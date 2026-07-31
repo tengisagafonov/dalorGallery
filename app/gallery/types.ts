@@ -4,10 +4,13 @@ export type TemplateField = {
   placeholder: string;
   optional?: boolean;
   type?: "text" | "color";
+  localizedLabels?: Record<string, string>;
+  localizedPlaceholders?: Record<string, string>;
 };
 
 export type GalleryTemplate = {
   id: number;
+  analyticsKey: string;
   title: string;
   category: string;
   subcategory?: string;
@@ -21,4 +24,10 @@ export type GalleryTemplate = {
   prompt?: string;
   cover?: string;
   coverFit?: "cover" | "contain";
+  trending?: boolean;
+  popular?: boolean;
+  popularityRank?: number;
+  localizedTitles?: Record<string, string>;
+  localizedDescriptions?: Record<string, string>;
+  localizedCategoryNames?: Record<string, string>;
 };

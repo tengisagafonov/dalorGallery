@@ -1,6 +1,12 @@
 {
   "categoriesHeading": "Kategorien",
+  "contentType": "Inhaltstyp",
+  "photo": "Foto",
+  "video": "Video",
+  "soon": "Bald",
+  "videoComingSoon": "Video-Vorlagen sind bald verfügbar",
   "templates": "Vorlagen",
+  "searchResults": "Suchergebnisse",
   "browse": "Durchsuche Vorlagen und passe den Prompt an.",
   "search": "Vorlagen durchsuchen...",
   "viewAll": "Alle anzeigen",

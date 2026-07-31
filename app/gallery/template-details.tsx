@@ -2,21 +2,25 @@
 
 import Image from "next/image";
 import type { Ref } from "react";
-import { Icon } from "./icon";
-import type { Translation } from "./i18n";
+import { Icon } from "./gallery-icon";
+import type { Locale, Translation } from "./i18n";
 import type { useGalleryController } from "./use-gallery-controller";
+import { trackAnalytics } from "./analytics";
 
 type Controller = ReturnType<typeof useGalleryController>;
 
 type Props = {
   controller: Controller;
   detailsRef: Ref<HTMLElement>;
+  locale: Locale;
   t: Translation;
 };
 
-export function TemplateDetails({ controller, detailsRef, t }: Props) {
+export function TemplateDetails({ controller, detailsRef, locale, t }: Props) {
   const { selected, setIsCoverPreviewOpen, setIsPromptPreviewOpen, setValues, values } = controller;
-  const selectedTitle = t.templateTitles[String(selected.id)] ?? selected.title;
+  if (!selected) return null;
+
+  const selectedTitle = selected.localizedTitles?.[locale] ?? selected.title;
   return (
         <aside ref={detailsRef} className="scroll-mt-3 border-t border-[#e5e0d8] bg-[#f8f6f2] p-5 lg:border-l lg:border-t-0">
           <div className="rounded-[22px] border border-[#ded8cf] bg-[#fdfcf9] p-5 shadow-[0_4px_20px_rgba(70,55,40,0.035)]">
@@ -46,14 +50,17 @@ export function TemplateDetails({ controller, detailsRef, t }: Props) {
               <div className="min-w-0 pt-1">
                 <h2 className="text-[15px] font-semibold">{selectedTitle}</h2>
                 <span className="mt-2 inline-block rounded-full border border-[#ddd6cd] bg-[#f2eee8] px-2.5 py-1 text-[10px] font-medium uppercase tracking-wide text-[#625b53]">
-                  {t.categories[selected.category] ?? selected.category}
+                  {selected.localizedCategoryNames?.[locale] ?? selected.category}
                 </span>
                 <p className="mt-3 text-[12px] leading-5 text-[#68625c]">
-                  {t.templateDescriptions[String(selected.id)] ?? selected.description}
+                  {selected.localizedDescriptions?.[locale] ?? selected.description}
                 </p>
                 <button
                   type="button"
-                  onClick={() => setIsPromptPreviewOpen(true)}
+                  onClick={() => {
+                    setIsPromptPreviewOpen(true);
+                    trackAnalytics({ eventType: "prompt_preview", templateId: selected.id, templateKey: selected.analyticsKey, templateTitle: selected.title });
+                  }}
                   className="mt-3 inline-flex items-center gap-2 rounded-full border border-[#d8d1c8] bg-[#f5f2ed] px-3 py-2 text-[11px] font-semibold text-[#27231f] shadow-sm transition hover:-translate-y-px hover:bg-white hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#cfc7bc] focus:ring-offset-2"
                 >
                   <span className="flex items-center gap-2">
@@ -72,35 +79,39 @@ export function TemplateDetails({ controller, detailsRef, t }: Props) {
               <h3 className="text-[18px] font-black italic tracking-tight">{t.customize}.</h3>
               <p className="mt-1 text-[12px] leading-5 text-[#746e68]">{t.customizeHint}</p>
               <div className="mt-5 space-y-3.5">
-                {selected.fields.map((field) => (
+                {selected.fields.map((field) => {
+                  const label = field.localizedLabels?.[locale] ?? field.label;
+                  const placeholder = field.localizedPlaceholders?.[locale] ?? field.placeholder;
+                  return (
                   <label key={`${selected.id}-${field.key}`} className="block">
                     <span className="mb-1.5 block text-[11px] font-semibold">
-                      {field.label} {field.optional && <span className="font-normal text-[#8f8880]">(optional)</span>}
+                      {label} {field.optional && <span className="font-normal text-[#8f8880]">(optional)</span>}
                     </span>
                     <div className="flex items-center gap-2 rounded-xl border border-[#ded8cf] bg-white px-3 py-2.5 focus-within:border-[#746b61] focus-within:ring-2 focus-within:ring-[#e9e4dc]">
                       {field.type === "color" && (
                         <input
                           type="color"
                           value={
-                            /^#[0-9A-Fa-f]{6}$/.test(values[field.key] ?? field.placeholder)
-                              ? (values[field.key] ?? field.placeholder)
+                            /^#[0-9A-Fa-f]{6}$/.test(values[field.key] ?? placeholder)
+                              ? (values[field.key] ?? placeholder)
                               : "#7b746b"
                           }
                           onChange={(event) =>
                             setValues((current) => ({ ...current, [field.key]: event.target.value.toUpperCase() }))
                           }
                           className="size-6 shrink-0 cursor-pointer rounded-full border-0 bg-transparent p-0 [&::-moz-color-swatch]:rounded-full [&::-moz-color-swatch]:border-0 [&::-webkit-color-swatch]:rounded-full [&::-webkit-color-swatch]:border-0 [&::-webkit-color-swatch-wrapper]:p-0"
-                          aria-label={`Choose ${field.label.toLowerCase()}`}
+                          aria-label={`Choose ${label.toLowerCase()}`}
                         />
                       )}
                       <input
-                        value={values[field.key] ?? field.placeholder}
+                        value={values[field.key] ?? placeholder}
                         onChange={(event) => setValues((current) => ({ ...current, [field.key]: event.target.value }))}
                         className="min-w-0 flex-1 bg-transparent text-[12px] outline-none"
                       />
                     </div>
                   </label>
-                ))}
+                  );
+                })}
               </div>
               <p className="mt-6 text-center text-[10px] text-[#827b74]">{t.privacy}</p>
             </div>

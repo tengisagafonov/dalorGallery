@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Icon } from "./icon";
+import { Icon } from "./gallery-icon";
 import type { Locale } from "./i18n";
 
 type LanguageSelectorProps = {
