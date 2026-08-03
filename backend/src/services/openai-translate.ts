@@ -41,7 +41,7 @@ export async function localize(texts: string[], keywords: string[]): Promise<Loc
       input: [
         {
           role: 'system',
-          content: 'Localize English CMS content into German, Russian, Hindi, and Punjabi. Return translations in exactly the same order and count as texts. For keywords, add natural translations and useful search synonyms, remove duplicates, use lowercase, and return at most 30 per language. Preserve brands, numbers, placeholders, and formatting.',
+          content: 'Localize English CMS content into German, Russian, Hindi, and Punjabi. Return translations in exactly the same order and count as texts. For keywords, add natural translations and useful search synonyms, remove duplicates, use lowercase, and return at most 30 per language. Preserve brands, product names, company names, numbers, template placeholders such as {{brand}}, and formatting exactly as written.',
         },
         { role: 'user', content: JSON.stringify({ texts, keywords }) },
       ],

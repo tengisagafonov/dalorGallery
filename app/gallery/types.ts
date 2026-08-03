@@ -3,7 +3,7 @@ export type TemplateField = {
   label: string;
   placeholder: string;
   optional?: boolean;
-  type?: "text" | "color";
+  type?: "text" | "textarea" | "color";
   localizedLabels?: Record<string, string>;
   localizedPlaceholders?: Record<string, string>;
 };

@@ -1,0 +1,28 @@
+- Cleaning dist dir C:/Users/User/OneDrive/Desktop/dalor-gallery/backend/dist
+√ Cleaning dist dir (20ms)
+- Loading Strapi
+- Building build context
+√ Building build context (142ms)
+- Creating admin
+√ Creating admin (1123ms)
+√ Loading Strapi (8155ms)
+- Generating types
+√ Generating types (883ms)
+- Compiling TS
+- Cleaning dist dir C:/Users/User/OneDrive/Desktop/dalor-gallery/backend/dist
+√ Cleaning dist dir (147ms)
+√ Compiling TS (7895ms)
+- Cleaning dist dir C:/Users/User/OneDrive/Desktop/dalor-gallery/backend/dist
+√ Cleaning dist dir (28ms)
+- Loading Strapi
+- Building build context
+√ Building build context (153ms)
+- Creating admin
+√ Creating admin (1055ms)
+√ Loading Strapi (6833ms)
+- Generating types
+√ Generating types (951ms)
+- Compiling TS
+- Cleaning dist dir C:/Users/User/OneDrive/Desktop/dalor-gallery/backend/dist
+√ Cleaning dist dir (90ms)
+√ Compiling TS (8794ms)

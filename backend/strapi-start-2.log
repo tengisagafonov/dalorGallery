@@ -1,0 +1,329 @@
+
+> backend@0.1.0 dev
+> strapi develop
+
+[2026-08-03 11:43:29.393] [33mwarn[39m: [email]: The "sendmail" email provider is still supported, but for most production setups that use a dedicated SMTP relay, consider switching to @strapi/provider-email-nodemailer (set `provider` to `"nodemailer"` in your email plugin config). This message is only shown in development.
+
+ Project information
+
+[90m╭────────────────────[39m[90m┬──────────────────────────────────────────────────╮[39m
+[90m│[39m Time               [90m│[39m Mon Aug 03 2026 11:43:43 GMT+0200 (Mitteleuropä… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 17015 ms                                         [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 16392                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 5.51.1 (node v23.10.0)                           [90m│[39m
+[90m│[39m Plan               [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m│[39m Database name      [90m│[39m .tmp\data.db                                     [90m│[39m
+[90m╰────────────────────[39m[90m┴──────────────────────────────────────────────────╯[39m
+
+ Actions available
+
+Welcome back!
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2026-08-03 11:43:43.290] [32minfo[39m: Strapi started successfully
+[2026-08-03 11:43:44.860] [32mhttp[39m: GET /api/templates?pagination%5BpageSize%5D=1&populate%5BinputFields%5D=true (57 ms) 200
+[2026-08-03 11:44:04.759] [32mhttp[39m: GET /api/templates?pagination%5BpageSize%5D=100&populate%5BinputFields%5D=true (78 ms) 200
+[2026-08-03 11:45:28.675] [32mhttp[39m: GET /admin/content-manager/collection-types/api::template.template?pageSize=10 (267 ms) 200
+[2026-08-03 11:45:31.119] [32mhttp[39m: GET /admin/project-type (45 ms) 200
+[2026-08-03 11:45:31.695] [32mhttp[39m: GET /favicon.ico (1 ms) 200
+[2026-08-03 11:45:32.203] [32mhttp[39m: GET /admin/init (8 ms) 200
+[2026-08-03 11:45:32.245] [32mhttp[39m: GET /admin/users/me (40 ms) 200
+[2026-08-03 11:45:32.275] [32mhttp[39m: GET /admin/users/me/permissions (66 ms) 200
+[2026-08-03 11:45:32.334] [32mhttp[39m: GET /admin/information (58 ms) 200
+[2026-08-03 11:45:32.336] [32mhttp[39m: GET /admin/telemetry-properties (56 ms) 200
+[2026-08-03 11:45:32.444] [32mhttp[39m: GET /admin/guided-tour-meta (33 ms) 200
+[2026-08-03 11:45:32.478] [32mhttp[39m: GET /content-manager/init (24 ms) 200
+[2026-08-03 11:45:32.530] [32mhttp[39m: GET /content-manager/content-types-settings (50 ms) 200
+[2026-08-03 11:45:32.541] [32mhttp[39m: GET /admin/license-limit-information (94 ms) 200
+[2026-08-03 11:45:32.642] [32mhttp[39m: GET /content-manager/init (31 ms) 200
+[2026-08-03 11:45:32.700] [32mhttp[39m: GET /content-manager/content-types/api::template.template/configuration (40 ms) 200
+[2026-08-03 11:45:32.834] [32mhttp[39m: GET /content-manager/collection-types/api::template.template?page=1&pageSize=10&sort=title%3AASC (88 ms) 200
+[2026-08-03 11:45:33.194] [32mhttp[39m: GET /admin/ai-feature-config (25 ms) 404
+[2026-08-03 11:45:33.217] [32mhttp[39m: GET /i18n/locales (22 ms) 200
+[2026-08-03 11:45:36.663] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/eflgpoe3nw8j6zrz5krl1p1h (44 ms) 200
+[2026-08-03 11:45:37.171] [32mhttp[39m: GET /admin/ai-feature-config (24 ms) 404
+[2026-08-03 11:45:37.191] [32mhttp[39m: GET /i18n/settings (19 ms) 200
+[2026-08-03 11:45:37.209] [32mhttp[39m: GET /i18n/ai-localization-jobs/collection-types/api::template.template/eflgpoe3nw8j6zrz5krl1p1h (17 ms) 404
+[2026-08-03 11:45:37.253] [32mhttp[39m: GET /content-manager/relations/api::template.template/category?id=eflgpoe3nw8j6zrz5krl1p1h&pageSize=10&_q=&page=1 (42 ms) 200
+[2026-08-03 11:45:37.278] [32mhttp[39m: GET /content-manager/relations/api::template.template/eflgpoe3nw8j6zrz5krl1p1h/category?pageSize=5&page=1 (24 ms) 200
+[2026-08-03 11:45:37.307] [32mhttp[39m: GET /content-manager/relations/api::template.template/subcategory?id=eflgpoe3nw8j6zrz5krl1p1h&pageSize=10&_q=&page=1 (28 ms) 200
+[2026-08-03 11:45:37.334] [32mhttp[39m: GET /content-manager/relations/api::template.template/eflgpoe3nw8j6zrz5krl1p1h/subcategory?pageSize=5&page=1 (25 ms) 200
+[2026-08-03 11:45:37.351] [32mhttp[39m: GET /content-manager/preview/url/api::template.template?documentId=eflgpoe3nw8j6zrz5krl1p1h&locale=&status=published (16 ms) 404
+[2026-08-03 11:45:37.364] [32mhttp[39m: GET /uploads/thumbnail_luxury_handbag_36e7d48d55.webp?updatedAt=2026-07-30T14:33:14.282Z (5 ms) 200
+[2026-08-03 11:45:37.839] [32mhttp[39m: GET /admin/ai-feature-config (27 ms) 404
+[2026-08-03 11:45:37.872] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/eflgpoe3nw8j6zrz5krl1p1h/actions/countDraftRelations (31 ms) 200
+[2026-08-03 11:47:06.623] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/eflgpoe3nw8j6zrz5krl1p1h/actions/countDraftRelations (27 ms) 200
+[2026-08-03 11:47:51.012] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/eflgpoe3nw8j6zrz5krl1p1h/actions/countDraftRelations (69 ms) 200
+[2026-08-03 11:48:11.917] [32mhttp[39m: POST /content-manager/collection-types/api::template.template/eflgpoe3nw8j6zrz5krl1p1h/actions/publish (273 ms) 200
+[2026-08-03 11:48:11.977] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/eflgpoe3nw8j6zrz5krl1p1h (40 ms) 200
+[2026-08-03 11:48:12.014] [32mhttp[39m: GET /content-manager/relations/api::template.template/eflgpoe3nw8j6zrz5krl1p1h/category?pageSize=5&page=1 (35 ms) 200
+[2026-08-03 11:48:12.053] [32mhttp[39m: GET /content-manager/relations/api::template.template/eflgpoe3nw8j6zrz5krl1p1h/subcategory?pageSize=5&page=1 (35 ms) 200
+[2026-08-03 11:48:12.072] [32mhttp[39m: GET /i18n/ai-localization-jobs/collection-types/api::template.template/eflgpoe3nw8j6zrz5krl1p1h (17 ms) 404
+[2026-08-03 11:48:12.507] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/eflgpoe3nw8j6zrz5krl1p1h/actions/countDraftRelations (44 ms) 200
+[2026-08-03 11:48:27.917] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/eflgpoe3nw8j6zrz5krl1p1h/actions/countDraftRelations (45 ms) 200
+[2026-08-03 11:48:34.558] [32mhttp[39m: GET /api/categories?sort=sortOrder:asc&populate[parent]=true (26 ms) 200
+[2026-08-03 11:48:34.608] [32mhttp[39m: GET /api/templates?populate[image]=true&populate[category]=true&populate[inputFields]=true&pagination[pageSize]=100 (44 ms) 200
+[2026-08-03 11:48:34.618] [32mhttp[39m: GET /api/analytics/popular (5 ms) 200
+[2026-08-03 11:48:35.728] [32mhttp[39m: POST /api/analytics/track (24 ms) 200
+[2026-08-03 11:48:36.721] [32mhttp[39m: POST /api/analytics/track (44 ms) 200
+[2026-08-03 11:48:50.762] [32mhttp[39m: GET /api/categories?sort=sortOrder:asc&populate[parent]=true (22 ms) 200
+[2026-08-03 11:48:50.863] [32mhttp[39m: GET /api/templates?populate[image]=true&populate[category]=true&populate[inputFields]=true&pagination[pageSize]=100 (55 ms) 200
+[2026-08-03 11:48:50.875] [32mhttp[39m: GET /api/analytics/popular (5 ms) 200
+[2026-08-03 11:48:51.435] [32mhttp[39m: POST /api/analytics/track (23 ms) 200
+[2026-08-03 11:48:53.077] [32mhttp[39m: POST /api/analytics/track (35 ms) 200
+[2026-08-03 11:49:01.057] [32mhttp[39m: POST /api/analytics/track (40 ms) 200
+[2026-08-03 11:49:02.504] [32mhttp[39m: POST /api/analytics/track (31 ms) 200
+[2026-08-03 11:49:05.805] [32mhttp[39m: GET /uploads/luxury_handbag_36e7d48d55.webp (3 ms) 200
+[2026-08-03 11:49:08.314] [32mhttp[39m: POST /api/analytics/track (56 ms) 200
+[2026-08-03 11:49:17.304] [32mhttp[39m: POST /api/analytics/track (69 ms) 200
+[2026-08-03 11:50:20.928] [32mhttp[39m: POST /api/analytics/track (65 ms) 200
+[2026-08-03 11:50:22.609] [32mhttp[39m: POST /api/analytics/track (61 ms) 200
+[2026-08-03 11:50:27.784] [32mhttp[39m: POST /api/analytics/track (34 ms) 200
+[2026-08-03 11:50:28.843] [32mhttp[39m: POST /api/analytics/track (72 ms) 200
+[2026-08-03 11:50:30.186] [32mhttp[39m: POST /api/analytics/track (52 ms) 200
+[2026-08-03 11:50:30.664] [32mhttp[39m: POST /api/analytics/track (40 ms) 200
+[2026-08-03 11:51:01.909] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/eflgpoe3nw8j6zrz5krl1p1h/actions/countDraftRelations (29 ms) 200
+[2026-08-03 11:52:06.870] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/eflgpoe3nw8j6zrz5krl1p1h/actions/countDraftRelations (59 ms) 200
+[2026-08-03 11:52:09.854] [32mhttp[39m: GET /content-manager/collection-types/api::template.template?page=1&pageSize=10&sort=title%3AASC (110 ms) 200
+[2026-08-03 11:52:10.068] [32mhttp[39m: GET /admin/ai-feature-config (25 ms) 404
+[2026-08-03 11:52:16.470] [32mhttp[39m: GET /content-manager/collection-types/api::template.template?page=1&pageSize=10&sort=title%3AASC&_q=sneaker (43 ms) 200
+[2026-08-03 11:52:16.657] [32mhttp[39m: GET /admin/ai-feature-config (19 ms) 404
+[2026-08-03 11:52:21.028] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/tc2c4lxz5j8mejvvwjhm5wtm (34 ms) 200
+[2026-08-03 11:52:21.286] [32mhttp[39m: GET /admin/ai-feature-config (23 ms) 404
+[2026-08-03 11:52:21.351] [32mhttp[39m: GET /i18n/ai-localization-jobs/collection-types/api::template.template/tc2c4lxz5j8mejvvwjhm5wtm (34 ms) 404
+[2026-08-03 11:52:21.410] [32mhttp[39m: GET /content-manager/relations/api::template.template/category?id=tc2c4lxz5j8mejvvwjhm5wtm&pageSize=10&_q=&page=1 (56 ms) 200
+[2026-08-03 11:52:21.457] [32mhttp[39m: GET /content-manager/relations/api::template.template/tc2c4lxz5j8mejvvwjhm5wtm/category?pageSize=5&page=1 (32 ms) 200
+[2026-08-03 11:52:21.492] [32mhttp[39m: GET /content-manager/relations/api::template.template/subcategory?id=tc2c4lxz5j8mejvvwjhm5wtm&pageSize=10&_q=&page=1 (33 ms) 200
+[2026-08-03 11:52:21.523] [32mhttp[39m: GET /content-manager/relations/api::template.template/tc2c4lxz5j8mejvvwjhm5wtm/subcategory?pageSize=5&page=1 (29 ms) 200
+[2026-08-03 11:52:21.541] [32mhttp[39m: GET /content-manager/preview/url/api::template.template?documentId=tc2c4lxz5j8mejvvwjhm5wtm&locale=&status=published (16 ms) 404
+[2026-08-03 11:52:21.545] [32mhttp[39m: GET /uploads/thumbnail_cloud_runner_4360ab1deb.webp?updatedAt=2026-07-30T14:33:12.952Z (2 ms) 200
+[2026-08-03 11:52:21.883] [32mhttp[39m: GET /admin/ai-feature-config (22 ms) 404
+[2026-08-03 11:52:21.910] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/tc2c4lxz5j8mejvvwjhm5wtm/actions/countDraftRelations (25 ms) 200
+[2026-08-03 11:52:24.253] [32mhttp[39m: GET /admin/ai-feature-config (21 ms) 404
+[2026-08-03 11:52:25.639] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/lg0kuq7ugvws07a4gjzqrpb6 (32 ms) 200
+[2026-08-03 11:52:25.869] [32mhttp[39m: GET /admin/ai-feature-config (21 ms) 404
+[2026-08-03 11:52:25.914] [32mhttp[39m: GET /i18n/ai-localization-jobs/collection-types/api::template.template/lg0kuq7ugvws07a4gjzqrpb6 (16 ms) 404
+[2026-08-03 11:52:25.945] [32mhttp[39m: GET /content-manager/relations/api::template.template/category?id=lg0kuq7ugvws07a4gjzqrpb6&pageSize=10&_q=&page=1 (29 ms) 200
+[2026-08-03 11:52:25.969] [32mhttp[39m: GET /content-manager/relations/api::template.template/lg0kuq7ugvws07a4gjzqrpb6/category?pageSize=5&page=1 (23 ms) 200
+[2026-08-03 11:52:25.995] [32mhttp[39m: GET /content-manager/relations/api::template.template/subcategory?id=lg0kuq7ugvws07a4gjzqrpb6&pageSize=10&_q=&page=1 (25 ms) 200
+[2026-08-03 11:52:26.022] [32mhttp[39m: GET /content-manager/relations/api::template.template/lg0kuq7ugvws07a4gjzqrpb6/subcategory?pageSize=5&page=1 (25 ms) 200
+[2026-08-03 11:52:26.043] [32mhttp[39m: GET /content-manager/preview/url/api::template.template?documentId=lg0kuq7ugvws07a4gjzqrpb6&locale=&status=published (18 ms) 404
+[2026-08-03 11:52:26.047] [32mhttp[39m: GET /uploads/thumbnail_summer_sale_sneaker_poster_de7005775d.webp?updatedAt=2026-07-30T14:32:52.824Z (2 ms) 200
+[2026-08-03 11:52:26.626] [32mhttp[39m: GET /admin/ai-feature-config (22 ms) 404
+[2026-08-03 11:52:26.653] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/lg0kuq7ugvws07a4gjzqrpb6/actions/countDraftRelations (26 ms) 200
+[2026-08-03 11:53:51.707] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/lg0kuq7ugvws07a4gjzqrpb6/actions/countDraftRelations (68 ms) 200
+[2026-08-03 11:54:07.398] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/lg0kuq7ugvws07a4gjzqrpb6/actions/countDraftRelations (58 ms) 200
+[2026-08-03 11:54:36.638] [32mhttp[39m: POST /content-manager/collection-types/api::template.template/lg0kuq7ugvws07a4gjzqrpb6/actions/publish (254 ms) 200
+[2026-08-03 11:54:36.693] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/lg0kuq7ugvws07a4gjzqrpb6 (36 ms) 200
+[2026-08-03 11:54:36.718] [32mhttp[39m: GET /content-manager/relations/api::template.template/lg0kuq7ugvws07a4gjzqrpb6/category?pageSize=5&page=1 (22 ms) 200
+[2026-08-03 11:54:36.748] [32mhttp[39m: GET /content-manager/relations/api::template.template/lg0kuq7ugvws07a4gjzqrpb6/subcategory?pageSize=5&page=1 (28 ms) 200
+[2026-08-03 11:54:36.768] [32mhttp[39m: GET /i18n/ai-localization-jobs/collection-types/api::template.template/lg0kuq7ugvws07a4gjzqrpb6 (19 ms) 404
+[2026-08-03 11:54:37.266] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/lg0kuq7ugvws07a4gjzqrpb6/actions/countDraftRelations (41 ms) 200
+[2026-08-03 11:54:38.047] [32mhttp[39m: POST /admin/access-token (43 ms) 200
+[2026-08-03 11:54:45.742] [32mhttp[39m: GET /api/categories?sort=sortOrder:asc&populate[parent]=true (18 ms) 200
+[2026-08-03 11:54:45.836] [32mhttp[39m: GET /api/templates?populate[image]=true&populate[category]=true&populate[inputFields]=true&pagination[pageSize]=100 (61 ms) 200
+[2026-08-03 11:54:45.845] [32mhttp[39m: GET /api/analytics/popular (4 ms) 200
+[2026-08-03 11:54:47.568] [32mhttp[39m: POST /api/analytics/track (21 ms) 200
+[2026-08-03 11:54:47.838] [32mhttp[39m: POST /api/analytics/track (36 ms) 200
+[2026-08-03 11:55:04.348] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/lg0kuq7ugvws07a4gjzqrpb6/actions/countDraftRelations (81 ms) 200
+[2026-08-03 11:55:13.715] [32mhttp[39m: POST /api/analytics/track (55 ms) 200
+[2026-08-03 11:55:16.223] [32mhttp[39m: POST /api/analytics/track (24 ms) 200
+[2026-08-03 11:58:17.859] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/lg0kuq7ugvws07a4gjzqrpb6/actions/countDraftRelations (116 ms) 200
+[2026-08-03 11:58:21.033] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/lg0kuq7ugvws07a4gjzqrpb6/actions/countDraftRelations (52 ms) 200
+[2026-08-03 11:58:24.063] [32mhttp[39m: GET /content-manager/collection-types/api::template.template?page=1&pageSize=10&sort=title%3AASC (71 ms) 200
+[2026-08-03 11:58:24.302] [32mhttp[39m: GET /admin/ai-feature-config (28 ms) 404
+[2026-08-03 11:58:30.843] [32mhttp[39m: POST /api/analytics/track (57 ms) 200
+[2026-08-03 11:58:36.006] [32mhttp[39m: GET /content-manager/collection-types/api::template.template?page=1&pageSize=10&sort=title%3AASC&_q=Perfume (36 ms) 200
+[2026-08-03 11:58:36.175] [32mhttp[39m: GET /admin/ai-feature-config (19 ms) 404
+[2026-08-03 11:58:37.978] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq (44 ms) 200
+[2026-08-03 11:58:38.234] [32mhttp[39m: GET /admin/ai-feature-config (20 ms) 404
+[2026-08-03 11:58:38.284] [32mhttp[39m: GET /i18n/ai-localization-jobs/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq (19 ms) 404
+[2026-08-03 11:58:38.311] [32mhttp[39m: GET /content-manager/relations/api::template.template/category?id=e4iw83vzfzfzjpuzcnjj6avq&pageSize=10&_q=&page=1 (24 ms) 200
+[2026-08-03 11:58:38.333] [32mhttp[39m: GET /content-manager/relations/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/category?pageSize=5&page=1 (20 ms) 200
+[2026-08-03 11:58:38.359] [32mhttp[39m: GET /content-manager/relations/api::template.template/subcategory?id=e4iw83vzfzfzjpuzcnjj6avq&pageSize=10&_q=&page=1 (23 ms) 200
+[2026-08-03 11:58:38.384] [32mhttp[39m: GET /content-manager/relations/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/subcategory?pageSize=5&page=1 (23 ms) 200
+[2026-08-03 11:58:38.410] [32mhttp[39m: GET /content-manager/preview/url/api::template.template?documentId=e4iw83vzfzfzjpuzcnjj6avq&locale=&status=published (23 ms) 404
+[2026-08-03 11:58:38.415] [32mhttp[39m: GET /uploads/thumbnail_perfume_promo_da4f0114e8.webp?updatedAt=2026-07-30T14:32:54.675Z (2 ms) 200
+[2026-08-03 11:58:39.085] [32mhttp[39m: GET /admin/ai-feature-config (20 ms) 404
+[2026-08-03 11:58:39.112] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/actions/countDraftRelations (26 ms) 200
+[2026-08-03 11:59:10.965] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/actions/countDraftRelations (58 ms) 200
+[2026-08-03 11:59:16.285] [32mhttp[39m: POST /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/actions/publish (206 ms) 200
+[2026-08-03 11:59:16.405] [32mhttp[39m: GET /content-manager/collection-types/api::template.template?page=1&pageSize=10&sort=title%3AASC (89 ms) 200
+[2026-08-03 11:59:16.452] [32mhttp[39m: GET /content-manager/collection-types/api::template.template?page=1&pageSize=10&sort=title%3AASC&_q=Perfume (44 ms) 200
+[2026-08-03 11:59:16.492] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq (39 ms) 200
+[2026-08-03 11:59:16.524] [32mhttp[39m: GET /content-manager/relations/api::template.template/lg0kuq7ugvws07a4gjzqrpb6/category?pageSize=5&page=1 (30 ms) 200
+[2026-08-03 11:59:16.563] [32mhttp[39m: GET /content-manager/relations/api::template.template/lg0kuq7ugvws07a4gjzqrpb6/subcategory?pageSize=5&page=1 (37 ms) 200
+[2026-08-03 11:59:16.589] [32mhttp[39m: GET /content-manager/relations/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/category?pageSize=5&page=1 (24 ms) 200
+[2026-08-03 11:59:16.617] [32mhttp[39m: GET /content-manager/relations/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/subcategory?pageSize=5&page=1 (27 ms) 200
+[2026-08-03 11:59:16.636] [32mhttp[39m: GET /i18n/ai-localization-jobs/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq (17 ms) 404
+[2026-08-03 11:59:16.878] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/actions/countDraftRelations (55 ms) 200
+[2026-08-03 11:59:28.815] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/actions/countDraftRelations (32 ms) 200
+[2026-08-03 11:59:46.049] [32mhttp[39m: POST /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/actions/publish (85 ms) 400
+[2026-08-03 11:59:46.128] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq (38 ms) 200
+[2026-08-03 11:59:46.159] [32mhttp[39m: GET /content-manager/relations/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/category?pageSize=5&page=1 (28 ms) 200
+[2026-08-03 11:59:46.185] [32mhttp[39m: GET /content-manager/relations/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/subcategory?pageSize=5&page=1 (23 ms) 200
+[2026-08-03 11:59:46.201] [32mhttp[39m: GET /i18n/ai-localization-jobs/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq (13 ms) 404
+[2026-08-03 12:01:04.222] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/actions/countDraftRelations (82 ms) 200
+[2026-08-03 12:01:12.676] [32mhttp[39m: POST /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/actions/publish (255 ms) 200
+[2026-08-03 12:01:12.729] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq (36 ms) 200
+[2026-08-03 12:01:12.779] [32mhttp[39m: GET /content-manager/relations/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/category?pageSize=5&page=1 (38 ms) 200
+[2026-08-03 12:01:12.826] [32mhttp[39m: GET /content-manager/relations/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/subcategory?pageSize=5&page=1 (39 ms) 200
+[2026-08-03 12:01:12.865] [32mhttp[39m: GET /i18n/ai-localization-jobs/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq (20 ms) 404
+[2026-08-03 12:01:13.242] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/actions/countDraftRelations (29 ms) 200
+[2026-08-03 12:01:17.689] [32mhttp[39m: GET /api/categories?sort=sortOrder:asc&populate[parent]=true (24 ms) 200
+[2026-08-03 12:01:17.733] [32mhttp[39m: GET /api/templates?populate[image]=true&populate[category]=true&populate[inputFields]=true&pagination[pageSize]=100 (39 ms) 200
+[2026-08-03 12:01:17.742] [32mhttp[39m: GET /api/analytics/popular (4 ms) 200
+[2026-08-03 12:01:18.807] [32mhttp[39m: POST /api/analytics/track (24 ms) 200
+[2026-08-03 12:01:19.035] [32mhttp[39m: POST /api/analytics/track (31 ms) 200
+[2026-08-03 12:01:21.968] [32mhttp[39m: POST /api/analytics/track (25 ms) 200
+[2026-08-03 12:01:23.051] [32mhttp[39m: POST /api/analytics/track (34 ms) 200
+[2026-08-03 12:04:21.073] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/actions/countDraftRelations (54 ms) 200
+[2026-08-03 12:05:48.229] [32mhttp[39m: POST /api/analytics/track (37 ms) 200
+[2026-08-03 12:06:20.683] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/actions/countDraftRelations (125 ms) 200
+[2026-08-03 12:06:25.619] [32mhttp[39m: POST /api/analytics/track (64 ms) 200
+[2026-08-03 12:06:26.557] [32mhttp[39m: POST /api/analytics/track (98 ms) 200
+[2026-08-03 12:06:38.402] [32mhttp[39m: POST /api/analytics/track (59 ms) 200
+[2026-08-03 12:06:46.435] [32mhttp[39m: POST /api/analytics/track (56 ms) 200
+[2026-08-03 12:06:56.676] [32mhttp[39m: POST /api/analytics/track (110 ms) 200
+[2026-08-03 12:07:11.076] [32mhttp[39m: POST /api/analytics/track (16 ms) 200
+[2026-08-03 12:07:14.460] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/actions/countDraftRelations (59 ms) 200
+[2026-08-03 12:07:19.452] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/e4iw83vzfzfzjpuzcnjj6avq/actions/countDraftRelations (48 ms) 200
+[2026-08-03 12:07:21.148] [32mhttp[39m: GET /content-manager/collection-types/api::template.template?page=1&pageSize=10&sort=title%3AASC (68 ms) 200
+[2026-08-03 12:07:21.341] [32mhttp[39m: GET /admin/ai-feature-config (24 ms) 404
+[2026-08-03 12:07:26.839] [32mhttp[39m: GET /content-manager/collection-types/api::template.template?page=1&pageSize=10&sort=title%3AASC&_q=vitamin (29 ms) 200
+[2026-08-03 12:07:30.868] [32mhttp[39m: GET /content-manager/collection-types/api::template.template?page=1&pageSize=10&sort=title%3AASC&_q=serum (37 ms) 200
+[2026-08-03 12:07:31.032] [32mhttp[39m: GET /admin/ai-feature-config (42 ms) 404
+[2026-08-03 12:07:32.613] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/m148ytsik2ozbvs05bchd94w (35 ms) 200
+[2026-08-03 12:07:32.847] [32mhttp[39m: GET /admin/ai-feature-config (30 ms) 404
+[2026-08-03 12:07:32.867] [32mhttp[39m: GET /i18n/ai-localization-jobs/collection-types/api::template.template/m148ytsik2ozbvs05bchd94w (17 ms) 404
+[2026-08-03 12:07:32.894] [32mhttp[39m: GET /content-manager/relations/api::template.template/category?id=m148ytsik2ozbvs05bchd94w&pageSize=10&_q=&page=1 (24 ms) 200
+[2026-08-03 12:07:32.920] [32mhttp[39m: GET /content-manager/relations/api::template.template/m148ytsik2ozbvs05bchd94w/category?pageSize=5&page=1 (24 ms) 200
+[2026-08-03 12:07:32.944] [32mhttp[39m: GET /content-manager/relations/api::template.template/subcategory?id=m148ytsik2ozbvs05bchd94w&pageSize=10&_q=&page=1 (21 ms) 200
+[2026-08-03 12:07:32.969] [32mhttp[39m: GET /content-manager/relations/api::template.template/m148ytsik2ozbvs05bchd94w/subcategory?pageSize=5&page=1 (23 ms) 200
+[2026-08-03 12:07:32.987] [32mhttp[39m: GET /content-manager/preview/url/api::template.template?documentId=m148ytsik2ozbvs05bchd94w&locale=&status=published (15 ms) 404
+[2026-08-03 12:07:32.996] [32mhttp[39m: GET /uploads/thumbnail_skincare_serum_d6f5aedfea.webp?updatedAt=2026-07-30T14:33:03.852Z (3 ms) 200
+[2026-08-03 12:07:33.373] [32mhttp[39m: GET /admin/ai-feature-config (21 ms) 404
+[2026-08-03 12:07:33.397] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/m148ytsik2ozbvs05bchd94w/actions/countDraftRelations (23 ms) 200
+[2026-08-03 12:08:00.670] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/m148ytsik2ozbvs05bchd94w/actions/countDraftRelations (78 ms) 200
+[2026-08-03 12:08:39.468] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/m148ytsik2ozbvs05bchd94w/actions/countDraftRelations (108 ms) 200
+[2026-08-03 12:08:47.914] [32mhttp[39m: POST /content-manager/collection-types/api::template.template/m148ytsik2ozbvs05bchd94w/actions/publish (265 ms) 200
+[2026-08-03 12:08:47.971] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/m148ytsik2ozbvs05bchd94w (36 ms) 200
+[2026-08-03 12:08:47.996] [32mhttp[39m: GET /content-manager/relations/api::template.template/m148ytsik2ozbvs05bchd94w/category?pageSize=5&page=1 (23 ms) 200
+[2026-08-03 12:08:48.021] [32mhttp[39m: GET /content-manager/relations/api::template.template/m148ytsik2ozbvs05bchd94w/subcategory?pageSize=5&page=1 (22 ms) 200
+[2026-08-03 12:08:48.041] [32mhttp[39m: GET /i18n/ai-localization-jobs/collection-types/api::template.template/m148ytsik2ozbvs05bchd94w (18 ms) 404
+[2026-08-03 12:08:48.417] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/m148ytsik2ozbvs05bchd94w/actions/countDraftRelations (34 ms) 200
+[2026-08-03 12:08:54.599] [32mhttp[39m: POST /api/analytics/track (45 ms) 200
+[2026-08-03 12:08:56.862] [32mhttp[39m: POST /api/analytics/track (17 ms) 200
+[2026-08-03 12:08:57.874] [32mhttp[39m: POST /api/analytics/track (58 ms) 200
+[2026-08-03 12:08:58.900] [32mhttp[39m: POST /api/analytics/track (69 ms) 200
+[2026-08-03 12:08:59.574] [32mhttp[39m: POST /api/analytics/track (128 ms) 200
+[2026-08-03 12:09:00.814] [32mhttp[39m: POST /api/analytics/track (22 ms) 200
+[2026-08-03 12:09:08.315] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/m148ytsik2ozbvs05bchd94w/actions/countDraftRelations (93 ms) 200
+[2026-08-03 12:09:10.604] [32mhttp[39m: GET /content-manager/collection-types/api::template.template?page=1&pageSize=10&sort=title%3AASC (80 ms) 200
+[2026-08-03 12:09:10.801] [32mhttp[39m: GET /admin/ai-feature-config (23 ms) 404
+[2026-08-03 12:09:14.395] [32mhttp[39m: GET /content-manager/collection-types/api::template.template?page=1&pageSize=10&sort=title%3AASC&_q=burgwe (29 ms) 200
+[2026-08-03 12:09:16.981] [32mhttp[39m: GET /content-manager/collection-types/api::template.template?page=1&pageSize=10&sort=title%3AASC&_q=burer (25 ms) 200
+[2026-08-03 12:09:19.602] [32mhttp[39m: GET /content-manager/collection-types/api::template.template?page=1&pageSize=10&sort=title%3AASC&_q=burger (32 ms) 200
+[2026-08-03 12:09:19.733] [32mhttp[39m: GET /admin/ai-feature-config (23 ms) 404
+[2026-08-03 12:09:21.158] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax (32 ms) 200
+[2026-08-03 12:09:21.392] [32mhttp[39m: GET /admin/ai-feature-config (29 ms) 404
+[2026-08-03 12:09:21.437] [32mhttp[39m: GET /i18n/ai-localization-jobs/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax (16 ms) 404
+[2026-08-03 12:09:21.462] [32mhttp[39m: GET /content-manager/relations/api::template.template/category?id=yr2brfczkqzesfrylcvzbeax&pageSize=10&_q=&page=1 (21 ms) 200
+[2026-08-03 12:09:21.485] [32mhttp[39m: GET /content-manager/relations/api::template.template/yr2brfczkqzesfrylcvzbeax/category?pageSize=5&page=1 (22 ms) 200
+[2026-08-03 12:09:21.508] [32mhttp[39m: GET /content-manager/relations/api::template.template/subcategory?id=yr2brfczkqzesfrylcvzbeax&pageSize=10&_q=&page=1 (22 ms) 200
+[2026-08-03 12:09:21.531] [32mhttp[39m: GET /content-manager/relations/api::template.template/yr2brfczkqzesfrylcvzbeax/subcategory?pageSize=5&page=1 (22 ms) 200
+[2026-08-03 12:09:21.557] [32mhttp[39m: GET /content-manager/preview/url/api::template.template?documentId=yr2brfczkqzesfrylcvzbeax&locale=&status=published (25 ms) 404
+[2026-08-03 12:09:21.561] [32mhttp[39m: GET /uploads/thumbnail_burger_template_378974309b.png?updatedAt=2026-07-30T14:33:00.181Z (2 ms) 200
+[2026-08-03 12:09:22.490] [32mhttp[39m: GET /admin/ai-feature-config (23 ms) 404
+[2026-08-03 12:09:22.520] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (28 ms) 200
+[2026-08-03 12:13:10.369] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (96 ms) 200
+[2026-08-03 12:13:21.138] [32mhttp[39m: POST /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/publish (94 ms) 400
+[2026-08-03 12:13:21.205] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax (36 ms) 200
+[2026-08-03 12:13:21.229] [32mhttp[39m: GET /content-manager/relations/api::template.template/yr2brfczkqzesfrylcvzbeax/category?pageSize=5&page=1 (21 ms) 200
+[2026-08-03 12:13:21.257] [32mhttp[39m: GET /content-manager/relations/api::template.template/yr2brfczkqzesfrylcvzbeax/subcategory?pageSize=5&page=1 (26 ms) 200
+[2026-08-03 12:13:21.274] [32mhttp[39m: GET /i18n/ai-localization-jobs/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax (15 ms) 404
+[2026-08-03 12:18:46.298] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (85 ms) 200
+[2026-08-03 12:18:54.956] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (72 ms) 200
+[2026-08-03 12:19:17.955] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (73 ms) 200
+[2026-08-03 12:19:27.973] [32mhttp[39m: GET /admin/content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax (62 ms) 200
+[2026-08-03 12:19:29.536] [32mhttp[39m: GET /admin/project-type (10 ms) 200
+[2026-08-03 12:19:30.129] [32mhttp[39m: GET /favicon.ico (1 ms) 200
+[2026-08-03 12:19:30.457] [32mhttp[39m: GET /admin/init (5 ms) 200
+[2026-08-03 12:19:30.496] [32mhttp[39m: GET /admin/users/me (37 ms) 200
+[2026-08-03 12:19:30.526] [32mhttp[39m: GET /admin/users/me/permissions (63 ms) 200
+[2026-08-03 12:19:30.579] [32mhttp[39m: GET /admin/information (50 ms) 200
+[2026-08-03 12:19:30.582] [32mhttp[39m: GET /admin/telemetry-properties (48 ms) 200
+[2026-08-03 12:19:30.697] [32mhttp[39m: GET /admin/guided-tour-meta (35 ms) 200
+[2026-08-03 12:19:30.740] [32mhttp[39m: GET /content-manager/init (35 ms) 200
+[2026-08-03 12:19:30.840] [32mhttp[39m: GET /content-manager/content-types-settings (97 ms) 200
+[2026-08-03 12:19:30.866] [32mhttp[39m: GET /admin/license-limit-information (166 ms) 200
+[2026-08-03 12:19:30.978] [32mhttp[39m: GET /content-manager/init (18 ms) 200
+[2026-08-03 12:19:31.071] [32mhttp[39m: GET /content-manager/content-types/api::template.template/configuration (22 ms) 200
+[2026-08-03 12:19:31.112] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax (39 ms) 200
+[2026-08-03 12:19:31.287] [32mhttp[39m: GET /uploads/thumbnail_burger_template_378974309b.png?updatedAt=2026-07-30T14:33:00.181Z (2 ms) 200
+[2026-08-03 12:19:31.619] [32mhttp[39m: GET /admin/ai-feature-config (21 ms) 404
+[2026-08-03 12:19:31.638] [32mhttp[39m: GET /i18n/locales (18 ms) 200
+[2026-08-03 12:19:31.662] [32mhttp[39m: GET /i18n/settings (22 ms) 200
+[2026-08-03 12:19:31.685] [32mhttp[39m: GET /i18n/ai-localization-jobs/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax (22 ms) 404
+[2026-08-03 12:19:31.715] [32mhttp[39m: GET /content-manager/relations/api::template.template/category?id=yr2brfczkqzesfrylcvzbeax&pageSize=10&_q=&page=1 (29 ms) 200
+[2026-08-03 12:19:31.739] [32mhttp[39m: GET /content-manager/relations/api::template.template/yr2brfczkqzesfrylcvzbeax/category?pageSize=5&page=1 (22 ms) 200
+[2026-08-03 12:19:31.765] [32mhttp[39m: GET /content-manager/relations/api::template.template/subcategory?id=yr2brfczkqzesfrylcvzbeax&pageSize=10&_q=&page=1 (25 ms) 200
+[2026-08-03 12:19:31.787] [32mhttp[39m: GET /content-manager/relations/api::template.template/yr2brfczkqzesfrylcvzbeax/subcategory?pageSize=5&page=1 (21 ms) 200
+[2026-08-03 12:19:31.804] [32mhttp[39m: GET /content-manager/preview/url/api::template.template?documentId=yr2brfczkqzesfrylcvzbeax&locale=&status=published (16 ms) 404
+[2026-08-03 12:19:32.278] [32mhttp[39m: GET /admin/ai-feature-config (21 ms) 404
+[2026-08-03 12:19:32.310] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (31 ms) 200
+[2026-08-03 12:20:02.684] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (27 ms) 200
+[2026-08-03 12:20:12.448] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (86 ms) 200
+[2026-08-03 12:21:55.061] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (23 ms) 200
+[2026-08-03 12:22:24.716] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (105 ms) 200
+[2026-08-03 12:22:55.655] [32mhttp[39m: GET /content-manager/relations/api::template.template/category?id=yr2brfczkqzesfrylcvzbeax&pageSize=10&idsToInclude[0]=10&_q=&page=1 (53 ms) 200
+[2026-08-03 12:22:56.306] [32mhttp[39m: GET /content-manager/relations/api::template.template/category?id=yr2brfczkqzesfrylcvzbeax&pageSize=10&idsToInclude[0]=10&_q=&page=1 (54 ms) 200
+[2026-08-03 12:23:01.562] [32mhttp[39m: GET /content-manager/relations/api::template.template/category?id=yr2brfczkqzesfrylcvzbeax&pageSize=10&idsToInclude[0]=10&_q=foo&page=1 (94 ms) 200
+[2026-08-03 12:23:02.097] [32mhttp[39m: GET /content-manager/relations/api::template.template/category?id=yr2brfczkqzesfrylcvzbeax&pageSize=10&idsToInclude[0]=10&_q=food&page=1 (31 ms) 200
+[2026-08-03 12:23:05.539] [32mhttp[39m: GET /content-manager/relations/api::template.template/category?id=yr2brfczkqzesfrylcvzbeax&pageSize=10&idsToInclude[0]=10&_q=food&page=1 (35 ms) 200
+[2026-08-03 12:23:10.103] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (54 ms) 200
+[2026-08-03 12:23:19.385] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (53 ms) 200
+[2026-08-03 12:23:21.876] [32mhttp[39m: GET /content-manager/relations/api::template.template/category?id=yr2brfczkqzesfrylcvzbeax&pageSize=10&idsToInclude[0]=10&_q=foo&page=1 (38 ms) 200
+[2026-08-03 12:23:23.512] [32mhttp[39m: GET /content-manager/relations/api::template.template/category?id=yr2brfczkqzesfrylcvzbeax&pageSize=10&idsToInclude[0]=10&idsToOmit[0]=180&_q=foo&page=1 (29 ms) 200
+[2026-08-03 12:23:23.574] [32mhttp[39m: GET /content-manager/collection-types/api::category.category/zj0bhxex8nuf0eucncsipi3o (31 ms) 200
+[2026-08-03 12:23:23.777] [32mhttp[39m: GET /content-manager/relations/api::template.template/category?id=yr2brfczkqzesfrylcvzbeax&pageSize=10&idsToInclude[0]=10&idsToOmit[0]=180&_q=Food%20&%20drinks&page=1 (40 ms) 200
+[2026-08-03 12:23:40.350] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (126 ms) 200
+[2026-08-03 12:24:00.817] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (91 ms) 200
+[2026-08-03 12:24:06.940] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (48 ms) 200
+[2026-08-03 12:24:27.249] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (76 ms) 200
+[2026-08-03 12:24:28.077] [32mhttp[39m: POST /admin/access-token (71 ms) 200
+[2026-08-03 12:24:36.470] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (45 ms) 200
+[2026-08-03 12:24:45.733] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (83 ms) 200
+[2026-08-03 12:25:07.763] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (55 ms) 200
+[2026-08-03 12:27:56.152] [32minfo[39m: File changed: C:\Users\User\OneDrive\Desktop\dalor-gallery\backend\src\components\template\input-field.json
+[2026-08-03 12:27:58.326] [32minfo[39m: File changed: C:\Users\User\OneDrive\Desktop\dalor-gallery\backend\src\bootstrap\german-admin.ts
+[2026-08-03 12:28:00.274] [32minfo[39m: File changed: C:\Users\User\OneDrive\Desktop\dalor-gallery\backend\src\services\image-description-input.ts
+[2026-08-03 12:28:02.065] [32mhttp[39m: GET /content-manager/collection-types/api::template.template/yr2brfczkqzesfrylcvzbeax/actions/countDraftRelations (44 ms) 200
+[2026-08-03 12:28:02.711] [32minfo[39m: File changed: C:\Users\User\OneDrive\Desktop\dalor-gallery\backend\src\services\auto-translate.ts
+[2026-08-03 12:28:05.974] [32minfo[39m: Shutting down Strapi
+[2026-08-03 12:28:05.984] [32minfo[39m: Strapi has been shut down
+[2026-08-03 12:28:19.869] [33mwarn[39m: [email]: The "sendmail" email provider is still supported, but for most production setups that use a dedicated SMTP relay, consider switching to @strapi/provider-email-nodemailer (set `provider` to `"nodemailer"` in your email plugin config). This message is only shown in development.
+
+ Project information
+
+[90m╭────────────────────[39m[90m┬──────────────────────────────────────────────────╮[39m
+[90m│[39m Time               [90m│[39m Mon Aug 03 2026 12:28:32 GMT+0200 (Mitteleuropä… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 16654 ms                                         [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 10208                                            [90m│[39m
+[90m│[39m Version            [90m│[39m 5.51.1 (node v23.10.0)                           [90m│[39m
+[90m│[39m Plan               [90m│[39m Community                                        [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m│[39m Database name      [90m│[39m .tmp\data.db                                     [90m│[39m
+[90m╰────────────────────[39m[90m┴──────────────────────────────────────────────────╯[39m
+
+ Actions available
+
+Welcome back!
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2026-08-03 12:28:32.688] [32minfo[39m: Strapi started successfully

@@ -68,6 +68,7 @@ const FIELD_LABELS: Labels = {
   placeholderHi: { label: 'Beispielwert (Hindi)' },
   placeholderPa: { label: 'Beispielwert (Punjabi)' },
   required: { label: 'Pflichtfeld' },
+  autoTranslate: { label: 'Automatisch übersetzen', description: 'Bei neuen Variablen automatisch aktiv. Übersetzt Name und Beispielwert beim Speichern und schaltet sich danach wieder aus.' },
 };
 
 function applyLabels(configuration: any, labels: Labels) {

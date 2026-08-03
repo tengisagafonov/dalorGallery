@@ -18,12 +18,20 @@ export async function translateCategory(data: Data) {
 }
 
 export async function translateTemplate(data: Data) {
-  if (data.autoTranslate !== true) return;
+  const translateTemplateFields = data.autoTranslate === true;
   const textFields = ['title', 'description'];
   const fields = data.inputFields ?? [];
+  const fieldsToTranslate = fields.filter((field: Data) =>
+    field.autoTranslate === true || field.id == null,
+  );
+  if (!translateTemplateFields && fieldsToTranslate.length === 0) return;
   const sources = [
-    ...textFields.flatMap((field) => data[field] ? [String(data[field])] : []),
-    ...fields.flatMap((field: Data) => [field.label, field.placeholder].filter(Boolean).map(String)),
+    ...(translateTemplateFields
+      ? textFields.flatMap((field) => data[field] ? [String(data[field])] : [])
+      : []),
+    ...fieldsToTranslate.flatMap((field: Data) =>
+      [field.label, field.placeholder].filter(Boolean).map(String),
+    ),
   ];
   const englishKeywords = Array.isArray(data.searchKeywords)
     ? data.searchKeywords.filter((value: unknown): value is string => typeof value === 'string')
@@ -32,20 +40,25 @@ export async function translateTemplate(data: Data) {
 
   for (const target of TARGETS) {
     let index = 0;
-    for (const field of textFields) {
-      if (!data[field]) continue;
-      data[localizedField(field, target)] ||= localized[target].translations[index++];
+    if (translateTemplateFields) {
+      for (const field of textFields) {
+        if (!data[field]) continue;
+        data[localizedField(field, target)] ||= localized[target].translations[index++];
+      }
     }
-    for (const inputField of fields) {
+    for (const inputField of fieldsToTranslate) {
       for (const name of ['label', 'placeholder']) {
         if (!inputField[name]) continue;
         inputField[localizedField(name, target)] ||= localized[target].translations[index++];
       }
     }
   }
-  data.searchKeywords = [...new Set([
-    ...englishKeywords,
-    ...TARGETS.flatMap((target) => localized[target].keywords),
-  ])];
-  data.autoTranslate = false;
+  for (const inputField of fieldsToTranslate) inputField.autoTranslate = false;
+  if (translateTemplateFields) {
+    data.searchKeywords = [...new Set([
+      ...englishKeywords,
+      ...TARGETS.flatMap((target) => localized[target].keywords),
+    ])];
+    data.autoTranslate = false;
+  }
 }

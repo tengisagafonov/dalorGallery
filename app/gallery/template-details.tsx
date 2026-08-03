@@ -6,6 +6,7 @@ import { Icon } from "./gallery-icon";
 import type { Locale, Translation } from "./i18n";
 import type { useGalleryController } from "./use-gallery-controller";
 import { trackAnalytics } from "./analytics";
+import { ImageAnalyzer } from "./image-analyzer";
 
 type Controller = ReturnType<typeof useGalleryController>;
 
@@ -87,7 +88,22 @@ export function TemplateDetails({ controller, detailsRef, locale, t }: Props) {
                     <span className="mb-1.5 block text-[11px] font-semibold">
                       {label} {field.optional && <span className="font-normal text-[#8f8880]">(optional)</span>}
                     </span>
-                    <div className="flex items-center gap-2 rounded-xl border border-[#ded8cf] bg-white px-3 py-2.5 focus-within:border-[#746b61] focus-within:ring-2 focus-within:ring-[#e9e4dc]">
+                    {field.key === "image_description" && (
+                      <ImageAnalyzer
+                        t={t}
+                        onAnalyzed={(description) =>
+                          setValues((current) => ({ ...current, [field.key]: description }))
+                        }
+                      />
+                    )}
+                    {field.type === "textarea" ? (
+                      <textarea
+                        value={values[field.key] ?? placeholder}
+                        onChange={(event) => setValues((current) => ({ ...current, [field.key]: event.target.value }))}
+                        rows={4}
+                        className="w-full resize-y rounded-xl border border-[#ded8cf] bg-white px-3 py-2.5 text-[12px] leading-5 outline-none focus:border-[#746b61] focus:ring-2 focus:ring-[#e9e4dc]"
+                      />
+                    ) : <div className="flex items-center gap-2 rounded-xl border border-[#ded8cf] bg-white px-3 py-2.5 focus-within:border-[#746b61] focus-within:ring-2 focus-within:ring-[#e9e4dc]">
                       {field.type === "color" && (
                         <input
                           type="color"
@@ -108,7 +124,7 @@ export function TemplateDetails({ controller, detailsRef, locale, t }: Props) {
                         onChange={(event) => setValues((current) => ({ ...current, [field.key]: event.target.value }))}
                         className="min-w-0 flex-1 bg-transparent text-[12px] outline-none"
                       />
-                    </div>
+                    </div>}
                   </label>
                   );
                 })}

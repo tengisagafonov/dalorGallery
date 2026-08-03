@@ -7,6 +7,7 @@ export interface TemplateInputField extends Struct.ComponentSchema {
     displayName: 'Eingabefeld';
   };
   attributes: {
+    autoTranslate: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     inputType: Schema.Attribute.Enumeration<
       ['text', 'textarea', 'number', 'color', 'select']
     > &

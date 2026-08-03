@@ -8,6 +8,7 @@ const PUBLIC_CATALOG_ACTIONS = [
   'api::analytics.analytics.track',
   'api::analytics.analytics.popular',
   'api::analytics.analytics.stats',
+  'api::image-analysis.image-analysis.analyze',
 ];
 
 export async function enablePublicCatalogRead(strapi: Core.Strapi) {

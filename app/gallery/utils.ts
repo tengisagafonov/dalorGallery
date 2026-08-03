@@ -11,14 +11,11 @@ export function createTemplateValues(template: GalleryTemplate, locale: string) 
 }
 
 export function compilePrompt(template: GalleryTemplate, values: Record<string, string>) {
-  if (!template.prompt) {
-    return "A detailed prompt will be added for this template later.";
-  }
-
+  const basePrompt = template.prompt || "Create a detailed image based on the following requirements.";
   return template.fields.reduce((prompt, field) => {
     const value = values[field.key] ?? field.placeholder;
     return prompt.replaceAll(`{{${field.key}}}`, value);
-  }, template.prompt);
+  }, basePrompt);
 }
 
 export function filterTemplates(

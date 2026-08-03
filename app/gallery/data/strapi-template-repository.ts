@@ -75,7 +75,9 @@ function mapField(field: StrapiInputField): TemplateField | null {
     label: field.label,
     placeholder,
     optional: field.required !== true,
-    type: field.inputType === "color" ? "color" : "text",
+    type: field.inputType === "color"
+      ? "color"
+      : field.inputType === "textarea" ? "textarea" : "text",
     localizedLabels: localizedValues(field as Record<string, unknown>, "label"),
     localizedPlaceholders: localizedValues(field as Record<string, unknown>, "placeholder"),
   };
