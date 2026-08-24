@@ -1,0 +1,797 @@
+[
+  {
+    "slug": "real-estate-just-listed-suburban-home",
+    "title": "Just Listed Suburban Home",
+    "description": "A bright listing poster: suburban family house with a status band, spec row and price.",
+    "searchKeywords": [
+      "just listed",
+      "real estate",
+      "family home",
+      "suburban house",
+      "for sale",
+      "listing poster",
+      "realtor",
+      "property marketing",
+      "house",
+      "viewing"
+    ],
+    "prompt": "Create a bright suburban listing poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a two storey suburban family house with pale siding and a dark shingle roof stands behind a mown front lawn, a paved driveway curving to the garage on the right. Warm late afternoon sun rakes across the facade, a deep blue sky above, a red leaved maple beside the covered porch and flower beds along the path.\n\nText layout: a wide {{accent_color}} band across the upper third carries \"{{status_label}}\" in bold spaced caps. Under the house a white panel holds \"{{property_headline}}\" in large type with \"{{location_line}}\" beneath it in a lighter weight, then a thin divider and the specification row \"{{spec_line}}\". The price \"{{price_text}}\" sits bottom left, \"{{cta_text}}\" bottom right inside a filled button shape.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Rich colour architectural photography in golden light, saturated blue sky and green lawn, warm shadows, high contrast, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "two storey white suburban family house with a dark roof and a green front lawn",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "NORTHGATE REALTY",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Status",
+        "inputType": "text",
+        "placeholder": "JUST LISTED",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "Maple Ridge Family Home",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "42 Larkspur Lane, Brookfield",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "4 BED - 2 BATH - 210 SQM",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "489,000",
+        "required": false
+      },
+      {
+        "key": "cta_text",
+        "label": "Call to action",
+        "inputType": "text",
+        "placeholder": "BOOK A VIEWING",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Accent colour",
+        "inputType": "text",
+        "placeholder": "deep navy blue",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-for-sale-modern-villa",
+    "title": "For Sale Modern Villa",
+    "description": "A golden hour villa poster: pool, glass facade and a wide price bar.",
+    "searchKeywords": [
+      "for sale",
+      "modern villa",
+      "luxury home",
+      "swimming pool",
+      "golden hour",
+      "architecture",
+      "property listing",
+      "premium real estate",
+      "glass facade",
+      "villa"
+    ],
+    "prompt": "Create a golden hour villa listing poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a flat roofed modern villa of {{material_note}} sits behind a long rectangular pool that mirrors the facade. Floor to ceiling glass glows warm from inside, low sun rakes across the terrace, palms and clipped hedges frame the plot.\n\nText layout: \"{{status_label}}\" runs vertically down the left edge in thin spaced caps. The headline \"{{property_headline}}\" sits across the lower third in a light serif, \"{{location_line}}\" under it in small caps. A full width bar at the very bottom in {{accent_color}} holds \"{{spec_line}}\" on the left and \"{{price_text}}\" on the right.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Architectural photography at golden hour, warm interior glow, mirror still water, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "modern flat roofed villa with a long pool reflecting the lit glass facade at sunset",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "AURELIA ESTATES",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Status",
+        "inputType": "text",
+        "placeholder": "FOR SALE",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "Villa Solano",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Cypress Hills",
+        "required": false
+      },
+      {
+        "key": "material_note",
+        "label": "Materials",
+        "inputType": "text",
+        "placeholder": "pale travertine and dark timber",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "5 BED - 4 BATH - 420 SQM",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "2,150,000",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Bar colour",
+        "inputType": "text",
+        "placeholder": "warm sand beige",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-sold-family-house",
+    "title": "Sold Family House",
+    "description": "A celebration poster: sold stamp across a family house with the agent line below.",
+    "searchKeywords": [
+      "sold",
+      "sold sign",
+      "real estate",
+      "family house",
+      "agent",
+      "celebration",
+      "property sold",
+      "closing",
+      "realtor announcement",
+      "brick house"
+    ],
+    "prompt": "Create a sold announcement poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a brick end of terrace house with white window frames, photographed straight on from the pavement in warm low evening sun that makes the brick glow orange. A blank yard sign stands in the small front garden. Deep green hedges to both sides, a blue sky, flowering pots on the step.\n\nText layout: the word \"{{status_label}}\" is stamped diagonally across the middle of the image in heavy outlined caps, {{accent_color}}, slightly transparent so the house shows through. A solid footer holds \"{{headline_text}}\" in medium caps, \"{{location_line}}\" beneath it, and on the right \"{{agent_line}}\". A short line \"{{result_note}}\" sits above the stamp in small letters.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Warm evening photography, glowing brick, saturated greens, long shadows, strong colour, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "red brick end of terrace house with white windows and a blank yard sign in the garden",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "HOLLOWAY AND PARK",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Stamp",
+        "inputType": "text",
+        "placeholder": "SOLD",
+        "required": true
+      },
+      {
+        "key": "headline_text",
+        "label": "Headline",
+        "inputType": "text",
+        "placeholder": "ANOTHER HAPPY FAMILY MOVED IN",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Fernbrook Road",
+        "required": false
+      },
+      {
+        "key": "agent_line",
+        "label": "Agent",
+        "inputType": "text",
+        "placeholder": "LISTED BY CLARA VOSS",
+        "required": false
+      },
+      {
+        "key": "result_note",
+        "label": "Result note",
+        "inputType": "text",
+        "placeholder": "IN 19 DAYS",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Stamp colour",
+        "inputType": "text",
+        "placeholder": "bright signal red",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-open-house-townhouse",
+    "title": "Open House Townhouse",
+    "description": "An open house invite: townhouse facade with date and time in a large block.",
+    "searchKeywords": [
+      "open house",
+      "viewing",
+      "townhouse",
+      "invitation",
+      "date and time",
+      "real estate event",
+      "property viewing",
+      "house tour",
+      "weekend viewing",
+      "listing"
+    ],
+    "prompt": "Create an open house invitation poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a narrow three storey townhouse of {{facade_note}}, steps up to a painted front door, window boxes in bloom. Shot from across the street in even daylight, neighbouring houses softly out of focus on both sides.\n\nText layout: a tall panel over the lower half in {{accent_color}} carries \"{{event_label}}\" in wide caps at the top, then the date \"{{date_text}}\" very large, the time \"{{time_text}}\" directly beneath in lighter weight. A thin rule, then \"{{location_line}}\" and \"{{spec_line}}\" on one row. The wordmark \"{{agency_name}}\" sits centred at the very bottom.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Even daylight street photography, shallow depth of field, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "narrow three storey townhouse with a painted front door and flowering window boxes",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "BELLMONT HOMES",
+        "required": true
+      },
+      {
+        "key": "event_label",
+        "label": "Event label",
+        "inputType": "text",
+        "placeholder": "OPEN HOUSE",
+        "required": true
+      },
+      {
+        "key": "date_text",
+        "label": "Date",
+        "inputType": "text",
+        "placeholder": "SATURDAY 14 JUNE",
+        "required": false
+      },
+      {
+        "key": "time_text",
+        "label": "Time",
+        "inputType": "text",
+        "placeholder": "11 AM - 3 PM",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "8 Sable Row",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "3 BED - 2 BATH",
+        "required": false
+      },
+      {
+        "key": "facade_note",
+        "label": "Facade",
+        "inputType": "text",
+        "placeholder": "warm sandstone with black railings",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Panel colour",
+        "inputType": "text",
+        "placeholder": "deep forest green",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-luxury-penthouse-skyline",
+    "title": "Luxury Penthouse Skyline",
+    "description": "A dark luxury expose: penthouse terrace above the city at blue hour, serif typography.",
+    "searchKeywords": [
+      "penthouse",
+      "luxury",
+      "skyline",
+      "blue hour",
+      "city view",
+      "exclusive listing",
+      "high rise",
+      "premium property",
+      "terrace",
+      "expose"
+    ],
+    "prompt": "Create a dark luxury penthouse expose, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a penthouse terrace at blue hour, seen from inside through open sliding glass. Low lounge furniture, a lit fire bowl, and beyond the glass balustrade a dense city skyline of scattered lights. Deep shadows, restrained warm pools of light, {{material_note}} underfoot.\n\nText layout: everything is set in a fine serif directly on the dark image, no panels. \"{{eyebrow_text}}\" sits at the top centre in tiny spaced caps, the headline \"{{property_headline}}\" fills the middle in large light serif with \"{{location_line}}\" in italic beneath. A single hairline rule near the bottom separates \"{{spec_line}}\" from \"{{price_text}}\", the wordmark \"{{agency_name}}\" centred below both.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings or landmarks. Moody architectural interior photography at dusk, low key lighting, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "penthouse terrace with lounge seating and a fire bowl overlooking a lit city skyline at dusk",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "MERIDIAN PRIVATE",
+        "required": true
+      },
+      {
+        "key": "eyebrow_text",
+        "label": "Eyebrow",
+        "inputType": "text",
+        "placeholder": "PRIVATE COLLECTION",
+        "required": false
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "The Ardent Penthouse",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Harbour District",
+        "required": false
+      },
+      {
+        "key": "material_note",
+        "label": "Materials",
+        "inputType": "text",
+        "placeholder": "honed dark stone",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "3 BED - 3 BATH - 310 SQM",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "PRICE ON REQUEST",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-new-development-render",
+    "title": "New Development Render",
+    "description": "A development launch poster: rendered apartment block with project name and completion date.",
+    "searchKeywords": [
+      "new development",
+      "new build",
+      "project launch",
+      "apartment block",
+      "render",
+      "completion date",
+      "developer",
+      "off plan",
+      "construction",
+      "residences"
+    ],
+    "prompt": "Create a new development launch poster, vertical 4:5.\n\nDeveloper: \"{{agency_name}}\"\n\nScene: an architectural visualisation of a four storey apartment block with pale brick and bronze metalwork, staggered balconies planted with greenery, a glazed ground floor. Deep blue sky with light cloud, a landscaped path with flowering beds in front, a few figures walking, rendered in warm late afternoon sun with long shadows.\n\nText layout: \"{{project_label}}\" appears top left in small spaced caps. The project name \"{{property_headline}}\" is set large across the lower image with \"{{location_line}}\" under it. A row of three short blocks sits at the very bottom on a {{accent_color}} strip: \"{{unit_line}}\", \"{{completion_line}}\" and \"{{cta_text}}\", separated by thin vertical rules.\n\nInvented developer only, no real companies, no real addresses and no recognisable existing buildings. Architectural visualisation in warm golden light, saturated sky and planting, strong colour contrast, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "rendered four storey apartment block with planted balconies and a landscaped path",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Developer name",
+        "inputType": "text",
+        "placeholder": "KESTREL DEVELOPMENTS",
+        "required": true
+      },
+      {
+        "key": "project_label",
+        "label": "Label",
+        "inputType": "text",
+        "placeholder": "NOW SELLING OFF PLAN",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Project name",
+        "inputType": "text",
+        "placeholder": "Alder Court Residences",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Westhaven Quarter",
+        "required": false
+      },
+      {
+        "key": "unit_line",
+        "label": "Units",
+        "inputType": "text",
+        "placeholder": "1 - 3 BED APARTMENTS",
+        "required": false
+      },
+      {
+        "key": "completion_line",
+        "label": "Completion",
+        "inputType": "text",
+        "placeholder": "READY SPRING 2027",
+        "required": false
+      },
+      {
+        "key": "cta_text",
+        "label": "Call to action",
+        "inputType": "text",
+        "placeholder": "RESERVE NOW",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Strip colour",
+        "inputType": "text",
+        "placeholder": "muted terracotta",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-agency-dream-home",
+    "title": "Agency Dream Home Ad",
+    "description": "An agency advert: welcoming house, service list and a contact strip.",
+    "searchKeywords": [
+      "real estate agency",
+      "dream home",
+      "services",
+      "buy a home",
+      "agent advert",
+      "property services",
+      "find a home",
+      "estate agent",
+      "marketing",
+      "contact"
+    ],
+    "prompt": "Create a friendly estate agency advert, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a welcoming detached house with {{facade_note}}, warm light in the windows, the front door open a crack, potted plants on the steps. Strong golden hour sun, a deep blue sky, a red bicycle leaning by the path and a border of bright flowers.\n\nText layout: the headline \"{{headline_text}}\" spans the top across two lines in a rounded bold face, \"{{subline_text}}\" under it in a lighter weight. The lower third is a solid {{accent_color}} block carrying the service line \"{{service_line}}\" in spaced caps. Beneath it a single contact strip reads \"{{contact_text}}\", with the wordmark \"{{agency_name}}\" on the opposite side.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Warm lifestyle architectural photography in rich golden hour light, saturated colour, glowing windows, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "welcoming detached house with warm lit windows and potted plants on the front steps",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "HEARTHSTONE REALTY",
+        "required": true
+      },
+      {
+        "key": "headline_text",
+        "label": "Headline",
+        "inputType": "text",
+        "placeholder": "FIND YOUR DREAM HOME",
+        "required": true
+      },
+      {
+        "key": "subline_text",
+        "label": "Subline",
+        "inputType": "text",
+        "placeholder": "We handle the search, the paperwork and the keys",
+        "required": false
+      },
+      {
+        "key": "service_line",
+        "label": "Services",
+        "inputType": "text",
+        "placeholder": "BUYING - SELLING - VALUATION",
+        "required": false
+      },
+      {
+        "key": "contact_text",
+        "label": "Contact",
+        "inputType": "text",
+        "placeholder": "hearthstone-realty.example",
+        "required": false
+      },
+      {
+        "key": "facade_note",
+        "label": "Facade",
+        "inputType": "text",
+        "placeholder": "cream render and a slate roof",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Block colour",
+        "inputType": "text",
+        "placeholder": "soft olive green",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-price-drop-apartment",
+    "title": "Price Drop Apartment",
+    "description": "A price reduction poster: city apartment with the old price struck through.",
+    "searchKeywords": [
+      "price drop",
+      "reduced",
+      "apartment",
+      "city flat",
+      "new price",
+      "real estate offer",
+      "reduction",
+      "listing update",
+      "interior",
+      "property"
+    ],
+    "prompt": "Create a price reduction poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a bright city apartment living room, tall windows with sheer curtains, pale oak floor, a low sofa and a single plant. Warm afternoon sun floods in from the left and lays bright patches across the floor, a large plant in the corner and {{detail_note}} in full colour through the glass.\n\nText layout: a bold tag in {{accent_color}} sits at an angle in the top right corner reading \"{{status_label}}\". Across the bottom a white panel shows the old price \"{{old_price_text}}\" struck through in grey and directly beside it the new price \"{{price_text}}\" in large dark type. Under the prices a single row gives \"{{location_line}}\" and \"{{spec_line}}\".\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Sunlit interior photography, warm oak tones against white walls, strong light patches, rich colour, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "bright empty apartment living room with tall windows, pale oak floor and a low sofa",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "CIVIC AND CO",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Tag",
+        "inputType": "text",
+        "placeholder": "PRICE DROP",
+        "required": true
+      },
+      {
+        "key": "old_price_text",
+        "label": "Old price",
+        "inputType": "text",
+        "placeholder": "349,000",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "New price",
+        "inputType": "text",
+        "placeholder": "319,000",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Quill Street, Midtown",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "2 BED - 1 BATH - 78 SQM",
+        "required": false
+      },
+      {
+        "key": "detail_note",
+        "label": "View",
+        "inputType": "text",
+        "placeholder": "leafy rooftops",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Tag colour",
+        "inputType": "text",
+        "placeholder": "bright amber yellow",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-coming-soon-cottage",
+    "title": "Coming Soon Cottage",
+    "description": "A teaser poster: country cottage in morning mist with a coming soon line.",
+    "searchKeywords": [
+      "coming soon",
+      "teaser",
+      "cottage",
+      "countryside",
+      "morning mist",
+      "upcoming listing",
+      "rural property",
+      "country home",
+      "announcement",
+      "stone house"
+    ],
+    "prompt": "Create a quiet teaser poster for an upcoming listing, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a stone cottage with {{roof_note}} sits at the end of a gravel track, half wrapped in early morning mist. Bare hedgerows, dew on the grass, muted colours, a single lit window. The house reads small in the frame with a lot of pale sky above it.\n\nText layout: \"{{status_label}}\" is set in wide letter spaced caps across the centre of the mist, thin and pale. Near the bottom, left aligned, \"{{property_headline}}\" in a medium serif with \"{{location_line}}\" underneath. On the right edge of the same line sits \"{{date_text}}\". The wordmark \"{{agency_name}}\" stands alone in the top left corner.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Atmospheric landscape photography, heavy morning mist, muted palette, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "stone cottage at the end of a gravel track in early morning mist with one lit window",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "WREN AND FIELD",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Status",
+        "inputType": "text",
+        "placeholder": "COMING SOON",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "Thornmere Cottage",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Hollow Vale",
+        "required": false
+      },
+      {
+        "key": "date_text",
+        "label": "Date",
+        "inputType": "text",
+        "placeholder": "ON THE MARKET 3 MARCH",
+        "required": false
+      },
+      {
+        "key": "roof_note",
+        "label": "Roof",
+        "inputType": "text",
+        "placeholder": "a mossy slate roof and a tall chimney",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-commercial-office-space",
+    "title": "Commercial Office Space",
+    "description": "A commercial letting poster: open plan office floor with area and availability.",
+    "searchKeywords": [
+      "commercial",
+      "office space",
+      "to let",
+      "lease",
+      "business premises",
+      "open plan office",
+      "workspace",
+      "commercial property",
+      "letting",
+      "square metres"
+    ],
+    "prompt": "Create a sober commercial letting poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: an empty open plan office floor, exposed concrete ceiling with visible services, polished screed underfoot, a continuous window band along one wall showing {{detail_note}}. Low afternoon sun pours through the window band and throws long bright bars across the floor, a blue sky and green street trees outside, structural columns receding into depth.\n\nText layout: a narrow header bar in deep slate grey holds \"{{status_label}}\" on the left and \"{{agency_name}}\" on the right. The lower third sits on a white ground: \"{{property_headline}}\" in a tight grotesque with \"{{location_line}}\" beneath. Below that a two column data block pairs \"{{area_line}}\" with \"{{availability_line}}\", and a last line reads \"{{cta_text}}\".\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Wide angle interior photography in warm raking sunlight, strong light and shadow, warm concrete against a blue sky, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "empty open plan office floor with exposed concrete ceiling and a long window band",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "AXFORD COMMERCIAL",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Status",
+        "inputType": "text",
+        "placeholder": "OFFICE SPACE TO LET",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "The Foundry Floor 3",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Ironworks Quarter",
+        "required": false
+      },
+      {
+        "key": "area_line",
+        "label": "Area",
+        "inputType": "text",
+        "placeholder": "640 SQM OPEN PLAN",
+        "required": false
+      },
+      {
+        "key": "availability_line",
+        "label": "Availability",
+        "inputType": "text",
+        "placeholder": "AVAILABLE IMMEDIATELY",
+        "required": false
+      },
+      {
+        "key": "cta_text",
+        "label": "Call to action",
+        "inputType": "text",
+        "placeholder": "ARRANGE AN INSPECTION",
+        "required": false
+      },
+      {
+        "key": "detail_note",
+        "label": "View",
+        "inputType": "text",
+        "placeholder": "a quiet industrial street",
+        "required": false
+      }
+    ]
+  }
+]

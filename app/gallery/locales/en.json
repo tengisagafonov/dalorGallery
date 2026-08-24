@@ -1,5 +1,6 @@
 {
   "categoriesHeading": "Categories",
+  "toggleTheme": "Switch between light and dark theme",
   "contentType": "Content type",
   "photo": "Photo",
   "video": "Video",
@@ -10,6 +11,8 @@
   "browse": "Browse templates and insert one into your prompt.",
   "search": "Search templates...",
   "viewAll": "View all",
+  "previousPage": "Previous page",
+  "nextPage": "Next page",
   "noTemplates": "No templates found",
   "searchHint": "Try another search or category.",
   "previewPrompt": "Preview Prompt",
@@ -25,6 +28,9 @@
   "analyzeAgain": "Analyze again",
   "removeImage": "Remove",
   "analyzingImage": "Analyzing image…",
+  "imageDoesNotFit": "This image does not fit this template",
+  "imageDetected": "Detected",
+  "imageExpected": "Expected here",
   "imageAnalysisFailed": "The image could not be analyzed.",
   "imageUploadInvalid": "Please select a supported image smaller than 10 MB.",
   "uploadedImage": "Uploaded reference image",
@@ -32,6 +38,7 @@
   "promptPreview": "Prompt preview",
   "copy": "Copy",
   "copied": "Copied",
+  "loadingPrompt": "Loading prompt…",
   "noPrompt": "No prompt",
   "closePrompt": "Close prompt preview",
   "templateTitles": {

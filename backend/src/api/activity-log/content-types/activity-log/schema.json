@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activity_logs",
+  "info": {
+    "singularName": "activity-log",
+    "pluralName": "activity-logs",
+    "displayName": "Aktivitätsprotokoll",
+    "description": "Was im System passiert ist – Inhalte, KI-Aufrufe, Fehler"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": { "content-manager": { "visible": false } },
+  "attributes": {
+    "level": {
+      "type": "enumeration",
+      "enum": ["info", "warning", "error"],
+      "default": "info",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": ["content", "ai", "security", "system"],
+      "required": true
+    },
+    "action": { "type": "string", "required": true, "maxLength": 60 },
+    "message": { "type": "text", "required": true },
+    "actor": { "type": "string", "maxLength": 160 },
+    "context": { "type": "json" },
+    "durationMs": { "type": "integer" }
+  }
+}

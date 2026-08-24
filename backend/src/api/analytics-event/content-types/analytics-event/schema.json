@@ -19,6 +19,8 @@
     "templateKey": { "type": "string" },
     "templateTitle": { "type": "string" },
     "visitorId": { "type": "string" },
-    "path": { "type": "string" }
+    "path": { "type": "string" },
+    "country": { "type": "string", "maxLength": 2 },
+    "timeZone": { "type": "string" }
   }
 }

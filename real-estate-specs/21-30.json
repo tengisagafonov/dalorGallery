@@ -1,0 +1,776 @@
+[
+  {
+    "slug": "real-estate-key-handover-congrats",
+    "title": "Key Handover Congratulations",
+    "description": "A congratulations post: keys handed over in front of a new home, warm tone.",
+    "searchKeywords": [
+      "key handover",
+      "congratulations",
+      "new home",
+      "happy buyers",
+      "closing day",
+      "keys",
+      "moving in",
+      "homeowner",
+      "celebration",
+      "real estate"
+    ],
+    "prompt": "Create a warm congratulations post, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: two hands meet in the centre of the frame as a set of house keys on {{keyring_note}} is passed over. Behind them, thrown out of focus, the front of a newly bought home in soft afternoon light. Shallow depth of field, the keys sharp and catching the sun.\n\nText layout: \"{{headline_text}}\" arcs across the top in a friendly rounded face. Below the hands sits a small pill in {{accent_color}} reading \"{{status_label}}\". The bottom band, plain and light, carries \"{{message_text}}\" over two centred lines and the wordmark \"{{agency_name}}\" underneath, with \"{{location_line}}\" in the corner.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Warm shallow depth of field lifestyle photography, afternoon light, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "two hands passing over a set of house keys in front of a blurred home",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "OPEN DOOR REALTY",
+        "required": true
+      },
+      {
+        "key": "headline_text",
+        "label": "Headline",
+        "inputType": "text",
+        "placeholder": "CONGRATULATIONS",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Label",
+        "inputType": "text",
+        "placeholder": "KEYS HANDED OVER",
+        "required": false
+      },
+      {
+        "key": "message_text",
+        "label": "Message",
+        "inputType": "text",
+        "placeholder": "Wishing you many happy years in your new home",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Brindle Park",
+        "required": false
+      },
+      {
+        "key": "keyring_note",
+        "label": "Keyring",
+        "inputType": "text",
+        "placeholder": "a small wooden house shaped keyring",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Pill colour",
+        "inputType": "text",
+        "placeholder": "soft mustard",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-kitchen-highlight",
+    "title": "Kitchen Highlight",
+    "description": "A feature poster for the kitchen: island, materials and a short highlight list.",
+    "searchKeywords": [
+      "kitchen",
+      "interior feature",
+      "kitchen island",
+      "renovated",
+      "modern kitchen",
+      "home interior",
+      "highlight",
+      "fitted kitchen",
+      "property detail",
+      "listing"
+    ],
+    "prompt": "Create an interior feature poster for a kitchen, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a bright fitted kitchen shot from the doorway, a broad island in {{material_note}} at the centre, handleless cabinets along the back wall, a window above the sink. Fruit in a shallow bowl, everything else cleared. Even daylight, no harsh reflections.\n\nText layout: a slim vertical strip down the right edge in {{accent_color}} carries \"{{status_label}}\" rotated ninety degrees. Bottom left, over the image, \"{{feature_headline}}\" sits in two lines of tight caps with \"{{feature_line}}\" underneath in a lighter weight. A single closing line at the very bottom pairs \"{{property_headline}}\" with the wordmark \"{{agency_name}}\".\n\nInvented agency only, no real brokerages, no real brands and no recognisable existing buildings. Interior real estate photography, even daylight, straight lines, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "bright fitted kitchen with a broad stone island and handleless cabinets",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "STILL AND CO PROPERTY",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Label",
+        "inputType": "text",
+        "placeholder": "INSIDE THE HOME",
+        "required": true
+      },
+      {
+        "key": "feature_headline",
+        "label": "Feature headline",
+        "inputType": "text",
+        "placeholder": "A KITCHEN BUILT FOR GATHERING",
+        "required": false
+      },
+      {
+        "key": "feature_line",
+        "label": "Feature details",
+        "inputType": "text",
+        "placeholder": "Stone island - induction hob - walk in pantry",
+        "required": false
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "Fallow House",
+        "required": false
+      },
+      {
+        "key": "material_note",
+        "label": "Island material",
+        "inputType": "text",
+        "placeholder": "pale veined marble",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Strip colour",
+        "inputType": "text",
+        "placeholder": "warm clay",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-master-bedroom-suite",
+    "title": "Master Bedroom Suite",
+    "description": "A soft morning interior: master bedroom with a quiet caption and a small spec line.",
+    "searchKeywords": [
+      "bedroom",
+      "master suite",
+      "interior",
+      "morning light",
+      "bedroom design",
+      "home interior",
+      "calm",
+      "property detail",
+      "suite",
+      "listing"
+    ],
+    "prompt": "Create a soft interior poster for a bedroom, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a master bedroom in early morning light, linen bedding in {{tone_note}}, sheer curtains lifting slightly at a tall window, a bench at the foot of the bed. A door stands open to an ensuite in the background. Gentle shadows, dust in the light beam.\n\nText layout: no panels at all, type sits directly on the image. \"{{eyebrow_text}}\" runs small along the top edge next to the wordmark \"{{agency_name}}\". The caption \"{{caption_text}}\" is set low on the left in a light serif over two lines. Bottom right, aligned to the same baseline, \"{{spec_line}}\" and beneath it \"{{location_line}}\" in tiny caps.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Soft morning interior photography, sheer light, muted palette, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "master bedroom with linen bedding and sheer curtains in soft morning light",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "LUMEN HOMES",
+        "required": true
+      },
+      {
+        "key": "eyebrow_text",
+        "label": "Eyebrow",
+        "inputType": "text",
+        "placeholder": "ROOM OF THE WEEK",
+        "required": true
+      },
+      {
+        "key": "caption_text",
+        "label": "Caption",
+        "inputType": "text",
+        "placeholder": "Mornings start slower in a room like this",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "MASTER SUITE - 32 SQM - ENSUITE",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Halden Gardens",
+        "required": false
+      },
+      {
+        "key": "tone_note",
+        "label": "Bedding tone",
+        "inputType": "text",
+        "placeholder": "oatmeal and soft white",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-garden-and-terrace",
+    "title": "Garden And Terrace",
+    "description": "An outdoor living poster: terrace and garden in summer with a lifestyle headline.",
+    "searchKeywords": [
+      "garden",
+      "terrace",
+      "outdoor living",
+      "summer",
+      "patio",
+      "backyard",
+      "landscaped garden",
+      "outdoor space",
+      "property feature",
+      "home"
+    ],
+    "prompt": "Create an outdoor living poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a paved terrace opening onto a landscaped garden on a summer afternoon. A long table set for a meal under {{shade_note}}, deep borders of grasses and shrubs, a lawn running back to a hedge. Dappled light, glasses catching the sun, no people in frame.\n\nText layout: the headline \"{{headline_text}}\" sits across the sky in a relaxed italic. A narrow horizontal strip in {{accent_color}} crosses the middle of the image carrying \"{{feature_line}}\" in small spaced caps. The lower left corner stacks \"{{property_headline}}\", \"{{location_line}}\" and \"{{price_text}}\"; the wordmark \"{{agency_name}}\" sits opposite in the lower right.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing gardens. Summer garden photography, dappled light, rich greens, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "paved terrace with a long set table opening onto a landscaped summer garden",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "GREENWAY AND SONS",
+        "required": true
+      },
+      {
+        "key": "headline_text",
+        "label": "Headline",
+        "inputType": "text",
+        "placeholder": "Summer belongs outside",
+        "required": true
+      },
+      {
+        "key": "feature_line",
+        "label": "Feature",
+        "inputType": "text",
+        "placeholder": "SOUTH FACING GARDEN - 340 SQM PLOT",
+        "required": false
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "Willowmead",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Ellery Lane",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "725,000",
+        "required": false
+      },
+      {
+        "key": "shade_note",
+        "label": "Shade",
+        "inputType": "text",
+        "placeholder": "a pergola hung with wisteria",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Strip colour",
+        "inputType": "text",
+        "placeholder": "soft sage",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-loft-conversion-city",
+    "title": "Loft Conversion City",
+    "description": "A top floor listing: converted attic with skylights and a sloped ceiling.",
+    "searchKeywords": [
+      "loft conversion",
+      "attic apartment",
+      "top floor",
+      "skylight",
+      "sloped ceiling",
+      "city apartment",
+      "converted",
+      "for sale",
+      "roof apartment",
+      "listing"
+    ],
+    "prompt": "Create a top floor apartment listing, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a converted attic apartment with white sloped ceilings and two large skylights letting in hard afternoon sun. Exposed roof beams painted white, {{floor_note}} underfoot, a reading chair beneath the lower slope. Bright, airy, sharp shafts of light across the floor.\n\nText layout: a bold rule frames the poster on three sides in {{accent_color}}, open at the top. The status \"{{status_label}}\" is centred in the gap of that frame at the top. Low on the image, right aligned, \"{{property_headline}}\" over \"{{location_line}}\". The bottom rule of the frame is interrupted by a small box holding \"{{spec_line}}\" and \"{{price_text}}\" side by side, and the wordmark \"{{agency_name}}\" sits just above it.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Bright interior photography, hard skylight beams, white walls, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "converted attic apartment with white sloped ceilings and two large skylights",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "ROOFLINE CITY",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Status",
+        "inputType": "text",
+        "placeholder": "TOP FLOOR - FOR SALE",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "The Skylight Flat",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Verity Street",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "2 BED - 1 BATH - 96 SQM",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "398,000",
+        "required": false
+      },
+      {
+        "key": "floor_note",
+        "label": "Floor",
+        "inputType": "text",
+        "placeholder": "wide pale oak boards",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Frame colour",
+        "inputType": "text",
+        "placeholder": "strong cobalt blue",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-eco-home-sustainable",
+    "title": "Eco Home Sustainable",
+    "description": "A sustainable build poster: timber house with solar roof and efficiency figures.",
+    "searchKeywords": [
+      "eco home",
+      "sustainable",
+      "timber house",
+      "solar panels",
+      "energy efficient",
+      "green building",
+      "passive house",
+      "new build",
+      "low energy",
+      "environment"
+    ],
+    "prompt": "Create a sustainable home poster, vertical 4:5.\n\nDeveloper: \"{{agency_name}}\"\n\nScene: a two storey timber clad house with a solar panelled roof stands on a green plot, a wildflower strip and young birches in front of it. Large triple glazed windows, a rainwater tank at the gable end. Clear bright daylight, deep blue sky, everything crisp and new.\n\nText layout: a circular badge in {{accent_color}} sits top right holding \"{{badge_text}}\" over two lines. The headline \"{{headline_text}}\" runs along the bottom of the sky in medium caps. A light footer holds three efficiency entries in a row, \"{{energy_line}}\", \"{{feature_line}}\" and \"{{price_text}}\", with the wordmark \"{{agency_name}}\" and \"{{location_line}}\" on a thin line beneath them.\n\nInvented developer only, no real companies, no real addresses and no recognisable existing buildings. Bright architectural photography, clear sky, natural timber tones, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "two storey timber clad house with solar panels on the roof and large windows",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Developer name",
+        "inputType": "text",
+        "placeholder": "ROOTED BUILD",
+        "required": true
+      },
+      {
+        "key": "badge_text",
+        "label": "Badge",
+        "inputType": "text",
+        "placeholder": "ENERGY CLASS A",
+        "required": true
+      },
+      {
+        "key": "headline_text",
+        "label": "Headline",
+        "inputType": "text",
+        "placeholder": "A HOME THAT COSTS THE EARTH LESS",
+        "required": false
+      },
+      {
+        "key": "energy_line",
+        "label": "Energy",
+        "inputType": "text",
+        "placeholder": "HEATING 22 KWH PER SQM",
+        "required": false
+      },
+      {
+        "key": "feature_line",
+        "label": "Feature",
+        "inputType": "text",
+        "placeholder": "SOLAR ROOF - HEAT PUMP",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "545,000",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Sorrel Meadow",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Badge colour",
+        "inputType": "text",
+        "placeholder": "fresh leaf green",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-historic-townhouse",
+    "title": "Historic Townhouse",
+    "description": "A period property expose: stucco townhouse at dusk with an elegant serif layout.",
+    "searchKeywords": [
+      "historic",
+      "period property",
+      "townhouse",
+      "stucco facade",
+      "heritage",
+      "classic architecture",
+      "dusk",
+      "elegant",
+      "for sale",
+      "expose"
+    ],
+    "prompt": "Create an elegant period property expose, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a stucco townhouse facade at dusk, tall sash windows lit from within, a stone staircase to a panelled door flanked by {{lamp_note}}. Wrought iron railings, a paved street still wet from rain reflecting the lights. Deep blue sky above the roofline.\n\nText layout: the upper third stays clear of the building and holds, centred, the wordmark \"{{agency_name}}\" above a fine rule with \"{{eyebrow_text}}\" beneath it. Across the bottom a dark translucent band carries \"{{property_headline}}\" in a high contrast serif on the left, and on the right a stacked pair of \"{{period_line}}\" and \"{{spec_line}}\". The price \"{{price_text}}\" sits alone under the band.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Evening architectural photography, wet reflective street, warm window light, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "lit stucco townhouse facade at dusk with a stone staircase and iron railings",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "CAVENDISH ROW",
+        "required": true
+      },
+      {
+        "key": "eyebrow_text",
+        "label": "Eyebrow",
+        "inputType": "text",
+        "placeholder": "A PERIOD HOUSE OF RARE PROPORTION",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "Number Eleven, Ottley Square",
+        "required": false
+      },
+      {
+        "key": "period_line",
+        "label": "Period",
+        "inputType": "text",
+        "placeholder": "BUILT 1878 - RESTORED 2021",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "6 BED - 4 BATH - 390 SQM",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "3,100,000",
+        "required": false
+      },
+      {
+        "key": "lamp_note",
+        "label": "Lamps",
+        "inputType": "text",
+        "placeholder": "two black carriage lamps",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-virtual-tour-promo",
+    "title": "Virtual Tour Promo",
+    "description": "A social promo for a virtual tour: interior with a play button and a short prompt.",
+    "searchKeywords": [
+      "virtual tour",
+      "video tour",
+      "play button",
+      "online viewing",
+      "360 tour",
+      "social media",
+      "property video",
+      "walkthrough",
+      "tour from home",
+      "listing"
+    ],
+    "prompt": "Create a social promo for a virtual property tour, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: the view from a hallway into a bright open living room, a staircase rising on one side, {{detail_note}} catching the light. The framing is slightly wide and low as if paused mid walkthrough. Warm afternoon sun falls in bright patches across the floor, green plants and a deep coloured rug lift the room.\n\nText layout: \"{{headline_text}}\" is set across the upper image in two short lines of bold caps over a soft {{accent_color}} gradient. Under it, small and centred, \"{{duration_line}}\". The bottom edge carries a full width bar with the wordmark \"{{agency_name}}\" on the left, \"{{property_headline}}\" in the middle and \"{{cta_text}}\" on the right.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Interior walkthrough photography, wide framing, warm sunlight and saturated colour, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "view from a hallway into a bright open living room with a staircase to one side",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "CLARIT HOMES",
+        "required": true
+      },
+      {
+        "key": "headline_text",
+        "label": "Headline",
+        "inputType": "text",
+        "placeholder": "WALK THROUGH IT TONIGHT",
+        "required": true
+      },
+      {
+        "key": "duration_line",
+        "label": "Duration",
+        "inputType": "text",
+        "placeholder": "FULL TOUR - 3 MINUTES",
+        "required": false
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "Peveril House",
+        "required": false
+      },
+      {
+        "key": "cta_text",
+        "label": "Call to action",
+        "inputType": "text",
+        "placeholder": "LINK IN BIO",
+        "required": false
+      },
+      {
+        "key": "detail_note",
+        "label": "Detail",
+        "inputType": "text",
+        "placeholder": "a tall mirror and a vase of branches",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Gradient colour",
+        "inputType": "text",
+        "placeholder": "warm amber",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-mortgage-consultation",
+    "title": "Mortgage Consultation",
+    "description": "A service poster for financing advice: desk scene with a calm three step list.",
+    "searchKeywords": [
+      "mortgage",
+      "financing",
+      "consultation",
+      "advice",
+      "home loan",
+      "broker",
+      "appointment",
+      "finance service",
+      "buying process",
+      "real estate"
+    ],
+    "prompt": "Create a calm financing service poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a quiet desk seen from above at a slight angle: a laptop turned away, a folder of papers, a pair of reading glasses, {{desk_note}} and a small architectural model of a house at the corner. Soft daylight from a window on the left, warm wood surface.\n\nText layout: the top half stays mostly empty apart from \"{{headline_text}}\" in a calm medium serif over two lines, with \"{{subline_text}}\" small underneath. The lower half is a solid {{accent_color}} panel carrying three numbered steps as short lines under each other: \"{{step_line}}\". Under the steps a divider, then \"{{cta_text}}\" on the left and the wordmark \"{{agency_name}}\" on the right.\n\nInvented agency only, no real companies, no real rates and no recognisable brands. Overhead desk photography, soft window light, warm wood tones, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "wooden desk from above with a laptop, folder, glasses and a small model house",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "ANCHOR HOME FINANCE",
+        "required": true
+      },
+      {
+        "key": "headline_text",
+        "label": "Headline",
+        "inputType": "text",
+        "placeholder": "Know what you can borrow before you fall in love",
+        "required": true
+      },
+      {
+        "key": "subline_text",
+        "label": "Subline",
+        "inputType": "text",
+        "placeholder": "Independent mortgage advice, free first appointment",
+        "required": false
+      },
+      {
+        "key": "step_line",
+        "label": "Steps",
+        "inputType": "text",
+        "placeholder": "1 TALK - 2 COMPARE - 3 SIGN",
+        "required": false
+      },
+      {
+        "key": "cta_text",
+        "label": "Call to action",
+        "inputType": "text",
+        "placeholder": "BOOK A CALL",
+        "required": false
+      },
+      {
+        "key": "desk_note",
+        "label": "Desk detail",
+        "inputType": "text",
+        "placeholder": "a cup of black coffee",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Panel colour",
+        "inputType": "text",
+        "placeholder": "deep teal",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-free-valuation-offer",
+    "title": "Free Valuation Offer",
+    "description": "A seller lead poster: house exterior with a valuation offer and a simple prompt.",
+    "searchKeywords": [
+      "free valuation",
+      "property value",
+      "sell your home",
+      "appraisal",
+      "market value",
+      "seller leads",
+      "estate agent offer",
+      "valuation",
+      "what is my home worth",
+      "real estate"
+    ],
+    "prompt": "Create a seller lead poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a modest family house photographed from a low angle across the front lawn so the roofline sits against a clean sky. {{facade_note}}, a mown lawn, a mailbox at the kerb. Warm evening sun on the siding under a deep blue sky, a vivid green lawn and a flowering shrub by the porch.\n\nText layout: the question \"{{headline_text}}\" is set very large across the sky in a heavy face, breaking over three lines. A tilted sticker in {{accent_color}} sits over the lower left corner of the house reading \"{{offer_text}}\". At the very bottom a plain strip holds \"{{subline_text}}\" on the left and \"{{cta_text}}\" on the right, with the wordmark \"{{agency_name}}\" centred above the strip.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Golden hour exterior photography, low angle, saturated blue sky and green lawn, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "modest family house from a low angle across the lawn against a clean sky",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "TRUE NORTH REALTY",
+        "required": true
+      },
+      {
+        "key": "headline_text",
+        "label": "Headline",
+        "inputType": "text",
+        "placeholder": "WHAT IS YOUR HOME WORTH TODAY",
+        "required": true
+      },
+      {
+        "key": "offer_text",
+        "label": "Offer",
+        "inputType": "text",
+        "placeholder": "FREE VALUATION",
+        "required": false
+      },
+      {
+        "key": "subline_text",
+        "label": "Subline",
+        "inputType": "text",
+        "placeholder": "A written estimate within 48 hours",
+        "required": false
+      },
+      {
+        "key": "cta_text",
+        "label": "Call to action",
+        "inputType": "text",
+        "placeholder": "REQUEST YOURS",
+        "required": false
+      },
+      {
+        "key": "facade_note",
+        "label": "Facade",
+        "inputType": "text",
+        "placeholder": "grey siding with a white porch",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Sticker colour",
+        "inputType": "text",
+        "placeholder": "bright lime",
+        "required": false
+      }
+    ]
+  }
+]

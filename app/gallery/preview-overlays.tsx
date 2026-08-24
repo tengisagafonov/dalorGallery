@@ -8,32 +8,34 @@ import type { useGalleryController } from "./use-gallery-controller";
 type Controller = ReturnType<typeof useGalleryController>;
 
 export function PreviewOverlays({ controller, locale, t }: { controller: Controller; locale: Locale; t: Translation }) {
-  const { compiledPrompt, copyPrompt, isCoverPreviewOpen, isPromptCopied, isPromptPreviewOpen, selected, setIsCoverPreviewOpen, setIsPromptPreviewOpen } = controller;
+  const { compiledPrompt, copyPrompt, isCoverPreviewOpen, isPromptCopied, isPromptLoading, isPromptPreviewOpen, selected, setIsCoverPreviewOpen, setIsPromptPreviewOpen } = controller;
   if (!selected) return null;
 
   const selectedTitle = selected.localizedTitles?.[locale] ?? selected.title;
+  // Der Prompt wird erst beim Auswählen nachgeladen – bis dahin ist Kopieren gesperrt.
+  const copyLabel = isPromptLoading ? t.loadingPrompt : compiledPrompt ? (isPromptCopied ? t.copied : t.copy) : t.noPrompt;
   return (
     <>
       {isPromptPreviewOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-[#151310]/45 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm"
           role="dialog"
           aria-modal="true"
           aria-labelledby="prompt-preview-title"
           onClick={() => setIsPromptPreviewOpen(false)}
         >
           <div
-            className="max-h-[85vh] w-full max-w-3xl overflow-hidden rounded-[24px] border border-[#ded8cf] bg-[#fbfaf8] shadow-2xl"
+            className="max-h-[85vh] w-full max-w-3xl overflow-hidden rounded-[24px] border border-line bg-surface shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="flex items-center justify-between border-b border-[#e5e0d8] px-6 py-5">
+            <div className="flex items-center justify-between border-b border-line px-6 py-5">
               <div>
-                <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#9a9186]">{t.promptPreview}</p>
+                <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ink-faint">{t.promptPreview}</p>
                 <h2 id="prompt-preview-title" className="mt-1 text-xl font-black italic">{selectedTitle}.</h2>
               </div>
               <button
                 onClick={() => setIsPromptPreviewOpen(false)}
-                className="rounded-full p-2 hover:bg-[#eee9e2]"
+                className="rounded-full p-2 hover:bg-muted"
                 aria-label={t.closePrompt}
               >
                 <Icon name="close" />
@@ -43,15 +45,15 @@ export function PreviewOverlays({ controller, locale, t }: { controller: Control
               <button
                 type="button"
                 onClick={copyPrompt}
-                disabled={!selected.prompt}
-                className="absolute right-5 top-5 flex items-center gap-2 rounded-full border border-[#ded8cf] bg-[#fbfaf8]/95 px-3 py-2 text-[11px] font-semibold shadow-sm backdrop-blur transition hover:bg-[#eee9e2] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-[#fbfaf8]"
-                aria-label={selected.prompt ? t.copy : t.noPrompt}
+                disabled={!compiledPrompt}
+                className="absolute right-5 top-5 flex items-center gap-2 rounded-full border border-line bg-surface/95 px-3 py-2 text-[11px] font-semibold shadow-sm backdrop-blur transition hover:bg-muted disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-surface"
+                aria-label={copyLabel}
               >
                 <Icon name={isPromptCopied ? "check" : "copy"} className="size-4" />
-                {selected.prompt ? (isPromptCopied ? t.copied : t.copy) : t.noPrompt}
+                {copyLabel}
               </button>
-              <pre className="max-h-[65vh] overflow-auto whitespace-pre-wrap p-6 pr-28 font-mono text-[12px] leading-6 text-[#3f3a34]">
-                {compiledPrompt}
+              <pre className="max-h-[65vh] overflow-auto whitespace-pre-wrap p-6 pr-28 font-mono text-[12px] leading-6 text-ink-soft">
+                {compiledPrompt || (isPromptLoading ? t.loadingPrompt : t.noPrompt)}
               </pre>
             </div>
           </div>
@@ -60,7 +62,7 @@ export function PreviewOverlays({ controller, locale, t }: { controller: Control
 
       {isCoverPreviewOpen && selected.cover && (
         <div
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-[#151310]/75 p-5 backdrop-blur-md"
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 p-5 backdrop-blur-md"
           role="dialog"
           aria-modal="true"
           aria-label={`${selectedTitle} cover preview`}

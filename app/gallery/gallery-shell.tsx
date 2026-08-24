@@ -45,8 +45,10 @@ export function GalleryScreen({ strapiCategories, strapiTemplates }: Props) {
   };
 
   return (
-    <main className="min-h-screen bg-[#f1efeb] p-3 text-[#151310] sm:p-4">
-      <div className={`mx-auto grid min-h-[calc(100vh-24px)] max-w-[1550px] overflow-hidden rounded-[26px] border border-[#ded9d1] bg-[#fbfaf8] shadow-[0_24px_70px_rgba(37,31,24,0.10)] ${controller.selected ? "lg:grid-cols-[270px_minmax(0,1fr)_340px]" : "lg:grid-cols-[270px_minmax(0,1fr)]"}`}>
+    <main className="min-h-screen bg-canvas p-3 text-ink sm:p-4">
+      {/* overflow-clip statt overflow-hidden: beschneidet die runden Ecken, erzeugt aber keinen
+          Scroll-Container – sonst würde position:sticky in Sidebar und Detailspalte nicht greifen. */}
+      <div className={`mx-auto grid min-h-[calc(100vh-24px)] max-w-[1550px] overflow-clip rounded-[26px] border border-line bg-surface shadow-[var(--card-shadow)] ${controller.selected ? "lg:grid-cols-[270px_minmax(0,1fr)_340px]" : "lg:grid-cols-[270px_minmax(0,1fr)]"}`}>
         <CategorySidebar categories={categories} controller={controller} locale={locale} onLocaleChange={setLocale} t={t} />
         <TemplateGallery categories={categories} controller={controller} locale={locale} onSelectTemplate={selectTemplateAndRevealDetails} t={t} />
         {controller.selected && <TemplateDetails controller={controller} detailsRef={detailsRef} locale={locale} t={t} />}

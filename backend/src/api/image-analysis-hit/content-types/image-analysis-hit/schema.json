@@ -1,0 +1,15 @@
+{
+  "kind": "collectionType",
+  "collectionName": "image_analysis_hits",
+  "info": {
+    "singularName": "image-analysis-hit",
+    "pluralName": "image-analysis-hits",
+    "displayName": "Bildanalyse-Aufruf",
+    "description": "Zählt Bildanalysen je Besucher, damit das Limit Neustarts übersteht"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": { "content-manager": { "visible": false } },
+  "attributes": {
+    "identifier": { "type": "string", "required": true }
+  }
+}

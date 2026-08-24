@@ -1,5 +1,6 @@
 {
   "categoriesHeading": "श्रेणियाँ",
+  "toggleTheme": "हल्की और गहरी थीम बदलें",
   "contentType": "कंटेंट प्रकार",
   "photo": "फ़ोटो",
   "video": "वीडियो",
@@ -10,6 +11,8 @@
   "browse": "टेम्पलेट देखें और अपने प्रॉम्प्ट में एक जोड़ें।",
   "search": "टेम्पलेट खोजें...",
   "viewAll": "सभी देखें",
+  "previousPage": "पिछला पृष्ठ",
+  "nextPage": "अगला पृष्ठ",
   "noTemplates": "कोई टेम्पलेट नहीं मिला",
   "searchHint": "कोई दूसरी खोज या श्रेणी आज़माएँ।",
   "previewPrompt": "प्रॉम्प्ट देखें",
@@ -25,6 +28,9 @@
   "analyzeAgain": "फिर से विश्लेषण करें",
   "removeImage": "हटाएँ",
   "analyzingImage": "तस्वीर का विश्लेषण हो रहा है…",
+  "imageDoesNotFit": "यह तस्वीर इस टेम्पलेट से मेल नहीं खाती",
+  "imageDetected": "पहचाना गया",
+  "imageExpected": "यहाँ चाहिए",
   "imageAnalysisFailed": "तस्वीर का विश्लेषण नहीं हो सका।",
   "imageUploadInvalid": "कृपया 10 MB से छोटी समर्थित तस्वीर चुनें।",
   "uploadedImage": "अपलोड की गई संदर्भ तस्वीर",
@@ -32,6 +38,7 @@
   "promptPreview": "प्रॉम्प्ट पूर्वावलोकन",
   "copy": "कॉपी करें",
   "copied": "कॉपी हो गया",
+  "loadingPrompt": "प्रॉम्प्ट लोड हो रहा है…",
   "noPrompt": "कोई प्रॉम्प्ट नहीं",
   "closePrompt": "प्रॉम्प्ट पूर्वावलोकन बंद करें",
   "templateTitles": {

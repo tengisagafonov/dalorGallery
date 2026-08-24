@@ -1,6 +1,40 @@
+import { capToStringField } from './field-length';
 import { localize, localizedField, TARGETS } from './openai-translate';
 
 type Data = Record<string, any>;
+
+/**
+ * Felder, die im Schema als `string` liegen und deshalb bei 255 Zeichen enden.
+ *
+ * `description` fehlt hier bewusst: das ist ein `text` und darf lang sein. Eine Übersetzung
+ * dort zu kürzen würde echten Inhalt abschneiden, statt einen Fehler zu verhindern.
+ */
+const STRING_FIELDS = new Set(['name', 'title', 'label', 'placeholder']);
+
+/**
+ * Setzt eine Übersetzung, ohne die Zählung zu verlieren.
+ *
+ * `ziel[feld] ||= liste[index++]` sieht harmlos aus, ist es aber nicht: bei `||=` wird die
+ * rechte Seite gar nicht ausgewertet, wenn links schon ein Wert steht – `index` bleibt dann
+ * stehen. Ist eine Sprachfassung vorbelegt und eine andere nicht, laufen die Durchgänge
+ * auseinander und jede folgende Sprache bekommt die Übersetzung des falschen Feldes.
+ * Deshalb wird der Wert immer entnommen und erst danach bedingt gesetzt.
+ *
+ * `source` ist der unlokalisierte Feldname – aus ihm ergibt sich, ob gekappt werden muss.
+ * Russisch, Hindi und Panjabi geraten regelmäßig länger als das englische Original, eine
+ * Begrenzung der Quelle allein reicht deshalb nicht.
+ */
+function assignTranslation(
+  target: Data, source: string, localizedName: string, translations: string[], index: number,
+) {
+  const translation = translations[index];
+  if (typeof translation === 'string') {
+    target[localizedName] ||= STRING_FIELDS.has(source)
+      ? capToStringField(translation)
+      : translation;
+  }
+  return index + 1;
+}
 
 export async function translateCategory(data: Data) {
   if (data.autoTranslate !== true) return;
@@ -11,7 +45,9 @@ export async function translateCategory(data: Data) {
     let index = 0;
     for (const field of ['name', 'description']) {
       if (!data[field]) continue;
-      data[localizedField(field, target)] ||= localized[target].translations[index++];
+      index = assignTranslation(
+        data, field, localizedField(field, target), localized[target].translations, index,
+      );
     }
   }
   data.autoTranslate = false;
@@ -43,13 +79,17 @@ export async function translateTemplate(data: Data) {
     if (translateTemplateFields) {
       for (const field of textFields) {
         if (!data[field]) continue;
-        data[localizedField(field, target)] ||= localized[target].translations[index++];
+        index = assignTranslation(
+          data, field, localizedField(field, target), localized[target].translations, index,
+        );
       }
     }
     for (const inputField of fieldsToTranslate) {
       for (const name of ['label', 'placeholder']) {
         if (!inputField[name]) continue;
-        inputField[localizedField(name, target)] ||= localized[target].translations[index++];
+        index = assignTranslation(
+          inputField, name, localizedField(name, target), localized[target].translations, index,
+        );
       }
     }
   }

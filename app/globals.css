@@ -1,20 +1,111 @@
 @import "tailwindcss";
 
-:root {
-  --background: #f1efeb;
-  --foreground: #151310;
+/* Dark Mode wird über data-theme am <html> gesteuert (nicht über prefers-color-scheme),
+   damit der Toggle die Systemeinstellung überschreiben kann. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Flächen – von außen nach innen */
+  --canvas: #f1efeb;
+  --surface: #fbfaf8;
+  --surface-raised: #fdfcf9;
+  --surface-sunken: #f8f6f2;
+  --elevated: #ffffff;
+  --subtle: #f3f0eb;
+  --muted: #ebe7e0;
+
+  /* Linien */
+  --line: #ded8cf;
+  --line-strong: #cfc7bc;
+  --line-hover: #a9a198;
+  --ring: #e9e4dc;
+
+  /* Text – von kräftig nach zurückhaltend */
+  --ink: #151310;
+  --ink-soft: #3f3a34;
+  --ink-muted: #6b655e;
+  --ink-faint: #8f8880;
+
+  /* Kontrastfarbe für aktive Elemente */
+  --accent: #171410;
+  --on-accent: #ffffff;
+
+  --info: #246fd1;
+  --info-soft: #e5efff;
+
+  --card-shadow: 0 24px 70px rgba(37, 31, 24, 0.1);
+  --selection: #d8d1c7;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --canvas: #100e0c;
+  --surface: #1a1815;
+  --surface-raised: #201d19;
+  --surface-sunken: #161412;
+  --elevated: #262220;
+  --subtle: #2a2622;
+  --muted: #35302b;
+
+  --line: #322d28;
+  --line-strong: #443e37;
+  --line-hover: #6b6259;
+  --ring: #3a342e;
+
+  --ink: #f4f1ec;
+  --ink-soft: #d8d1c7;
+  --ink-muted: #a79f95;
+  --ink-faint: #857d74;
+
+  --accent: #f4f1ec;
+  --on-accent: #17140f;
+
+  --info: #7cb0ff;
+  --info-soft: #1b2b42;
+
+  --card-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+  --selection: #3f3a34;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--canvas);
+  --color-foreground: var(--ink);
+
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-elevated: var(--elevated);
+  --color-subtle: var(--subtle);
+  --color-muted: var(--muted);
+
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-line-hover: var(--line-hover);
+  --color-ring: var(--ring);
+
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+
   --font-sans: Arial, Helvetica, sans-serif;
   --font-mono: "Cascadia Code", "Segoe UI Mono", monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--canvas);
+  color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
@@ -29,6 +120,49 @@ button {
 }
 
 ::selection {
-  background: #d8d1c7;
-  color: #151310;
+  background: var(--selection);
+  color: var(--ink);
+}
+
+/* Beim Umschalten kurz überblenden statt hart springen. Die Klasse wird
+   vom Toggle nur für die Dauer des Wechsels gesetzt. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-theme-switching],
+  [data-theme-switching] * {
+    transition:
+      background-color 220ms ease,
+      border-color 220ms ease,
+      color 220ms ease,
+      fill 220ms ease;
+  }
+}
+
+/* Dezenter Scrollbalken für eigenständig scrollende Spalten (z. B. Kategorie-Sidebar). */
+.scrollbar-subtle {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
+.scrollbar-subtle::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-subtle::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-subtle::-webkit-scrollbar-thumb {
+  background-color: var(--line);
+  border-radius: 999px;
+}
+
+.scrollbar-subtle::-webkit-scrollbar-thumb:hover {
+  background-color: var(--line-hover);
+}
+
+/* Der Toggle rendert immer beide Symbole; sichtbar ist das des Themes, in das
+   man wechseln würde. Rein per CSS, damit beim Hydrieren nichts springt. */
+[data-theme="light"] .theme-icon-sun,
+[data-theme="dark"] .theme-icon-moon {
+  display: none;
 }

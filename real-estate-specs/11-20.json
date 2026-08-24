@@ -1,0 +1,811 @@
+[
+  {
+    "slug": "real-estate-land-for-sale-plot",
+    "title": "Land For Sale Plot",
+    "description": "A drone view land poster: building plot with boundary outline, size and zoning line.",
+    "searchKeywords": [
+      "land for sale",
+      "building plot",
+      "drone view",
+      "plot size",
+      "zoning",
+      "development land",
+      "aerial",
+      "acreage",
+      "site",
+      "real estate"
+    ],
+    "prompt": "Create an aerial land sale poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a drone view straight down over a rectangular building plot of open meadow, bordered by {{border_note}}. A dirt access track runs to one corner, neighbouring fields in different greens around it. Late golden hour light, long tree shadows across the grass, the meadow in vivid greens with wildflowers, neighbouring fields in gold and deep green.\n\nText layout: a thin white outline traces the plot boundary in the image with small corner markers. The upper left corner holds \"{{status_label}}\" in a tight box. A wide footer on {{accent_color}} carries \"{{property_headline}}\" in bold caps, and under it three short entries side by side: \"{{area_line}}\", \"{{zoning_line}}\" and \"{{price_text}}\". The wordmark \"{{agency_name}}\" sits in the top right.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing places. Aerial drone photography, top down perspective, warm low sun, saturated greens and golds, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "aerial top down view of an empty rectangular meadow plot with a dirt access track",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "TERRA LOTS",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Status",
+        "inputType": "text",
+        "placeholder": "LAND FOR SALE",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Plot name",
+        "inputType": "text",
+        "placeholder": "Cedar Field Plot 7",
+        "required": false
+      },
+      {
+        "key": "area_line",
+        "label": "Plot size",
+        "inputType": "text",
+        "placeholder": "1,250 SQM",
+        "required": false
+      },
+      {
+        "key": "zoning_line",
+        "label": "Zoning",
+        "inputType": "text",
+        "placeholder": "RESIDENTIAL ZONING",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "178,000",
+        "required": false
+      },
+      {
+        "key": "border_note",
+        "label": "Border",
+        "inputType": "text",
+        "placeholder": "a low hedgerow and a line of poplars",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Footer colour",
+        "inputType": "text",
+        "placeholder": "deep moss green",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-rental-studio-city",
+    "title": "Rental Studio City",
+    "description": "A rental ad: compact studio apartment in warm evening light with monthly rent.",
+    "searchKeywords": [
+      "for rent",
+      "rental",
+      "studio apartment",
+      "monthly rent",
+      "small flat",
+      "city living",
+      "tenant",
+      "letting",
+      "apartment ad",
+      "available now"
+    ],
+    "prompt": "Create a compact rental advert, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a small studio apartment in warm evening light, a made bed against one wall, a two seat table by the window, {{detail_note}} on the sill. Lamps on and glowing amber, a burning orange sunset over the city outside the glass, a patterned rug and coloured cushions on the bed.\n\nText layout: a rounded card floats over the lower half in off white. On it: \"{{status_label}}\" as a small pill in {{accent_color}}, then the rent \"{{price_text}}\" very large with \"{{rent_period}}\" small beside it, and below a two line block with \"{{location_line}}\" and \"{{spec_line}}\". The wordmark \"{{agency_name}}\" sits above the card on the image itself.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Warm interior photography, amber lamp light against a violet and orange sunset, rich saturated colour, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "small tidy studio apartment with a made bed and a window table in warm evening light",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "KEYSTONE LETTINGS",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Status",
+        "inputType": "text",
+        "placeholder": "AVAILABLE NOW",
+        "required": true
+      },
+      {
+        "key": "price_text",
+        "label": "Rent",
+        "inputType": "text",
+        "placeholder": "850",
+        "required": false
+      },
+      {
+        "key": "rent_period",
+        "label": "Period",
+        "inputType": "text",
+        "placeholder": "PER MONTH",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Pallett Street, Old Town",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "STUDIO - 34 SQM - FURNISHED",
+        "required": false
+      },
+      {
+        "key": "detail_note",
+        "label": "Detail",
+        "inputType": "text",
+        "placeholder": "a small potted olive tree",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Pill colour",
+        "inputType": "text",
+        "placeholder": "warm coral",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-interior-collage-loft",
+    "title": "Interior Collage Loft",
+    "description": "A four panel interior collage of a loft with a caption strip under each frame.",
+    "searchKeywords": [
+      "interior collage",
+      "loft",
+      "four panel",
+      "room tour",
+      "apartment interior",
+      "industrial loft",
+      "property photos",
+      "grid layout",
+      "brick wall",
+      "listing"
+    ],
+    "prompt": "Create a four panel interior collage poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: four equal photographs in a two by two grid with thin white gutters, all from the same {{style_note}} loft: the open living area with tall factory windows, the kitchen island, the mezzanine bedroom, the bathroom in dark tile. Warm afternoon sun in every frame, glowing red brick, green plants and deep coloured textiles, consistent rich colour across all four.\n\nText layout: a header strip above the grid carries \"{{property_headline}}\" on the left and \"{{status_label}}\" on the right. Each panel has a small caption in its lower left corner. Below the grid a footer in {{accent_color}} holds \"{{spec_line}}\" and \"{{price_text}}\" on one line, with the wordmark \"{{agency_name}}\" and \"{{location_line}}\" on the line beneath.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Consistent interior photography in warm sunlight, saturated brick and foliage, strong contrast, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "four interior photos of a brick loft: living area, kitchen island, mezzanine bedroom, dark bathroom",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "FOUNDRY AND FLOOR",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Status",
+        "inputType": "text",
+        "placeholder": "NEW LISTING",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "The Cordage Loft",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Millgate",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "2 BED - 2 BATH - 165 SQM",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "612,000",
+        "required": false
+      },
+      {
+        "key": "style_note",
+        "label": "Style",
+        "inputType": "text",
+        "placeholder": "exposed brick and black steel",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Footer colour",
+        "inputType": "text",
+        "placeholder": "charcoal black",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-under-contract-bungalow",
+    "title": "Under Contract Bungalow",
+    "description": "A status update poster: single storey bungalow with a diagonal under contract ribbon.",
+    "searchKeywords": [
+      "under contract",
+      "under offer",
+      "bungalow",
+      "single storey",
+      "status update",
+      "pending sale",
+      "real estate",
+      "ribbon",
+      "listing update",
+      "house"
+    ],
+    "prompt": "Create a status update poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a single storey bungalow with a low pitched roof and a carport, {{garden_note}} across the front. Low golden sun from the side sets the grasses alight and throws long shadows over the path, a deep blue sky, flowering shrubs along the front. Calm suburban street, no cars.\n\nText layout: a solid {{accent_color}} ribbon crosses the top right corner at forty five degrees carrying \"{{status_label}}\" in small white caps. The bottom fifth is a plain white band: \"{{headline_text}}\" in medium caps on the left, \"{{location_line}}\" underneath it, and the wordmark \"{{agency_name}}\" pushed to the right edge. A small note \"{{next_step_text}}\" sits directly above the band on the image.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Golden hour architectural photography, glowing grasses, saturated sky, long shadows, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "single storey bungalow with a carport and a low pitched roof in late afternoon sun",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "LARKIN PROPERTY",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Ribbon",
+        "inputType": "text",
+        "placeholder": "UNDER CONTRACT",
+        "required": true
+      },
+      {
+        "key": "headline_text",
+        "label": "Headline",
+        "inputType": "text",
+        "placeholder": "OFFER ACCEPTED",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Wexley Close",
+        "required": false
+      },
+      {
+        "key": "next_step_text",
+        "label": "Note",
+        "inputType": "text",
+        "placeholder": "BACKUP OFFERS WELCOME",
+        "required": false
+      },
+      {
+        "key": "garden_note",
+        "label": "Garden",
+        "inputType": "text",
+        "placeholder": "a gravel garden with ornamental grasses",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Ribbon colour",
+        "inputType": "text",
+        "placeholder": "deep plum",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-just-sold-luxury-estate",
+    "title": "Just Sold Luxury Estate",
+    "description": "A discreet sold notice for a country estate, gold rule and small serif type.",
+    "searchKeywords": [
+      "just sold",
+      "luxury estate",
+      "country house",
+      "gold accent",
+      "discreet",
+      "high end sale",
+      "manor",
+      "record sale",
+      "serif",
+      "expose"
+    ],
+    "prompt": "Create a discreet luxury sold notice, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a symmetrical country estate of {{material_note}} at the end of a long gravel drive lined with mature trees, photographed from the drive in warm low sun. Lawns to both sides, tall chimneys, no cars and no people.\n\nText layout: a thin gold hairline frame runs inside the poster edge. \"{{status_label}}\" sits centred at the top in tiny wide caps above a short gold rule. The estate name \"{{property_headline}}\" is set centred in a large serif over the lawn with \"{{location_line}}\" small beneath. At the bottom, centred and stacked: \"{{result_line}}\" then the wordmark \"{{agency_name}}\", separated by a second gold rule.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Estate photography in warm low sun, symmetrical composition, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "symmetrical country estate at the end of a tree lined gravel drive in warm low sun",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "HAVERSHAM AND ROWE",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Status",
+        "inputType": "text",
+        "placeholder": "JUST SOLD",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Estate name",
+        "inputType": "text",
+        "placeholder": "Ashcombe House",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "The Downs",
+        "required": false
+      },
+      {
+        "key": "result_line",
+        "label": "Result",
+        "inputType": "text",
+        "placeholder": "SOLD OFF MARKET IN SIX WEEKS",
+        "required": false
+      },
+      {
+        "key": "material_note",
+        "label": "Materials",
+        "inputType": "text",
+        "placeholder": "honey coloured stone with sash windows",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-open-house-weekend-flyer",
+    "title": "Open House Weekend Flyer",
+    "description": "A busy weekend flyer: semi detached house, arrow marker and a viewing schedule.",
+    "searchKeywords": [
+      "open house",
+      "weekend",
+      "flyer",
+      "semi detached",
+      "viewing times",
+      "schedule",
+      "arrow marker",
+      "house viewing",
+      "real estate flyer",
+      "this weekend"
+    ],
+    "prompt": "Create a lively open house weekend flyer, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a semi detached house with {{facade_note}}, a wide open front gate and a path of stepping stones. Bright breezy sunshine under a deep blue sky, bright red and yellow balloons tied to the gate post, flower beds either side of the path.\n\nText layout: a large hand drawn style arrow in {{accent_color}} points from the top left down towards the front door with \"{{event_label}}\" written along it. Bottom left a stacked schedule: \"{{date_text}}\" over \"{{time_text}}\". Bottom right a boxed block with \"{{location_line}}\" and \"{{spec_line}}\" beneath each other. The wordmark \"{{agency_name}}\" runs along the very bottom edge.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Bright saturated daylight photography, strong blue sky, vivid colour, cheerful and lively, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "semi detached house with an open front gate, stepping stone path and balloons on the gate post",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "SUNNYVALE PROPERTY",
+        "required": true
+      },
+      {
+        "key": "event_label",
+        "label": "Event label",
+        "inputType": "text",
+        "placeholder": "OPEN THIS WEEKEND",
+        "required": true
+      },
+      {
+        "key": "date_text",
+        "label": "Date",
+        "inputType": "text",
+        "placeholder": "SAT 22 AND SUN 23",
+        "required": false
+      },
+      {
+        "key": "time_text",
+        "label": "Time",
+        "inputType": "text",
+        "placeholder": "10 AM - 4 PM",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "14 Ridley Avenue",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "3 BED - 1 BATH - GARAGE",
+        "required": false
+      },
+      {
+        "key": "facade_note",
+        "label": "Facade",
+        "inputType": "text",
+        "placeholder": "pale yellow render and white trim",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Arrow colour",
+        "inputType": "text",
+        "placeholder": "bright turquoise",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-beachfront-property",
+    "title": "Beachfront Property",
+    "description": "A coastal listing: beach house at sunset with the sea and a wide headline.",
+    "searchKeywords": [
+      "beachfront",
+      "beach house",
+      "coastal property",
+      "sea view",
+      "sunset",
+      "holiday home",
+      "waterfront",
+      "ocean",
+      "seaside",
+      "for sale"
+    ],
+    "prompt": "Create a coastal listing poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a low timber beach house on stilts sits directly above the sand, a wooden walkway leading down to the water. Sunset behind it, the sea calm and glassy, {{detail_note}} along the deck. Warm backlight, long soft shadows on the beach.\n\nText layout: the headline \"{{headline_text}}\" is set very wide across the sky in thin caps, letters spaced far apart. Underneath, centred, \"{{property_headline}}\" in a medium weight with \"{{location_line}}\" below it. A single line at the bottom holds \"{{spec_line}}\" left, \"{{price_text}}\" right, with the wordmark \"{{agency_name}}\" centred between them on a {{accent_color}} band.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings or coastlines. Warm backlit coastal photography, glassy water, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "low timber beach house on stilts above the sand with a walkway to the sea at sunset",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "SALT AND SHORE",
+        "required": true
+      },
+      {
+        "key": "headline_text",
+        "label": "Headline",
+        "inputType": "text",
+        "placeholder": "WAKE UP TO THE SEA",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "Driftwood House",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Fenn Bay",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "4 BED - 3 BATH - DIRECT BEACH ACCESS",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "1,340,000",
+        "required": false
+      },
+      {
+        "key": "detail_note",
+        "label": "Detail",
+        "inputType": "text",
+        "placeholder": "lanterns and a hanging chair",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Band colour",
+        "inputType": "text",
+        "placeholder": "deep sea blue",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-mountain-chalet-listing",
+    "title": "Mountain Chalet Listing",
+    "description": "A winter listing: timber chalet in snow with a warm lit interior and alpine facts.",
+    "searchKeywords": [
+      "chalet",
+      "mountain home",
+      "snow",
+      "winter property",
+      "alpine",
+      "ski lodge",
+      "timber house",
+      "holiday home",
+      "for sale",
+      "mountain view"
+    ],
+    "prompt": "Create a winter chalet listing poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a timber and stone chalet half buried in fresh snow, deep eaves loaded with white, every window glowing warm. Snow still falling in fine flakes, {{background_note}} rising behind the roofline in the blue dusk. Footprints lead to the door.\n\nText layout: the top left carries the wordmark \"{{agency_name}}\" and \"{{status_label}}\" stacked in small caps. Across the lower third a translucent dark panel holds \"{{property_headline}}\" in a warm serif, \"{{location_line}}\" beneath, then a three part row: \"{{spec_line}}\", \"{{feature_line}}\" and \"{{price_text}}\" divided by dots.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings or resorts. Winter dusk photography, falling snow, warm window glow against blue light, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "timber and stone chalet in deep fresh snow with warm glowing windows at blue dusk",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "ALPINE KEY",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Status",
+        "inputType": "text",
+        "placeholder": "NEW TO MARKET",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "Chalet Silberhorn",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Vesper Valley",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "5 BED - 3 BATH - 280 SQM",
+        "required": false
+      },
+      {
+        "key": "feature_line",
+        "label": "Feature",
+        "inputType": "text",
+        "placeholder": "SKI IN SKI OUT",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "1,890,000",
+        "required": false
+      },
+      {
+        "key": "background_note",
+        "label": "Background",
+        "inputType": "text",
+        "placeholder": "steep pine covered slopes",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-investment-opportunity",
+    "title": "Investment Opportunity",
+    "description": "An investor poster: apartment building with yield figures in a data block.",
+    "searchKeywords": [
+      "investment",
+      "rental yield",
+      "apartment building",
+      "investor",
+      "return",
+      "multi family",
+      "income property",
+      "portfolio",
+      "occupancy",
+      "real estate"
+    ],
+    "prompt": "Create a factual investment poster, vertical 4:5.\n\nInvestment agency: \"{{agency_name}}\"\n\nScene: a well kept four storey apartment building seen from the opposite pavement, {{facade_note}}, uniform balconies, ground floor entrance with a canopy. Clear afternoon sun on the facade under a deep blue sky, a row of green street trees casting shadows across the pavement.\n\nText layout: the upper edge holds \"{{status_label}}\" in a slim outlined box. The bottom half sits on a solid dark ink blue ground and is organised as a data table: three rows, each with a label on the left and a figure on the right, reading \"{{yield_line}}\", \"{{occupancy_line}}\" and \"{{price_text}}\". Above the table \"{{property_headline}}\" with \"{{location_line}}\" beside it, below it the wordmark \"{{agency_name}}\".\n\nInvented agency only, no real companies, no real addresses and no recognisable existing buildings. Sunlit architectural photography, blue sky, warm facade and green foliage, clean strong colour, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "four storey apartment building with uniform balconies in clear afternoon sun",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "VANTAGE CAPITAL PROPERTY",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Status",
+        "inputType": "text",
+        "placeholder": "INVESTMENT OPPORTUNITY",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "Bramble Court",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Eastfield",
+        "required": false
+      },
+      {
+        "key": "yield_line",
+        "label": "Yield",
+        "inputType": "text",
+        "placeholder": "GROSS YIELD 6.2 PERCENT",
+        "required": false
+      },
+      {
+        "key": "occupancy_line",
+        "label": "Occupancy",
+        "inputType": "text",
+        "placeholder": "12 UNITS - FULLY LET",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "2,400,000",
+        "required": false
+      },
+      {
+        "key": "facade_note",
+        "label": "Facade",
+        "inputType": "text",
+        "placeholder": "light grey render with dark window frames",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-agent-profile-card",
+    "title": "Agent Profile Card",
+    "description": "An agent introduction card: portrait, name, specialisation and a contact line.",
+    "searchKeywords": [
+      "estate agent",
+      "realtor portrait",
+      "profile card",
+      "agent introduction",
+      "contact",
+      "broker",
+      "team member",
+      "personal branding",
+      "headshot",
+      "real estate"
+    ],
+    "prompt": "Create an estate agent introduction card, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a friendly professional in {{outfit_note}} stands turned slightly to camera against a plain studio backdrop, arms relaxed, warm confident expression. Soft even studio light, the figure cropped from the knees up and placed to the right of the frame.\n\nText layout: the left third is a solid {{accent_color}} column. On it, stacked from the top: the wordmark \"{{agency_name}}\", then the name \"{{agent_name}}\" in large type, \"{{role_line}}\" beneath in small caps, a short rule, and \"{{specialisation_line}}\". At the very bottom of the column sits \"{{contact_text}}\". A short greeting \"{{headline_text}}\" runs across the backdrop beside the head.\n\nInvented agency and invented person, no real brokerages and no real people. Clean studio portrait photography, soft even light, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "friendly estate agent in a navy blazer standing against a plain studio backdrop",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "MARLOWE HOMES",
+        "required": true
+      },
+      {
+        "key": "agent_name",
+        "label": "Agent name",
+        "inputType": "text",
+        "placeholder": "RENA OKAFOR",
+        "required": true
+      },
+      {
+        "key": "role_line",
+        "label": "Role",
+        "inputType": "text",
+        "placeholder": "SENIOR SALES AGENT",
+        "required": false
+      },
+      {
+        "key": "specialisation_line",
+        "label": "Specialisation",
+        "inputType": "text",
+        "placeholder": "City apartments and first homes",
+        "required": false
+      },
+      {
+        "key": "headline_text",
+        "label": "Greeting",
+        "inputType": "text",
+        "placeholder": "LET US FIND IT TOGETHER",
+        "required": false
+      },
+      {
+        "key": "contact_text",
+        "label": "Contact",
+        "inputType": "text",
+        "placeholder": "marlowe-homes.example",
+        "required": false
+      },
+      {
+        "key": "outfit_note",
+        "label": "Outfit",
+        "inputType": "text",
+        "placeholder": "a navy blazer over a white shirt",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Column colour",
+        "inputType": "text",
+        "placeholder": "deep burgundy",
+        "required": false
+      }
+    ]
+  }
+]

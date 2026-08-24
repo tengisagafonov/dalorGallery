@@ -1,0 +1,219 @@
+[
+  {
+    "file": "01-velora-shampoo.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "02-vynce-earbuds.webp",
+    "verdict": "rejected",
+    "comment": "icons are bad"
+  },
+  {
+    "file": "03-norvell-hoodie.webp",
+    "verdict": "rejected",
+    "comment": "to ai"
+  },
+  {
+    "file": "04-orancharm-body-oil.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "05-baoy-black-friday.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "06-kindroot-lavender.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "07-neurovia-omega.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "08-verdaleaf-face-wash.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "09-rawthread-denim.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "10-veloura-fig-balm.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "11-genwears-leather.webp",
+    "verdict": "rejected",
+    "comment": "not good enough"
+  },
+  {
+    "file": "12-luma-dragon-scrub.webp",
+    "verdict": "rejected",
+    "comment": "icons are bad"
+  },
+  {
+    "file": "13-elitecloset-sportluxe.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "14-strida-sneaker.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "15-orivelle-night-cream.webp",
+    "verdict": "rejected",
+    "comment": "colors are not good"
+  },
+  {
+    "file": "16-teeechess-oversized.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "17-eternal-cargo.webp",
+    "verdict": "rejected",
+    "comment": "icons"
+  },
+  {
+    "file": "18-naturestouch-forest.webp",
+    "verdict": "rejected",
+    "comment": "icons are not good"
+  },
+  {
+    "file": "19-leafwell-cica.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "20-aquaris-toner.webp",
+    "verdict": "rejected",
+    "comment": "doesn't look premium"
+  },
+  {
+    "file": "21-nextout-sale.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "22-veltra-sneaker.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "23-trailborn-boot.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "24-cocoluxe-lotion.webp",
+    "verdict": "rejected",
+    "comment": "already had the same"
+  },
+  {
+    "file": "25-nuvelle-repair.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "26-verenne-lovemoisture.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "27-serenleaf-tonic.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "28-bomber-shopcard.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "29-urbanluxe-shoppage.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "30-hoodie-shoppage.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "31-maisonvela-sale.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "32-hypemode-casualset.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "33-thalasi-listing.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "34-apexa-racing.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "35-plumora-facewash.webp",
+    "verdict": "rejected",
+    "comment": "looks ai"
+  },
+  {
+    "file": "36-majestia-jojoba.webp",
+    "verdict": "rejected",
+    "comment": "not good font"
+  },
+  {
+    "file": "37-aquelle-serum.webp",
+    "verdict": "rejected",
+    "comment": "repetitive design"
+  },
+  {
+    "file": "38-natura-botanicals.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "39-kaisun-sakura.webp",
+    "verdict": "rejected",
+    "comment": "not selling format"
+  },
+  {
+    "file": "40-aurelis-gold.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "41-solara-sunglasses.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "42-maisonholm-candle.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "43-ridgeroast-coldbrew.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "44-veluna-activewear.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "45-nordvel-watch.webp",
+    "verdict": "rejected",
+    "comment": "not good practice"
+  },
+  {
+    "file": "46-haldenhome-linen.webp",
+    "verdict": "rejected",
+    "comment": "looks ai"
+  },
+  {
+    "file": "47-soleyard-midweek.webp",
+    "verdict": "approved"
+  },
+  {
+    "file": "48-noirelle-hairoil.webp",
+    "verdict": "rejected",
+    "comment": "looks wierd cap"
+  },
+  {
+    "file": "49-vantrik-backpack.webp",
+    "verdict": "rejected",
+    "comment": "like a game"
+  },
+  {
+    "file": "50-malthouse-sourdough.webp",
+    "verdict": "approved"
+  }
+]

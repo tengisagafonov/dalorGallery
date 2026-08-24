@@ -2,17 +2,23 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Icon } from "./gallery-icon";
-import type { Translation } from "./i18n";
+import type { Locale, Translation } from "./i18n";
+import type { GalleryTemplate } from "./types";
 
 const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL ?? "http://127.0.0.1:1337";
 const ACCEPTED_TYPES = ["image/jpeg", "image/png", "image/webp", "image/gif"];
 
 type Props = {
+  locale: Locale;
   onAnalyzed: (description: string) => void;
   t: Translation;
+  template: GalleryTemplate;
 };
 
-export function ImageAnalyzer({ onAnalyzed, t }: Props) {
+/** Antwort des Backends, wenn das Motiv nicht zur Vorlage gehört. */
+type MismatchDetails = { reason?: string; detected?: string; expected?: string };
+
+export function ImageAnalyzer({ locale, onAnalyzed, t, template }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
   const previewRef = useRef("");
   const [file, setFile] = useState<File | null>(null);
@@ -34,9 +40,32 @@ export function ImageAnalyzer({ onAnalyzed, t }: Props) {
     setError("");
     const form = new FormData();
     form.append("image", image);
+    // Vorlage und Sprache mitschicken: das Backend prüft damit, ob das Motiv
+    // überhaupt zu dieser Vorlage gehört, und benennt die Abweichung passend.
+    if (template.promptId) form.append("templateId", template.promptId);
+    // Titel und Kategorie als Rückfall: findet das Backend die Vorlage über die
+    // Kennung nicht, hätte es sonst nichts zum Vergleichen und würde alles durchlassen.
+    form.append("templateTitle", template.title);
+    form.append("templateDescription", template.description);
+    form.append("locale", locale);
     try {
       const response = await fetch(`${STRAPI_URL}/api/image-analysis`, { method: "POST", body: form });
-      const payload = await response.json() as { description?: string; error?: { message?: string } };
+      const payload = await response.json() as {
+        description?: string;
+        error?: { message?: string; details?: MismatchDetails };
+      };
+
+      if (payload.error?.details?.reason === "subject-mismatch") {
+        const { detected, expected } = payload.error.details;
+        setError(
+          [t.imageDoesNotFit, detected && `${t.imageDetected}: ${detected}`, expected && `${t.imageExpected}: ${expected}`]
+            .filter(Boolean)
+            .join(" · "),
+        );
+        setStatus("error");
+        return;
+      }
+
       if (!response.ok || !payload.description) throw new Error(payload.error?.message ?? t.imageAnalysisFailed);
       onAnalyzed(payload.description);
       setStatus("idle");
@@ -66,7 +95,7 @@ export function ImageAnalyzer({ onAnalyzed, t }: Props) {
   };
 
   return (
-    <div className="mb-2 rounded-xl border border-dashed border-[#cfc7bc] bg-[#faf8f5] p-3">
+    <div className="mb-2 rounded-xl border border-dashed border-line-strong bg-surface-sunken p-3">
       <input ref={inputRef} type="file" accept={ACCEPTED_TYPES.join(",")} hidden onChange={(event) => selectFile(event.target.files?.[0])} />
       <div
         onDragOver={(event) => event.preventDefault()}
@@ -75,18 +104,18 @@ export function ImageAnalyzer({ onAnalyzed, t }: Props) {
       >
         {preview ? (
           <div className="size-14 shrink-0 rounded-lg bg-cover bg-center" style={{ backgroundImage: `url(${preview})` }} role="img" aria-label={t.uploadedImage} />
-        ) : <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white text-[#625b53] shadow-sm"><Icon name="camera" className="size-5" /></span>}
+        ) : <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-elevated text-ink-muted shadow-sm"><Icon name="camera" className="size-5" /></span>}
         <div className="min-w-0 flex-1">
           <p className="text-[11px] font-semibold">{status === "loading" ? t.analyzingImage : t.uploadReferenceImage}</p>
-          <p className="mt-0.5 text-[9px] leading-4 text-[#8b847c]">{t.imageUploadHint}</p>
+          <p className="mt-0.5 text-[9px] leading-4 text-ink-faint">{t.imageUploadHint}</p>
         </div>
       </div>
       <div className="mt-2.5 flex flex-wrap gap-2">
-        <button type="button" onClick={() => inputRef.current?.click()} disabled={status === "loading"} className="rounded-full bg-[#191612] px-3 py-1.5 text-[10px] font-semibold text-white disabled:opacity-50">{file ? t.changeImage : t.uploadImage}</button>
-        {file && <button type="button" onClick={() => void analyze(file)} disabled={status === "loading"} className="rounded-full border border-[#d8d1c8] bg-white px-3 py-1.5 text-[10px] font-semibold disabled:opacity-50">{t.analyzeAgain}</button>}
-        {file && <button type="button" onClick={remove} disabled={status === "loading"} className="px-2 py-1.5 text-[10px] font-medium text-[#776f67] disabled:opacity-50">{t.removeImage}</button>}
+        <button type="button" onClick={() => inputRef.current?.click()} disabled={status === "loading"} className="rounded-full bg-accent px-3 py-1.5 text-[10px] font-semibold text-on-accent disabled:opacity-50">{file ? t.changeImage : t.uploadImage}</button>
+        {file && <button type="button" onClick={() => void analyze(file)} disabled={status === "loading"} className="rounded-full border border-line-strong bg-elevated px-3 py-1.5 text-[10px] font-semibold disabled:opacity-50">{t.analyzeAgain}</button>}
+        {file && <button type="button" onClick={remove} disabled={status === "loading"} className="px-2 py-1.5 text-[10px] font-medium text-ink-muted disabled:opacity-50">{t.removeImage}</button>}
       </div>
-      {status === "loading" && <div className="mt-3 h-1 overflow-hidden rounded-full bg-[#e5e0d8]"><span className="block h-full w-1/2 animate-pulse rounded-full bg-[#2878df]" /></div>}
+      {status === "loading" && <div className="mt-3 h-1 overflow-hidden rounded-full bg-muted"><span className="block h-full w-1/2 animate-pulse rounded-full bg-info" /></div>}
       {error && <p className="mt-2 text-[10px] leading-4 text-red-600">{error}</p>}
     </div>
   );

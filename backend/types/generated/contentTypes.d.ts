@@ -443,6 +443,58 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiActivityLogActivityLog extends Struct.CollectionTypeSchema {
+  collectionName: 'activity_logs';
+  info: {
+    description: 'Was im System passiert ist \u2013 Inhalte, KI-Aufrufe, Fehler';
+    displayName: 'Aktivit\u00E4tsprotokoll';
+    pluralName: 'activity-logs';
+    singularName: 'activity-log';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+  };
+  attributes: {
+    action: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+    actor: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+      }>;
+    category: Schema.Attribute.Enumeration<
+      ['content', 'ai', 'security', 'system']
+    > &
+      Schema.Attribute.Required;
+    context: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    durationMs: Schema.Attribute.Integer;
+    level: Schema.Attribute.Enumeration<['info', 'warning', 'error']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'info'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::activity-log.activity-log'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAnalyticsEventAnalyticsEvent
   extends Struct.CollectionTypeSchema {
   collectionName: 'analytics_events';
@@ -461,6 +513,10 @@ export interface ApiAnalyticsEventAnalyticsEvent
     };
   };
   attributes: {
+    country: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 2;
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -479,6 +535,7 @@ export interface ApiAnalyticsEventAnalyticsEvent
     templateId: Schema.Attribute.Integer;
     templateKey: Schema.Attribute.String;
     templateTitle: Schema.Attribute.String;
+    timeZone: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -539,6 +596,41 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
       'api::template.template'
     >;
     templates: Schema.Attribute.Relation<'oneToMany', 'api::template.template'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiImageAnalysisHitImageAnalysisHit
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'image_analysis_hits';
+  info: {
+    description: 'Z\u00E4hlt Bildanalysen je Besucher, damit das Limit Neustarts \u00FCbersteht';
+    displayName: 'Bildanalyse-Aufruf';
+    pluralName: 'image-analysis-hits';
+    singularName: 'image-analysis-hit';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    identifier: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::image-analysis-hit.image-analysis-hit'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1122,8 +1214,10 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::activity-log.activity-log': ApiActivityLogActivityLog;
       'api::analytics-event.analytics-event': ApiAnalyticsEventAnalyticsEvent;
       'api::category.category': ApiCategoryCategory;
+      'api::image-analysis-hit.image-analysis-hit': ApiImageAnalysisHitImageAnalysisHit;
       'api::template.template': ApiTemplateTemplate;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

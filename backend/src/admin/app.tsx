@@ -8,6 +8,14 @@ function ChartIcon(): ReactNode {
   );
 }
 
+function ActivityIcon(): ReactNode {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 12h4l2.5-7 5 14L17.5 12H21" />
+    </svg>
+  );
+}
+
 export default {
   config: {
     locales: ['de'],
@@ -18,6 +26,13 @@ export default {
       icon: ChartIcon,
       intlLabel: { id: 'dalor.statistics', defaultMessage: 'Statistiken' },
       Component: () => import('./pages/statistics-page'),
+      permissions: [],
+    });
+    app.addMenuLink({
+      to: 'plugins/dalor-activity',
+      icon: ActivityIcon,
+      intlLabel: { id: 'dalor.activity', defaultMessage: 'Aktivität' },
+      Component: () => import('./pages/activity-page'),
       permissions: [],
     });
     app.widgets.register({

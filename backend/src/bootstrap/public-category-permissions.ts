@@ -5,10 +5,20 @@ const PUBLIC_CATALOG_ACTIONS = [
   'api::category.category.findOne',
   'api::template.template.find',
   'api::template.template.findOne',
+  'api::template.template.prompt',
   'api::analytics.analytics.track',
   'api::analytics.analytics.popular',
-  'api::analytics.analytics.stats',
   'api::image-analysis.image-analysis.analyze',
+];
+
+/**
+ * Rechte, die früher einmal vergeben wurden und wieder eingezogen gehören.
+ * Ein Eintrag aus PUBLIC_CATALOG_ACTIONS zu löschen genügt nicht – die Zeile
+ * bleibt sonst in der Datenbank bestehen und der Endpunkt weiter offen.
+ */
+const REVOKED_PUBLIC_ACTIONS = [
+  // Auswertung läuft jetzt über die Admin-Route /dalor-statistics/stats
+  'api::analytics.analytics.stats',
 ];
 
 export async function enablePublicCatalogRead(strapi: Core.Strapi) {
@@ -27,6 +37,17 @@ export async function enablePublicCatalogRead(strapi: Core.Strapi) {
       await permissionQuery.create({
         data: { action, role: publicRole.id },
       });
+    }
+  }
+
+  for (const action of REVOKED_PUBLIC_ACTIONS) {
+    const stale = await permissionQuery.findOne({
+      where: { action, role: publicRole.id },
+    });
+
+    if (stale) {
+      await permissionQuery.delete({ where: { id: stale.id } });
+      strapi.log.info(`Öffentliches Recht entzogen: ${action}`);
     }
   }
 }

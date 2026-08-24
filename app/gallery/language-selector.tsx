@@ -24,7 +24,7 @@ export function LanguageSelector({ locale, onChange }: LanguageSelectorProps) {
   return (
     <div className="relative mt-3">
       {isOpen && (
-        <div className="absolute bottom-full left-0 z-30 mb-2 w-full overflow-hidden rounded-2xl border border-[#ded7cf] bg-white p-1.5 shadow-xl">
+        <div className="absolute bottom-full left-0 z-30 mb-2 w-full overflow-hidden rounded-2xl border border-line bg-elevated p-1.5 shadow-xl">
           {languages.map((language) => (
             <button
               key={language.locale}
@@ -34,7 +34,7 @@ export function LanguageSelector({ locale, onChange }: LanguageSelectorProps) {
                 setIsOpen(false);
               }}
               className={`flex w-full items-center rounded-xl px-3 py-2.5 text-left text-[13px] transition ${
-                locale === language.locale ? "bg-[#ebe7e0] font-semibold" : "hover:bg-[#f5f2ed]"
+                locale === language.locale ? "bg-muted font-semibold" : "hover:bg-subtle"
               }`}
             >
               {language.label}
@@ -46,11 +46,11 @@ export function LanguageSelector({ locale, onChange }: LanguageSelectorProps) {
       <button
         type="button"
         onClick={() => setIsOpen((current) => !current)}
-        className="flex w-full items-center gap-3 rounded-full border border-[#ded7cf] bg-white px-4 py-3 text-[13px] font-medium text-[#3f3a34] shadow-sm transition hover:bg-[#f8f5f1]"
+        className="flex w-full items-center gap-3 rounded-full border border-line bg-elevated px-4 py-3 text-[13px] font-medium text-ink-soft shadow-sm transition hover:bg-subtle"
         aria-expanded={isOpen}
         aria-haspopup="listbox"
       >
-        <Icon name="globe" className="size-5 text-[#726a61]" />
+        <Icon name="globe" className="size-5 text-ink-muted" />
         {selectedLanguage.label}
         <Icon
           name="chevron"

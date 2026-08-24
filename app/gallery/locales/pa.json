@@ -1,5 +1,6 @@
 {
   "categoriesHeading": "ਸ਼੍ਰੇਣੀਆਂ",
+  "toggleTheme": "ਹਲਕੀ ਅਤੇ ਗੂੜ੍ਹੀ ਥੀਮ ਬਦਲੋ",
   "contentType": "ਸਮੱਗਰੀ ਦੀ ਕਿਸਮ",
   "photo": "ਫੋਟੋ",
   "video": "ਵੀਡੀਓ",
@@ -10,6 +11,8 @@
   "browse": "ਟੈਂਪਲੇਟ ਵੇਖੋ ਅਤੇ ਆਪਣੇ ਪ੍ਰੌਮਪਟ ਵਿੱਚ ਇੱਕ ਸ਼ਾਮਲ ਕਰੋ।",
   "search": "ਟੈਂਪਲੇਟ ਖੋਜੋ...",
   "viewAll": "ਸਾਰੇ ਵੇਖੋ",
+  "previousPage": "ਪਿਛਲਾ ਸਫ਼ਾ",
+  "nextPage": "ਅਗਲਾ ਸਫ਼ਾ",
   "noTemplates": "ਕੋਈ ਟੈਂਪਲੇਟ ਨਹੀਂ ਮਿਲਿਆ",
   "searchHint": "ਕੋਈ ਹੋਰ ਖੋਜ ਜਾਂ ਸ਼੍ਰੇਣੀ ਅਜ਼ਮਾਓ।",
   "previewPrompt": "ਪ੍ਰੌਮਪਟ ਵੇਖੋ",
@@ -25,6 +28,9 @@
   "analyzeAgain": "ਦੁਬਾਰਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰੋ",
   "removeImage": "ਹਟਾਓ",
   "analyzingImage": "ਤਸਵੀਰ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਹੋ ਰਿਹਾ ਹੈ…",
+  "imageDoesNotFit": "ਇਹ ਤਸਵੀਰ ਇਸ ਟੈਂਪਲੇਟ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦੀ",
+  "imageDetected": "ਪਛਾਣਿਆ ਗਿਆ",
+  "imageExpected": "ਇੱਥੇ ਚਾਹੀਦਾ",
   "imageAnalysisFailed": "ਤਸਵੀਰ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਨਹੀਂ ਹੋ ਸਕਿਆ।",
   "imageUploadInvalid": "ਕਿਰਪਾ ਕਰਕੇ 10 MB ਤੋਂ ਛੋਟੀ ਸਮਰਥਿਤ ਤਸਵੀਰ ਚੁਣੋ।",
   "uploadedImage": "ਅੱਪਲੋਡ ਕੀਤੀ ਹਵਾਲਾ ਤਸਵੀਰ",
@@ -32,6 +38,7 @@
   "promptPreview": "ਪ੍ਰੌਮਪਟ ਝਲਕ",
   "copy": "ਕਾਪੀ ਕਰੋ",
   "copied": "ਕਾਪੀ ਹੋ ਗਿਆ",
+  "loadingPrompt": "ਪ੍ਰੌਂਪਟ ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…",
   "noPrompt": "ਕੋਈ ਪ੍ਰੌਮਪਟ ਨਹੀਂ",
   "closePrompt": "ਪ੍ਰੌਮਪਟ ਝਲਕ ਬੰਦ ਕਰੋ",
   "templateTitles": {

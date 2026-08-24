@@ -1,5 +1,6 @@
 {
   "categoriesHeading": "Kategorien",
+  "toggleTheme": "Helles / dunkles Design umschalten",
   "contentType": "Inhaltstyp",
   "photo": "Foto",
   "video": "Video",
@@ -10,6 +11,8 @@
   "browse": "Durchsuche Vorlagen und passe den Prompt an.",
   "search": "Vorlagen durchsuchen...",
   "viewAll": "Alle anzeigen",
+  "previousPage": "Vorherige Seite",
+  "nextPage": "Nächste Seite",
   "noTemplates": "Keine Vorlagen gefunden",
   "searchHint": "Versuche eine andere Suche oder Kategorie.",
   "previewPrompt": "Prompt ansehen",
@@ -25,6 +28,9 @@
   "analyzeAgain": "Erneut analysieren",
   "removeImage": "Entfernen",
   "analyzingImage": "Bild wird analysiert…",
+  "imageDoesNotFit": "Dieses Bild passt nicht zu dieser Vorlage",
+  "imageDetected": "Erkannt",
+  "imageExpected": "Hier gehört hin",
   "imageAnalysisFailed": "Das Bild konnte nicht analysiert werden.",
   "imageUploadInvalid": "Bitte wähle ein unterstütztes Bild unter 10 MB.",
   "uploadedImage": "Hochgeladenes Referenzbild",
@@ -32,6 +38,7 @@
   "promptPreview": "Prompt-Vorschau",
   "copy": "Kopieren",
   "copied": "Kopiert",
+  "loadingPrompt": "Prompt wird geladen…",
   "noPrompt": "Kein Prompt",
   "closePrompt": "Prompt-Vorschau schließen",
   "templateTitles": {

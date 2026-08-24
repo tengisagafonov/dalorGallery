@@ -1,0 +1,804 @@
+[
+  {
+    "slug": "real-estate-property-of-the-week",
+    "title": "Property Of The Week",
+    "description": "A weekly highlight poster: featured house with a corner banner and three facts.",
+    "searchKeywords": [
+      "property of the week",
+      "featured listing",
+      "weekly highlight",
+      "pick of the week",
+      "banner",
+      "real estate feature",
+      "showcase",
+      "selected home",
+      "agent pick",
+      "for sale"
+    ],
+    "prompt": "Create a weekly highlight poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a handsome detached house with warm render and a tiled roof set back behind a low wall, photographed in warm evening sun that catches one side of the building. A gravel drive, clipped topiary in pots, the windows reflecting the sky.\n\nText layout: a triangular corner banner in {{accent_color}} covers the top left corner with \"{{feature_label}}\" set along its diagonal. The property name \"{{property_headline}}\" sits low over the image in generous caps, \"{{location_line}}\" underneath. The bottom band divides into three equal cells carrying \"{{spec_line}}\", \"{{plot_line}}\" and \"{{price_text}}\", with the wordmark \"{{agency_name}}\" centred beneath the band.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Warm evening architectural photography, side lighting, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "detached house behind a low wall in warm evening sun with a gravel drive",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "WESTMERE AND HALE",
+        "required": true
+      },
+      {
+        "key": "feature_label",
+        "label": "Banner",
+        "inputType": "text",
+        "placeholder": "PROPERTY OF THE WEEK",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "Bramblewood House",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Kingsmoor",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "5 BED - 3 BATH",
+        "required": false
+      },
+      {
+        "key": "plot_line",
+        "label": "Plot",
+        "inputType": "text",
+        "placeholder": "PLOT 980 SQM",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "1,050,000",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Banner colour",
+        "inputType": "text",
+        "placeholder": "rich gold",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-client-testimonial",
+    "title": "Client Testimonial",
+    "description": "A testimonial post: happy buyers at their new door with a quote and a rating line.",
+    "searchKeywords": [
+      "testimonial",
+      "review",
+      "happy clients",
+      "five stars",
+      "buyer feedback",
+      "quote",
+      "recommendation",
+      "new owners",
+      "trust",
+      "real estate"
+    ],
+    "prompt": "Create a client testimonial post, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a couple stands in the open doorway of their new home, one holding a moving box, both laughing at something off camera. Warm afternoon light on the porch, {{porch_note}} beside the door, the hallway visible behind them.\n\nText layout: an oversized quotation mark in {{accent_color}} sits behind the top of the text as a soft shape. The quote \"{{quote_text}}\" runs across three lines in a readable serif over a light panel in the lower half. Under the quote a small line gives \"{{client_line}}\", then a short row with \"{{rating_line}}\" on the left and the wordmark \"{{agency_name}}\" on the right. \"{{eyebrow_text}}\" sits above the panel on the image.\n\nInvented agency and invented people, no real brokerages and no real customers. Warm lifestyle photography, afternoon porch light, natural expressions, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "laughing couple in the open doorway of their new home holding a moving box",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "BRIGHTWATER HOMES",
+        "required": true
+      },
+      {
+        "key": "eyebrow_text",
+        "label": "Eyebrow",
+        "inputType": "text",
+        "placeholder": "WHAT OUR CLIENTS SAY",
+        "required": true
+      },
+      {
+        "key": "quote_text",
+        "label": "Quote",
+        "inputType": "text",
+        "placeholder": "They found us a home in three weeks and stayed calm when we did not",
+        "required": false
+      },
+      {
+        "key": "client_line",
+        "label": "Client",
+        "inputType": "text",
+        "placeholder": "MAYA AND TOM, MOVED IN APRIL",
+        "required": false
+      },
+      {
+        "key": "rating_line",
+        "label": "Rating",
+        "inputType": "text",
+        "placeholder": "RATED 5 OF 5",
+        "required": false
+      },
+      {
+        "key": "porch_note",
+        "label": "Porch detail",
+        "inputType": "text",
+        "placeholder": "a stack of unopened boxes",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Quote mark colour",
+        "inputType": "text",
+        "placeholder": "soft sky blue",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-listing-carousel-cover",
+    "title": "Listing Carousel Cover",
+    "description": "A social carousel cover: house exterior with a swipe prompt and a photo counter.",
+    "searchKeywords": [
+      "carousel",
+      "social media cover",
+      "swipe",
+      "instagram post",
+      "photo series",
+      "listing preview",
+      "property post",
+      "first slide",
+      "social real estate",
+      "gallery"
+    ],
+    "prompt": "Create a social carousel cover, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a modern two storey house with {{facade_note}} seen from a three quarter angle in warm late afternoon sun, the drive curving in from the lower left and a deep green lawn either side. Long shadows across the paving, glowing windows, a deep blue sky with a few gold lit clouds behind the roofline.\n\nText layout: the lower third sits under a soft dark gradient that fades up into the image. On it the headline \"{{headline_text}}\" is set across two lines in bold caps, with \"{{location_line}}\" small beneath. A pill in {{accent_color}} sits at the right of that line holding the photo counter \"{{counter_text}}\", and directly under it \"{{swipe_text}}\" with a right pointing arrow. The wordmark \"{{agency_name}}\" sits alone at the top left in small spaced caps.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Warm three quarter architectural photography, golden light, saturated sky and lawn, depth and long shadows, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "modern two storey house from a three quarter angle in warm late afternoon sun",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "NEWFORM PROPERTY",
+        "required": true
+      },
+      {
+        "key": "headline_text",
+        "label": "Headline",
+        "inputType": "text",
+        "placeholder": "INSIDE THIS WEEK NEW LISTING",
+        "required": true
+      },
+      {
+        "key": "counter_text",
+        "label": "Photo counter",
+        "inputType": "text",
+        "placeholder": "1 OF 9",
+        "required": false
+      },
+      {
+        "key": "swipe_text",
+        "label": "Swipe prompt",
+        "inputType": "text",
+        "placeholder": "SWIPE FOR THE TOUR",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Calder Rise",
+        "required": false
+      },
+      {
+        "key": "facade_note",
+        "label": "Facade",
+        "inputType": "text",
+        "placeholder": "white render and dark timber panels",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Pill colour",
+        "inputType": "text",
+        "placeholder": "warm amber",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-farmhouse-countryside",
+    "title": "Farmhouse Countryside",
+    "description": "A country listing: farmhouse in open fields with land size and outbuildings.",
+    "searchKeywords": [
+      "farmhouse",
+      "countryside",
+      "land",
+      "outbuildings",
+      "rural property",
+      "acres",
+      "country living",
+      "smallholding",
+      "fields",
+      "for sale"
+    ],
+    "prompt": "Create a country listing poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a long low farmhouse with whitewashed walls and {{outbuilding_note}} sits in open fields, seen from a rise so the land spreads around it. A track curves in from the bottom of the frame, hedged fields in different greens, a wide sky with high cloud. Clear afternoon light.\n\nText layout: the type sits high where the sky is empty. \"{{status_label}}\" is centred in small spaced caps above the headline \"{{property_headline}}\", set in a broad serif. \"{{location_line}}\" follows beneath in italic. The bottom of the poster carries three short entries evenly spread across a hairline: \"{{land_line}}\", \"{{spec_line}}\" and \"{{price_text}}\", with the wordmark \"{{agency_name}}\" centred below them.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing farms. Rural landscape photography from a rise, wide sky, clear afternoon light, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "long whitewashed farmhouse with barns in open hedged fields seen from a rise",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "COBBLE AND CLAY",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Status",
+        "inputType": "text",
+        "placeholder": "FOR SALE",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "Marley Farm",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Upper Wend",
+        "required": false
+      },
+      {
+        "key": "land_line",
+        "label": "Land",
+        "inputType": "text",
+        "placeholder": "14 ACRES",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "5 BED - 2 BARNS - STABLES",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "975,000",
+        "required": false
+      },
+      {
+        "key": "outbuilding_note",
+        "label": "Outbuildings",
+        "inputType": "text",
+        "placeholder": "two stone barns and a stable block",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-auction-notice",
+    "title": "Auction Notice",
+    "description": "An auction announcement: property with the auction date, guide price and lot number.",
+    "searchKeywords": [
+      "auction",
+      "guide price",
+      "lot number",
+      "auction date",
+      "bidding",
+      "under the hammer",
+      "property auction",
+      "sale by auction",
+      "reserve",
+      "real estate"
+    ],
+    "prompt": "Create a formal auction notice, vertical 4:5.\n\nAuction house: \"{{agency_name}}\"\n\nScene: a solid double fronted property in need of work, {{condition_note}}, photographed square on in warm low sun that picks out the worn paint, ivy climbing one side, weeds along the path, blinds down in the upper windows, a plain hoarding panel on the ground floor.\n\nText layout: the poster reads like a notice. A ruled box at the top holds \"{{status_label}}\" centred in heavy caps with \"{{lot_line}}\" small beneath it. The image sits in the middle with a hairline border. Under it a ruled table of three rows, each a label and a value: \"{{date_text}}\", \"{{guide_price_text}}\" and \"{{location_line}}\". The wordmark \"{{agency_name}}\" closes the poster centred, with \"{{terms_line}}\" in small type underneath.\n\nInvented auction house only, no real companies, no real addresses and no recognisable existing buildings. Documentary photography in warm low sun, weathered colour and green ivy against a blue sky, square on framing, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "double fronted property in need of repair photographed square on in warm low sun",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Auction house",
+        "inputType": "text",
+        "placeholder": "HALLIDAY AUCTIONS",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Notice",
+        "inputType": "text",
+        "placeholder": "FOR SALE BY AUCTION",
+        "required": true
+      },
+      {
+        "key": "lot_line",
+        "label": "Lot",
+        "inputType": "text",
+        "placeholder": "LOT 24",
+        "required": false
+      },
+      {
+        "key": "date_text",
+        "label": "Auction date",
+        "inputType": "text",
+        "placeholder": "THURSDAY 9 OCTOBER, 2 PM",
+        "required": false
+      },
+      {
+        "key": "guide_price_text",
+        "label": "Guide price",
+        "inputType": "text",
+        "placeholder": "GUIDE 185,000",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Nettlebed Row",
+        "required": false
+      },
+      {
+        "key": "terms_line",
+        "label": "Terms",
+        "inputType": "text",
+        "placeholder": "SUBJECT TO RESERVE - VIEWINGS BY APPOINTMENT",
+        "required": false
+      },
+      {
+        "key": "condition_note",
+        "label": "Condition",
+        "inputType": "text",
+        "placeholder": "peeling paint and a bare front garden",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-luxury-interior-marble",
+    "title": "Luxury Interior Marble",
+    "description": "A dark interior expose: marble living space with a single line of serif type.",
+    "searchKeywords": [
+      "luxury interior",
+      "marble",
+      "dark interior",
+      "high end design",
+      "living room",
+      "stone finishes",
+      "designer home",
+      "interior expose",
+      "elegant",
+      "property"
+    ],
+    "prompt": "Create a dark luxury interior expose, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a deep toned living space at night: a full height wall of {{stone_note}} behind a low sofa, a brass floor lamp casting a narrow pool of light, heavy curtains drawn across one side. Everything reads in browns and near blacks with one warm highlight on the stone veining.\n\nText layout: the poster is quiet. \"{{eyebrow_text}}\" sits in tiny caps at the top left with the wordmark \"{{agency_name}}\" directly under it. Nothing else until the lower edge, where a single centred line of serif type reads \"{{caption_text}}\". Below it, smaller and spaced, \"{{property_headline}}\" and \"{{spec_line}}\" separated by a dot, and \"{{price_text}}\" alone on the last line.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing interiors or brands. Low key interior photography at night, single warm light source, deep shadows, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "dark living room at night with a full height marble wall and a brass floor lamp",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "NOIR AND STONE",
+        "required": true
+      },
+      {
+        "key": "eyebrow_text",
+        "label": "Eyebrow",
+        "inputType": "text",
+        "placeholder": "INTERIORS",
+        "required": true
+      },
+      {
+        "key": "caption_text",
+        "label": "Caption",
+        "inputType": "text",
+        "placeholder": "Quiet rooms are the real luxury",
+        "required": false
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "Residence 9",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "3 BED - 240 SQM",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "PRICE ON APPLICATION",
+        "required": false
+      },
+      {
+        "key": "stone_note",
+        "label": "Stone",
+        "inputType": "text",
+        "placeholder": "dark veined brown marble",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-move-in-ready",
+    "title": "Move In Ready",
+    "description": "A ready to occupy poster: freshly finished empty apartment with a handover date.",
+    "searchKeywords": [
+      "move in ready",
+      "ready to occupy",
+      "newly renovated",
+      "empty apartment",
+      "handover",
+      "immediate possession",
+      "refurbished",
+      "new flooring",
+      "available",
+      "listing"
+    ],
+    "prompt": "Create a ready to occupy poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a freshly finished empty apartment: white walls, {{floor_note}}, a radiator under a clean window and a single closed door. Nothing in the room at all. Flat bright daylight, the corners crisp, a faint shadow where the light falls across the floor.\n\nText layout: the emptiness carries the type. \"{{headline_text}}\" is set in the middle of the bare wall in large thin caps as if painted there. A tight block sits bottom left with three stacked lines: \"{{status_label}}\", \"{{handover_line}}\" and \"{{spec_line}}\". Bottom right, in a small {{accent_color}} square, sits \"{{price_text}}\". The wordmark \"{{agency_name}}\" runs along the top edge.\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Bright empty interior photography, flat daylight, clean white walls, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "freshly finished empty apartment room with white walls and new oak flooring",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "PLAIN AND PROPER",
+        "required": true
+      },
+      {
+        "key": "headline_text",
+        "label": "Headline",
+        "inputType": "text",
+        "placeholder": "BRING ONLY YOUR BOXES",
+        "required": true
+      },
+      {
+        "key": "status_label",
+        "label": "Status",
+        "inputType": "text",
+        "placeholder": "MOVE IN READY",
+        "required": false
+      },
+      {
+        "key": "handover_line",
+        "label": "Handover",
+        "inputType": "text",
+        "placeholder": "KEYS FROM 1 SEPTEMBER",
+        "required": false
+      },
+      {
+        "key": "spec_line",
+        "label": "Key facts",
+        "inputType": "text",
+        "placeholder": "3 BED - 1 BATH - 92 SQM",
+        "required": false
+      },
+      {
+        "key": "price_text",
+        "label": "Price",
+        "inputType": "text",
+        "placeholder": "274,000",
+        "required": false
+      },
+      {
+        "key": "floor_note",
+        "label": "Flooring",
+        "inputType": "text",
+        "placeholder": "new pale oak flooring",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Square colour",
+        "inputType": "text",
+        "placeholder": "strong cherry red",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-home-office-study",
+    "title": "Home Office Study",
+    "description": "A feature poster for a study: built in desk and shelves with a working from home line.",
+    "searchKeywords": [
+      "home office",
+      "study",
+      "built in desk",
+      "work from home",
+      "shelving",
+      "quiet room",
+      "home workspace",
+      "interior feature",
+      "library",
+      "property detail"
+    ],
+    "prompt": "Create an interior feature poster for a study, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a small home office with a built in desk running under a window, {{shelf_note}} filling the wall beside it, a wooden chair pushed back as if just left. Warm morning sun lays a bright band across the desk, coloured book spines fill the shelves, a closed notebook and a cup on the desk, the garden vivid green outside.\n\nText layout: a horizontal band in {{accent_color}} crosses the upper quarter carrying \"{{eyebrow_text}}\" on the left and the wordmark \"{{agency_name}}\" on the right. The headline \"{{headline_text}}\" sits over the lower image in two lines of medium caps with \"{{feature_line}}\" beneath in a lighter weight. A last line at the bottom edge pairs \"{{property_headline}}\" with \"{{location_line}}\".\n\nInvented agency only, no real brokerages, no real addresses and no recognisable existing buildings. Morning interior photography, glowing wood, coloured spines and vivid garden green, strong light band, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "small home office with a built in desk under a window and full wall shelving",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "QUIETSIDE PROPERTY",
+        "required": true
+      },
+      {
+        "key": "eyebrow_text",
+        "label": "Eyebrow",
+        "inputType": "text",
+        "placeholder": "ROOM TO WORK",
+        "required": true
+      },
+      {
+        "key": "headline_text",
+        "label": "Headline",
+        "inputType": "text",
+        "placeholder": "A DOOR YOU CAN ACTUALLY CLOSE",
+        "required": false
+      },
+      {
+        "key": "feature_line",
+        "label": "Feature details",
+        "inputType": "text",
+        "placeholder": "Built in desk - wall of shelving - garden outlook",
+        "required": false
+      },
+      {
+        "key": "property_headline",
+        "label": "Property name",
+        "inputType": "text",
+        "placeholder": "Linden House",
+        "required": false
+      },
+      {
+        "key": "location_line",
+        "label": "Location",
+        "inputType": "text",
+        "placeholder": "Harker Road",
+        "required": false
+      },
+      {
+        "key": "shelf_note",
+        "label": "Shelving",
+        "inputType": "text",
+        "placeholder": "floor to ceiling painted shelves",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Band colour",
+        "inputType": "text",
+        "placeholder": "muted indigo",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-relocation-service",
+    "title": "Relocation Service",
+    "description": "A service poster for relocation help: moving day scene with a three point offer.",
+    "searchKeywords": [
+      "relocation",
+      "moving service",
+      "moving day",
+      "new city",
+      "relocation support",
+      "removals",
+      "settling in",
+      "service",
+      "boxes",
+      "real estate"
+    ],
+    "prompt": "Create a relocation service poster, vertical 4:5.\n\nAgency: \"{{agency_name}}\"\n\nScene: a moving day scene in a bare hallway: labelled cardboard boxes stacked by the front door, {{prop_note}} leaning against the wall, the door standing open to warm sunlight and a van tailgate beyond. Nobody in frame, the sun throwing a bright wedge across the floor, a green street outside, everything still.\n\nText layout: the headline \"{{headline_text}}\" is set large across the open doorway light in two lines. Below it a wide {{accent_color}} panel carries three offers as short lines under each other: \"{{service_line}}\". Under the panel a single row holds \"{{cta_text}}\" on the left and \"{{contact_text}}\" on the right, and the wordmark \"{{agency_name}}\" sits centred above the headline.\n\nInvented agency only, no real companies, no real addresses and no recognisable brands. Documentary interior photography on moving day, warm sun through the open door, saturated colour, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "labelled cardboard boxes stacked in a bare hallway by an open front door",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Agency name",
+        "inputType": "text",
+        "placeholder": "WAYPOINT RELOCATION",
+        "required": true
+      },
+      {
+        "key": "headline_text",
+        "label": "Headline",
+        "inputType": "text",
+        "placeholder": "NEW CITY, SORTED",
+        "required": true
+      },
+      {
+        "key": "service_line",
+        "label": "Services",
+        "inputType": "text",
+        "placeholder": "HOME SEARCH - SCHOOL PLACES - PAPERWORK",
+        "required": false
+      },
+      {
+        "key": "cta_text",
+        "label": "Call to action",
+        "inputType": "text",
+        "placeholder": "TELL US YOUR MOVE DATE",
+        "required": false
+      },
+      {
+        "key": "contact_text",
+        "label": "Contact",
+        "inputType": "text",
+        "placeholder": "waypoint-relocation.example",
+        "required": false
+      },
+      {
+        "key": "prop_note",
+        "label": "Detail",
+        "inputType": "text",
+        "placeholder": "a rolled rug and a folded step ladder",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Panel colour",
+        "inputType": "text",
+        "placeholder": "deep petrol blue",
+        "required": false
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-new-project-completion",
+    "title": "New Project Completion",
+    "description": "A construction update: development nearing completion with a three stage timeline.",
+    "searchKeywords": [
+      "construction update",
+      "completion",
+      "timeline",
+      "development progress",
+      "handover date",
+      "building site",
+      "new apartments",
+      "project phases",
+      "nearly finished",
+      "developer"
+    ],
+    "prompt": "Create a construction progress update, vertical 4:5.\n\nDeveloper: \"{{agency_name}}\"\n\nScene: a residential development close to completion, scaffolding down on the front half and still standing on the rear, {{site_note}} in the foreground. Windows in, balconies fitted, landscaping not yet laid. Bright working daylight, a crane arm crossing the top corner.\n\nText layout: a three stage timeline runs horizontally across the middle of the poster as a line with three dots; each dot carries a short label under it, taken from \"{{timeline_line}}\", and the middle dot is filled in {{accent_color}} to mark where the project stands. Above the timeline \"{{project_label}}\" and the project name \"{{property_headline}}\". Below it \"{{completion_line}}\" in large type, then a closing row with \"{{unit_line}}\" and the wordmark \"{{agency_name}}\".\n\nInvented developer only, no real companies, no real addresses and no recognisable existing buildings. Bright construction site photography, working daylight, crisp readable typography.\n\n{{image_description}}",
+    "fields": [
+      {
+        "key": "image_description",
+        "label": "What should be the main subject?",
+        "inputType": "textarea",
+        "placeholder": "residential development near completion with scaffolding still up on the rear half",
+        "required": false
+      },
+      {
+        "key": "agency_name",
+        "label": "Developer name",
+        "inputType": "text",
+        "placeholder": "STONEHAVEN BUILD",
+        "required": true
+      },
+      {
+        "key": "project_label",
+        "label": "Label",
+        "inputType": "text",
+        "placeholder": "BUILD UPDATE",
+        "required": true
+      },
+      {
+        "key": "property_headline",
+        "label": "Project name",
+        "inputType": "text",
+        "placeholder": "Juniper Yard",
+        "required": false
+      },
+      {
+        "key": "timeline_line",
+        "label": "Timeline",
+        "inputType": "text",
+        "placeholder": "FOUNDATIONS - STRUCTURE - HANDOVER",
+        "required": false
+      },
+      {
+        "key": "completion_line",
+        "label": "Completion",
+        "inputType": "text",
+        "placeholder": "KEYS FROM NOVEMBER",
+        "required": false
+      },
+      {
+        "key": "unit_line",
+        "label": "Units",
+        "inputType": "text",
+        "placeholder": "28 APARTMENTS - 9 STILL AVAILABLE",
+        "required": false
+      },
+      {
+        "key": "site_note",
+        "label": "Site detail",
+        "inputType": "text",
+        "placeholder": "stacked pallets behind site fencing",
+        "required": false
+      },
+      {
+        "key": "accent_color",
+        "label": "Marker colour",
+        "inputType": "text",
+        "placeholder": "bright signal orange",
+        "required": false
+      }
+    ]
+  }
+]

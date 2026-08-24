@@ -1,5 +1,5 @@
 import type { Core } from '@strapi/strapi';
-import { IMAGE_DESCRIPTION_FIELD } from '../services/image-description-input';
+import { ensureImageDescriptionInput } from '../services/image-description-input';
 
 const UID = 'api::template.template' as const;
 
@@ -19,11 +19,11 @@ export async function seedImageDescriptionInput(strapi: Core.Strapi) {
   const manager = strapi.plugin('content-manager').service('document-manager');
 
   for (const template of drafts) {
-    const fields = template.inputFields ?? [];
-    if (fields.some(({ key }) => key === IMAGE_DESCRIPTION_FIELD.key)) continue;
+    const data = { inputFields: template.inputFields ?? [] };
+    if (!ensureImageDescriptionInput(data, true)) continue;
 
     await manager.update(template.documentId, UID, {
-      data: { inputFields: [IMAGE_DESCRIPTION_FIELD, ...fields] },
+      data: { inputFields: data.inputFields },
       populate: {},
     });
     if (publishedIds.has(template.documentId)) {

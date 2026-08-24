@@ -1,7 +1,9 @@
 import "server-only";
 
 import type { GalleryTemplate, TemplateField } from "../types";
+import { isExamplePlaceholder } from "../utils";
 import { getPopularityRanks } from "./strapi-popularity-repository";
+import { fetchAllStrapiPages } from "./strapi-page-fetcher";
 
 type StrapiInputField = {
   key?: unknown;
@@ -21,6 +23,8 @@ type StrapiInputField = {
 
 type StrapiTemplate = {
   id?: unknown;
+  documentId?: unknown;
+  hasPrompt?: unknown;
   slug?: unknown;
   title?: unknown;
   description?: unknown;
@@ -59,10 +63,6 @@ type StrapiTemplate = {
   isPopular?: unknown;
 };
 
-type StrapiResponse = {
-  data?: StrapiTemplate[];
-};
-
 const STRAPI_URL = process.env.STRAPI_URL ?? "http://127.0.0.1:1337";
 
 function mapField(field: StrapiInputField): TemplateField | null {
@@ -74,6 +74,7 @@ function mapField(field: StrapiInputField): TemplateField | null {
     key: field.key,
     label: field.label,
     placeholder,
+    placeholderIsExample: isExamplePlaceholder(placeholder),
     optional: field.required !== true,
     type: field.inputType === "color"
       ? "color"
@@ -84,11 +85,12 @@ function mapField(field: StrapiInputField): TemplateField | null {
 }
 
 function mapTemplate(item: StrapiTemplate): GalleryTemplate | null {
+  // `prompt` wird von der API bewusst nicht mehr mitgeliefert – siehe
+  // backend/src/api/template/controllers/template.ts
   if (
     typeof item.id !== "number" ||
     typeof item.title !== "string" ||
-    typeof item.description !== "string" ||
-    typeof item.prompt !== "string"
+    typeof item.description !== "string"
   ) return null;
 
   const imageUrl = typeof item.image?.url === "string" ? item.image.url : undefined;
@@ -131,7 +133,8 @@ function mapTemplate(item: StrapiTemplate): GalleryTemplate | null {
     subline: typeof item.subline === "string" ? item.subline : item.description,
     style: typeof item.style === "string" ? item.style : "from-[#eeeae4] to-[#d9d2c9] text-[#171410]",
     fields: (item.inputFields ?? []).flatMap((field) => mapField(field) ?? []),
-    prompt: item.prompt,
+    promptId: typeof item.documentId === "string" ? item.documentId : undefined,
+    hasPrompt: item.hasPrompt === true,
     cover: imageUrl
       ? imageUrl.startsWith("http") ? imageUrl : `${STRAPI_URL}${imageUrl}`
       : undefined,
@@ -161,18 +164,14 @@ function localizedValues(
 
 export async function getStrapiTemplates(): Promise<GalleryTemplate[]> {
   try {
-    const [response, popularityRanks] = await Promise.all([
-      fetch(
-        `${STRAPI_URL}/api/templates?populate[image]=true&populate[category]=true&populate[inputFields]=true&pagination[pageSize]=100`,
-        { cache: "no-store", signal: AbortSignal.timeout(4000) },
+    const [items, popularityRanks] = await Promise.all([
+      fetchAllStrapiPages<StrapiTemplate>(
+        `${STRAPI_URL}/api/templates?populate[image]=true&populate[category]=true&populate[inputFields]=true`,
       ),
       getPopularityRanks(),
     ]);
 
-    if (!response.ok) return [];
-
-    const payload = (await response.json()) as StrapiResponse;
-    return (payload.data ?? []).flatMap((item) => {
+    return items.flatMap((item) => {
       const template = mapTemplate(item);
       if (!template) return [];
       const popularityRank = popularityRanks.get(template.analyticsKey)

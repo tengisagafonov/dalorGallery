@@ -18,12 +18,24 @@ function visitorId() {
   return created;
 }
 
+/** Zeitzone und Sprache dienen dem Backend zur Länderbestimmung – ohne IP-Speicherung. */
+function origin() {
+  try {
+    return {
+      timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      locale: navigator.language,
+    };
+  } catch {
+    return {};
+  }
+}
+
 export function trackAnalytics(event: AnalyticsEvent) {
   if (typeof window === "undefined") return;
   void fetch(`${STRAPI_URL}/api/analytics/track`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ ...event, visitorId: visitorId(), path: window.location.pathname }),
+    body: JSON.stringify({ ...event, ...origin(), visitorId: visitorId(), path: window.location.pathname }),
     keepalive: true,
   }).catch(() => undefined);
 }

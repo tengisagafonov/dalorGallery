@@ -1,6 +1,7 @@
 import "server-only";
 
 import type { GalleryCategory } from "./gallery-category";
+import { fetchAllStrapiPages } from "./strapi-page-fetcher";
 
 type StrapiCategory = {
   name?: unknown;
@@ -18,23 +19,15 @@ type StrapiCategory = {
   parentCategory?: unknown;
 };
 
-type StrapiResponse = {
-  data?: StrapiCategory[];
-};
-
 const STRAPI_URL = process.env.STRAPI_URL ?? "http://127.0.0.1:1337";
 
 export async function getStrapiCategories(): Promise<GalleryCategory[]> {
   try {
-    const response = await fetch(
+    const items = await fetchAllStrapiPages<StrapiCategory>(
       `${STRAPI_URL}/api/categories?sort=sortOrder:asc&populate[parent]=true`,
-      { cache: "no-store", signal: AbortSignal.timeout(3000) },
     );
 
-    if (!response.ok) return [];
-
-    const payload = (await response.json()) as StrapiResponse;
-    return (payload.data ?? []).flatMap((category) =>
+    return items.flatMap((category) =>
       typeof category.name === "string" && category.name.trim()
         ? [{
             name: category.name.trim(),
