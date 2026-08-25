@@ -9,7 +9,7 @@ import { seedImageDescriptionInput } from './bootstrap/image-description-input';
 import { backfillSubjectExamples, fillSubjectExample } from './bootstrap/subject-example-backfill';
 import { pruneActivityLog, recordActivity } from './services/activity-log';
 import { ensureImageDescriptionInput } from './services/image-description-input';
-import { translateTemplate } from './services/auto-translate';
+import { translateCategory, translateTemplate } from './services/auto-translate';
 
 export default {
   /**
@@ -48,6 +48,28 @@ export default {
           });
         }
       }
+
+      // Kategorien wurden bislang nie übersetzt: die Middleware sah nur Vorlagen,
+      // deshalb blieben nameDe/nameRu/… in allen Kategorien leer.
+      if (
+        context.uid === 'api::category.category' &&
+        (context.action === 'create' || context.action === 'update') &&
+        context.params.data
+      ) {
+        try {
+          await translateCategory(context.params.data as Record<string, any>);
+        } catch (error) {
+          strapi.log.error('Kategorie konnte nicht automatisch übersetzt werden.', error);
+          void recordActivity(strapi, {
+            level: 'error',
+            category: 'ai',
+            action: 'translate.failed',
+            message: 'Automatische Übersetzung der Kategorie fehlgeschlagen',
+            context: { fehler: error instanceof Error ? error.message : String(error) },
+          });
+        }
+      }
+
       return next();
     });
   },

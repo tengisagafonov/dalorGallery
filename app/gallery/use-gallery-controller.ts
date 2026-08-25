@@ -6,8 +6,18 @@ import { compilePrompt, createTemplateValues, filterTemplates } from "./utils";
 import { fetchTemplatePrompt } from "./data/prompt-client";
 import { trackAnalytics } from "./analytics";
 
+/**
+ * „Popular" speist sich aus den Zugriffszahlen. Auf einer frisch aufgesetzten
+ * Instanz gibt es davon noch keine – die Startseite zeigte dann „Keine Vorlagen
+ * gefunden", obwohl der Bestand vollständig da ist. Deshalb nur dort starten,
+ * wo auch etwas zu sehen ist.
+ */
+function initialCategory(templates: GalleryTemplate[]) {
+  return templates.some((template) => template.popular) ? "Popular" : "All";
+}
+
 export function useGalleryController(availableTemplates: GalleryTemplate[], locale: string) {
-  const [activeCategory, setActiveCategoryState] = useState("Popular");
+  const [activeCategory, setActiveCategoryState] = useState(() => initialCategory(availableTemplates));
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [query, setQueryState] = useState("");
