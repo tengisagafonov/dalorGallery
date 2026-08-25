@@ -4,7 +4,8 @@
 /node_modules
 backend/node_modules/
 backend/.cache/
-backend/.tmp/
+backend/.tmp/*
+!backend/.tmp/data.db
 backend/build/
 backend/dist/
 backend/public/uploads/*
