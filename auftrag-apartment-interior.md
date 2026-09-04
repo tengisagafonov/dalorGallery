@@ -11,7 +11,9 @@ loslegen.
 50 Vorlagen für die Kategorie **"Apartment / interior"** — exakt so geschrieben, mit
 Leerzeichen um den Schrägstrich und kleinem "i".
 
-Pinnwand: **<URL — trage ich nach>**
+Pinnwand: **https://at.pinterest.com/sukhjitmultani/apartment-interior/**
+Dort liegen **55 Pins**. Prüf beim Start kurz, ob die Zahl noch stimmt —
+sie kann sich ändern.
 Bildordner: `C:\Users\User\Downloads\Apartment-Interior`
 Temp-Dateiname: `__tmp_interior.webp`
 

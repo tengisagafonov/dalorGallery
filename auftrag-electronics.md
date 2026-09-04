@@ -10,7 +10,9 @@ loslegen.
 
 50 Vorlagen für die Kategorie **"Electronics"** — exakt so geschrieben.
 
-Pinnwand: **<URL — trage ich nach>**
+Pinnwand: **https://at.pinterest.com/sukhjitmultani/electronics/**
+Dort liegen **51 Pins**. Prüf beim Start kurz, ob die Zahl noch stimmt —
+sie kann sich ändern.
 Bildordner: `C:\Users\User\Downloads\Electronics`
 Temp-Dateiname: `__tmp_electro.webp`
 

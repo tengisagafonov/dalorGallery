@@ -10,7 +10,9 @@ loslegen.
 
 50 Vorlagen für die Kategorie **"Gadgets"** — exakt so geschrieben.
 
-Pinnwand: **<URL — trage ich nach>**
+Pinnwand: **https://at.pinterest.com/sukhjitmultani/gadgets/**
+Dort liegen **50 Pins**. Prüf beim Start kurz, ob die Zahl noch stimmt —
+sie kann sich ändern.
 Bildordner: `C:\Users\User\Downloads\Gadgets`
 Temp-Dateiname: `__tmp_gadget.webp`
 

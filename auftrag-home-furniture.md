@@ -11,7 +11,9 @@ loslegen.
 50 Vorlagen für die Kategorie **"Home & furniture"** — exakt so geschrieben, mit
 Kaufmanns-Und und kleinem "f".
 
-Pinnwand: **<URL — trage ich nach>**
+Pinnwand: **https://at.pinterest.com/sukhjitmultani/home-and-furniture/**
+Dort liegen **51 Pins**. Prüf beim Start kurz, ob die Zahl noch stimmt —
+sie kann sich ändern.
 Bildordner: `C:\Users\User\Downloads\Home-Furniture`
 Temp-Dateiname: `__tmp_home.webp`
 

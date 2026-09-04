@@ -10,7 +10,9 @@ loslegen.
 
 50 Vorlagen für die Kategorie **"Accessories"** — exakt so geschrieben.
 
-Pinnwand: **<URL — trage ich nach>**
+Pinnwand: **https://at.pinterest.com/sukhjitmultani/accessories/**
+Dort liegen **54 Pins**. Prüf beim Start kurz, ob die Zahl noch stimmt —
+sie kann sich ändern.
 Bildordner: `C:\Users\User\Downloads\Accessories`
 Temp-Dateiname: `__tmp_accessory.webp`
 

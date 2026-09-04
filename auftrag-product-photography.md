@@ -10,7 +10,9 @@ Rückfragen. Erst auf mein Startsignal loslegen.
 
 50 Vorlagen für die Kategorie **"Product Photography"** — exakt so geschrieben.
 
-Pinnwand: **<URL — trage ich nach>**
+Pinnwand: **https://at.pinterest.com/sukhjitmultani/product-photography/**
+Dort liegen **52 Pins**. Prüf beim Start kurz, ob die Zahl noch stimmt —
+sie kann sich ändern.
 Bildordner: `C:\Users\User\Downloads\Product-Photography`
 Temp-Dateiname: `__tmp_prodfoto.webp`
 
